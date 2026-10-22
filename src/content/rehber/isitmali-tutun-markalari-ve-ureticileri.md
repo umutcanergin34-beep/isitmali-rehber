@@ -4,6 +4,11 @@ aciklama: "IQOS, glo, Ploom, lil ve Pulze hangi şirketin? Dünyadaki büyük ı
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/2/26/Ploom_TECH_Device_(cropped).jpg"
+  alt: "Japan Tobacco'nun Ploom TECH cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Ploom_TECH_Device_(cropped).jpg"
 etiketler: ["markalar", "üreticiler", "IQOS", "glo", "Ploom", "lil", "Pulze"]
 sss:
   - soru: "IQOS hangi şirketin markası?"

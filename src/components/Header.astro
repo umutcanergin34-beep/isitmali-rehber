@@ -1,18 +1,81 @@
 ---
+import { getCollection } from 'astro:content';
+import Ikon from './Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 const yol = Astro.url.pathname;
 const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGORI_BILGI)[Kategori]][];
+const rehberler = await getCollection('rehber');
+const sayi = (k: Kategori) => rehberler.filter((r) => r.data.kategori === k).length;
+const konuAcik = yol.startsWith('/kategori/');
+const linkler = [
+  { href: '/rehber/', ad: 'Tüm rehberler' },
+  { href: '/rehber/isitmali-tutun-sozlugu/', ad: 'Sözlük' },
+  { href: '/rehber/isitmali-tutun-sik-sorulan-sorular/', ad: 'SSS' },
+  { href: '/hakkimizda/', ad: 'Hakkımızda' },
+];
 ---
-<header class="ust">
+<header class="ust" data-menu>
   <div class="kap ust-satir">
     <a href="/" class="logo" aria-label="Isıtmalı Rehber ana sayfa">
       <svg class="logo-isaret" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><rect x="9" y="7" width="5" height="18" rx="2.5" fill="#fff"/><path d="M19 9c3 2 3 4 0 6s-3 4 0 6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
       <span>Isıtmalı<b>Rehber</b></span>
     </a>
-    <nav class="kat-menu" aria-label="Kategoriler">
-      <a href="/rehber/" aria-current={yol === '/rehber/' ? 'page' : undefined}>Tüm rehberler</a>
-      {kategoriler.map(([k, b]) => <a href={`/kategori/${k}/`} style={`--kat:${b.renk}`} aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>{b.kisa}</a>)}
+
+    <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" data-menu-ac>
+      <span class="menu-cizgi" aria-hidden="true"></span>
+      <span class="gizli">Menüyü aç</span>
+    </button>
+
+    <nav class="ana-menu" id="ana-menu" aria-label="Ana menü">
+      <ul class="menu-liste">
+        <li class="menu-konu">
+          <button type="button" class="menu-link" aria-expanded="false" aria-controls="konu-paneli" aria-current={konuAcik ? 'true' : undefined} data-konu-ac>
+            Konular
+            <svg class="menu-ok" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="konu-paneli" id="konu-paneli">
+            <ul class="konu-izgara">
+              {kategoriler.map(([k, b]) => (
+                <li>
+                  <a href={`/kategori/${k}/`} class="konu-link" style={`--kat:${b.renk}`} aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>
+                    <span class="konu-ikon"><Ikon ad={k} boyut={20} /></span>
+                    <span class="konu-metin">
+                      <span class="konu-ad">{b.kisa} <small>{sayi(k)} rehber</small></span>
+                      <span class="konu-aciklama">{b.aciklama}</span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/rehber/" class="konu-tumu">Bütün rehberleri konulara göre gör <Ikon ad="ok" boyut={16} /></a>
+          </div>
+        </li>
+        {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href ? 'page' : undefined}>{l.ad}</a></li>)}
+      </ul>
     </nav>
-    <a href="/hakkimizda/" class="ust-hakkinda">Hakkımızda</a>
   </div>
 </header>
+
+<script>
+  const ust = document.querySelector<HTMLElement>('[data-menu]');
+  const menuDugme = ust?.querySelector<HTMLButtonElement>('[data-menu-ac]');
+  const konuDugme = ust?.querySelector<HTMLButtonElement>('[data-konu-ac]');
+  const ayarla = (d: HTMLButtonElement | null | undefined, acik: boolean) => d?.setAttribute('aria-expanded', String(acik));
+  const acikMi = (d: HTMLButtonElement | null | undefined) => d?.getAttribute('aria-expanded') === 'true';
+
+  menuDugme?.addEventListener('click', () => {
+    const acik = !acikMi(menuDugme);
+    ayarla(menuDugme, acik);
+    document.documentElement.classList.toggle('menu-acik', acik);
+  });
+  konuDugme?.addEventListener('click', () => ayarla(konuDugme, !acikMi(konuDugme)));
+
+  document.addEventListener('click', (e) => {
+    if (!konuDugme?.parentElement?.contains(e.target as Node)) ayarla(konuDugme, false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (acikMi(konuDugme)) { ayarla(konuDugme, false); konuDugme?.focus(); }
+    else if (acikMi(menuDugme)) { ayarla(menuDugme, false); document.documentElement.classList.remove('menu-acik'); menuDugme?.focus(); }
+  });
+</script>

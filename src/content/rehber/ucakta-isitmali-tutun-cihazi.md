@@ -5,6 +5,11 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Interior_View_of_Allegiant_Airplane_Cabin.jpg"
+  alt: "Yolcularla dolu bir uçak kabini"
+  kaynak: "Wikimedia Commons, CC BY 2.0"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Interior_View_of_Allegiant_Airplane_Cabin.jpg"
 etiketler: ["uçak", "seyahat", "batarya", "kabin bagajı"]
 sss:
   - soru: "Isıtmalı tütün cihazı bavula (bagaja) konabilir mi?"

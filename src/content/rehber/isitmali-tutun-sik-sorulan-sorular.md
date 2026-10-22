@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün nedir, nasıl çalışır, hangi çubuk hangi ciha
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/4/4d/IQOS.jpg"
+  alt: "IQOS ısıtmalı tütün cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS.jpg"
 etiketler: ["sık sorulan sorular", "ısıtmalı tütün", "temel"]
 sss:
   - soru: "Isıtmalı tütün nedir?"

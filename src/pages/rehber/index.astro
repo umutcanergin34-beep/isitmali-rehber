@@ -23,7 +23,7 @@ const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
     {gruplar.map((g) => (
       <section class="bolum-ana" id={g.k} style={`--kat:${g.renk}`}>
         <div class="bolum-baslik"><h2><a href={`/kategori/${g.k}/`}>{g.kisa}</a></h2><a href={`/kategori/${g.k}/`} class="tumu">Konu sayfası</a></div>
-        <div class="izgara">{g.yazilar.map((r) => <Kart slug={r.id} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
+        <div class="izgara">{g.yazilar.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
       </section>
     ))}
   </div>

@@ -4,6 +4,11 @@ aciklama: "ILUMA holder ya da şarj kutusu şarj olmuyorsa ne yapmalı? Üretici
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/USB-C_cable_2017_A.jpg/1280px-USB-C_cable_2017_A.jpg"
+  alt: "USB-C şarj kablosu"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:USB-C_cable_2017_A.jpg"
 etiketler: ["IQOS", "ILUMA", "şarj", "sorun giderme", "sıfırlama"]
 sss:
   - soru: "ILUMA şarj kutusu tamamen bitmişti, takınca ışık yanmıyor. Bozuk mu?"

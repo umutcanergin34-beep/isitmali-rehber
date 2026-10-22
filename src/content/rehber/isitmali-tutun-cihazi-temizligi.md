@@ -4,6 +4,11 @@ aciklama: "Bıçaklı IQOS'larda başlık ve hazne nasıl temizlenir, ILUMA gibi
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IQOS_01.jpg"
+  alt: "IQOS ısıtmalı tütün cihazı yakın plan"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_01.jpg"
 etiketler: ["temizlik", "bakım", "IQOS", "ILUMA", "bıçak"]
 sss:
   - soru: "IQOS ILUMA temizlenir mi?"

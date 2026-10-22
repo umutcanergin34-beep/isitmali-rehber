@@ -4,6 +4,11 @@ aciklama: "AB, Ekim 2023'ten beri ısıtmalı tütünde tütün dışındaki kar
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: mevzuat
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg/1280px-European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg"
+  alt: "Strazburg'daki Avrupa Parlamentosu genel kurul salonu"
+  kaynak: "Wikimedia Commons, CC BY-SA"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:European_Parliament_Strasbourg_Hemicycle_-_Diliff.jpg"
 etiketler: ["Avrupa Birliği", "aroma yasağı", "mentol", "direktif", "TPD"]
 sss:
   - soru: "AB'de aromalı ısıtmalı tütün yasak mı?"
