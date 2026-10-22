@@ -5,11 +5,13 @@ const { sorular, baslik = 'Sık sorulan sorular' } = Astro.props;
 {sorular.length > 0 && (
   <section class="bolum sss">
     <h2>{baslik}</h2>
-    {sorular.map((s) => (
-      <details>
-        <summary>{s.soru}</summary>
-        <p>{s.cevap}</p>
-      </details>
-    ))}
+    <div class="sss-liste">
+      {sorular.map((s) => (
+        <details>
+          <summary>{s.soru}</summary>
+          <p>{s.cevap}</p>
+        </details>
+      ))}
+    </div>
   </section>
 )}

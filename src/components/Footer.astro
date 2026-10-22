@@ -7,9 +7,9 @@ const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGOR
 <footer class="alt">
   <div class="kap alt-izgara">
     <div>
-      <a href="/" class="logo logo-alt">Isıtmalı<span>Rehber</span></a>
-      <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez.</p>
-      <p>İçerik yalnızca 18 yaş üstü yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
+      <a href="/" class="logo logo-alt"><span>Isıtmalı<b>Rehber</b></span></a>
+      <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez, reklam almaz.</p>
+      <p class="alt-18">18+ · İçerik yalnızca yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
     </div>
     <nav aria-label="Kategoriler (alt)">
       <p class="alt-baslik">Kategoriler</p>
@@ -18,10 +18,11 @@ const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGOR
     <nav aria-label="Site">
       <p class="alt-baslik">Site</p>
       <a href="/rehber/">Tüm rehberler</a>
+      <a href="/rehber/isitmali-tutun-sik-sorulan-sorular/">Sık sorulan sorular</a>
       <a href="/hakkimizda/">Hakkımızda</a>
       <a href="/yayin-ilkeleri/">Yayın ilkeleri ve düzeltmeler</a>
       <a href="/rss.xml">RSS</a>
     </nav>
   </div>
-  <div class="kap alt-son">© {yil} {SITE_ADI}</div>
+  <div class="kap alt-son"><span>© {yil} {SITE_ADI}</span><span>Bağımsız · Kaynaklı · Satış yapmaz</span></div>
 </footer>

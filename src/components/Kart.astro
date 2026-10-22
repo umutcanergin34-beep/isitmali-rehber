@@ -1,5 +1,7 @@
 ---
+// buyuk: kapaklı öne çıkan kart; normal: metin ağırlıklı kutu kart; yatay: ikonlu kısa liste satırı
 import Kapak from './Kapak.astro';
+import Ikon from './Ikon.astro';
 import type { ImageMetadata } from 'astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { tarihYaz, isoGun } from '../lib/site';
@@ -7,10 +9,11 @@ interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kat
 const { slug, baslik, aciklama, kategori, tarih, tur = 'normal', gorsel } = Astro.props;
 const { kisa, renk } = KATEGORI_BILGI[kategori];
 ---
-<article class={`kart kart-${tur}`}>
-  <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} slug={slug} buyuk={tur === 'buyuk'} gorsel={gorsel} /></a>
+<article class={`kart kart-${tur}`} style={`--kat:${renk}`}>
+  {tur === 'buyuk' && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} slug={slug} buyuk gorsel={gorsel} /></a>}
+  {tur === 'yatay' && <span class="kart-ikon"><Ikon ad={kategori} boyut={18} /></span>}
   <div class="kart-metin">
-    <a href={`/kategori/${kategori}/`} class="kat-etiket" style={`--kat:${renk}`}>{kisa}</a>
+    {tur !== 'yatay' && <a href={`/kategori/${kategori}/`} class="kat-etiket"><Ikon ad={kategori} boyut={14} />{kisa}</a>}
     <h3><a href={`/rehber/${slug}/`}>{baslik}</a></h3>
     {aciklama && tur !== 'yatay' && <p>{aciklama}</p>}
     <time datetime={isoGun(tarih)}>{tarihYaz(tarih)}</time>
