@@ -15,4 +15,6 @@ gorsel:
   kaynak: Isıtmalı Rehber   # lisanslı fotoğrafta sahibinin adı ve lisansı
 ```
 
+Wikimedia Commons fotoğrafı indirmeden de kullanılabilir: `src` alanına `https://upload.wikimedia.org/...` adresini, `kaynakUrl` alanına dosyanın Commons sayfasını yaz.
+
 Fotoğraf eklenmeyen yazıda çizim kapak görünmeye devam eder.

@@ -32,8 +32,13 @@ const rehber = defineCollection({
     kaynaklar: z.array(z.object({ ad: z.string(), url: z.string().url() })).default([]),
     // Yayın öncesi doğrulanması gereken bilgi varsa true; sayfada uyarı çıkar, sitemap'e girmez
     dogrulanacak: z.boolean().default(false),
-    // İsteğe bağlı cihaz fotoğrafı: src/assets/cihazlar/ altında, yalnızca cihaz (çubuk, duman, kutu yok)
-    gorsel: z.object({ src: image(), alt: z.string(), kaynak: z.string().optional() }).optional(),
+    // İsteğe bağlı cihaz fotoğrafı: src/assets/cihazlar/ altında ya da Wikimedia Commons adresi; yalnızca cihaz (çubuk, duman, kutu yok)
+    gorsel: z.object({
+      src: image().or(z.string().url().startsWith('https://upload.wikimedia.org/')),
+      alt: z.string(),
+      kaynak: z.string().optional(),
+      kaynakUrl: z.string().url().optional(),
+    }).optional(),
   }),
 });
 
