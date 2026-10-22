@@ -17,7 +17,7 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok. Her yazı markadan bağ
 
 | # | Kategori | Başlık | Not |
 |---|---|---|---|
-| 1 | Temel | Isıtmalı tütünün kısa tarihi: Accord'dan ILUMA'ya | Wikimedia'daki cihaz fotoğrafıyla eşleşir |
+| 1 | Temel | Isıtmalı tütünün kısa tarihi: Accord'dan ILUMA'ya | Yazıldı, doğrulanacak |
 | 2 | Güven | Sahte ısıtmalı tütün cihazı nasıl anlaşılır? | Seri numarası, ambalaj, yazılım kontrolü |
 | 3 | Kullanım | Cihaz ışıkları ve hata işaretleri ne anlama gelir? | Marka marka tablo |
 | 4 | Mevzuat | Türkiye'de ısıtılmış tütün ithalat yasağı neyi kapsar? | 2149 sayılı Cumhurbaşkanı Kararı, avukata doğrulatılacak |
