@@ -18,8 +18,8 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok. Her yazı markadan bağ
 | # | Kategori | Başlık | Not |
 |---|---|---|---|
 | 1 | Temel | Isıtmalı tütünün kısa tarihi: Accord'dan ILUMA'ya | Yazıldı, doğrulanacak |
-| 2 | Güven | Sahte ısıtmalı tütün cihazı nasıl anlaşılır? | Seri numarası, ambalaj, yazılım kontrolü |
-| 3 | Kullanım | Cihaz ışıkları ve hata işaretleri ne anlama gelir? | Marka marka tablo |
+| 2 | Güven | Sahte ısıtmalı tütün cihazı nasıl anlaşılır? | Bekliyor: üreticinin resmi doğrulama sayfası bulunamadı |
+| 3 | Kullanım | IQOS ILUMA ışıkları ne anlama gelir? | Yazıldı; glo ve Ploom için ayrı yazı |
 | 4 | Mevzuat | Türkiye'de ısıtılmış tütün ithalat yasağı neyi kapsar? | 2149 sayılı Cumhurbaşkanı Kararı, avukata doğrulatılacak |
 | 5 | Teknoloji | IQOS ILUMA serisi modelleri arasındaki farklar | ILUMA, PRIME, ONE, i serisi |
 | 6 | Güven | Batarya ısınırsa ya da şişerse ne yapılmalı? | Güvenlik odaklı |
