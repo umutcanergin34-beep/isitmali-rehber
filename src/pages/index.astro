@@ -68,7 +68,7 @@ const sss = hepsi.find((r) => r.id === 'isitmali-tutun-sik-sorulan-sorular');
     {son.length > 0 && (
       <section class="bolum-ana" aria-labelledby="diger">
         <div class="bolum-baslik"><h2 id="diger">Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{son.map((r) => <Kart slug={r.id} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
+        <div class="izgara">{son.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
       </section>
     )}
 

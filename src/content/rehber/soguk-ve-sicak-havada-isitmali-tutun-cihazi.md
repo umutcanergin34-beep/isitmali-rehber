@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün cihazı soğukta neden çalışmaz, sıcakta neden
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg/1280px-Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg"
+  alt: "İstanbul'da yoğun kar yağışı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg"
 etiketler: ["soğuk hava", "sıcak hava", "çalışma sıcaklığı", "batarya", "ILUMA"]
 sss:
   - soru: "Isıtmalı tütün cihazı soğukta çalışır mı?"

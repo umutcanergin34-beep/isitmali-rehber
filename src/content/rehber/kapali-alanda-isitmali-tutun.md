@@ -5,6 +5,11 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: mevzuat
 dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/9/9d/No_smoking_Welsh_bilingual_sign.jpg"
+  alt: "Bir tren istasyonunda iki dilli sigara içilmez levhası"
+  kaynak: "Wikimedia Commons, Kamu malı"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:No_smoking_Welsh_bilingual_sign.jpg"
 etiketler: ["4207", "kapalı alan", "sigara yasağı", "mevzuat"]
 sss:
   - soru: "Isıtmalı tütün kapalı alanda kullanılabilir mi?"

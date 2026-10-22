@@ -4,6 +4,11 @@ aciklama: "IQOS ORIGINALS ve IQOS 3 DUO gibi bıçaklı cihazlarda bıçak neden
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Heets-blade.jpg/1280px-Heets-blade.jpg"
+  alt: "IQOS tutucusundaki ısıtma bıçağı ve HEETS çubuğu"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Heets-blade.jpg"
 etiketler: ["IQOS", "bıçak", "IQOS 3 DUO", "ORIGINALS", "arıza", "garanti"]
 sss:
   - soru: "IQOS bıçağının kırıldığını nasıl anlarım?"

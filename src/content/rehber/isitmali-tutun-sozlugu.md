@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün cihazlarında geçen terimlerin markadan bağıms�
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/1/12/IQOS_3_Multi.jpg"
+  alt: "IQOS 3 Multi ısıtmalı tütün cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_3_Multi.jpg"
 etiketler: ["ısıtmalı tütün", "sözlük", "terimler"]
 sss:
   - soru: "Stick, çubuk ve heatstick aynı şey mi?"

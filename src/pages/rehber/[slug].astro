@@ -71,7 +71,7 @@ const kat = KATEGORI_BILGI[v.kategori];
     {digerleri.length > 0 && (
       <section class="bolum-ana ilgili">
         <div class="bolum-baslik"><h2>Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} baslik={x.data.baslik} aciklama={x.data.aciklama} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} />)}</div>
+        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} aciklama={x.data.aciklama} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} />)}</div>
       </section>
     )}
   </div>

@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün neyi ısıtır, elektronik sigara neyi buharlaşt�
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vape_Pen_-_E-Cigarette_(25587529206).jpg/1280px-Vape_Pen_-_E-Cigarette_(25587529206).jpg"
+  alt: "Kalem tipi bir elektronik sigara"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Vape_Pen_-_E-Cigarette_(25587529206).jpg"
 etiketler: ["ısıtmalı tütün", "elektronik sigara", "sigara", "karşılaştırma", "temel"]
 sss:
   - soru: "Isıtmalı tütün bir elektronik sigara mı?"
