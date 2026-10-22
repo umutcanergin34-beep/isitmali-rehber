@@ -40,12 +40,16 @@ kaynaklar:
 | Ön ısıtma | Cihazın kullanıma hazır olana kadar geçen ısınma süresi. |
 | Seans | Bir çubuğun baştan sona kullanımı. Süre ya da nefes sayısıyla sınırlıdır. |
 | Pause / duraklatma | Bazı cihazlarda seansı kısa süre durdurma özelliği (ILUMA i serisinde var). |
+| FlexBattery / Eco modu | ILUMA i kuşağında batarya ömrünü uzatmak için holder'ı art arda tek kullanımla sınırlayan ayar. Arıza değildir. |
+| Sıfırlama (reset) | Düğmeye belirli bir süre basılı tutarak cihazı yeniden başlatma; birçok hata ışığında ilk denenecek adım. |
 
 ## Çubuklar
 
 | Terim | Anlamı |
 |---|---|
 | Stick / çubuk | Cihaza takılan, işlenmiş tütün içeren tek kullanımlık parça. |
+| SMARTCORE | TEREA çubuklarının içindeki metal parça. ILUMA bu parçayı indüksiyonla ısıtır; yutulursa yaralanmaya yol açabilir. |
+| Kapalı uç | TEREA'nın ucunun kapalı olması; hazneye kalıntı geçmez, cihaz temizliği gerekmez. |
 | Çubuk ailesi | Bir cihazla uyumlu çubuk markası: TEREA (ILUMA), HEETS (eski IQOS), neo (glo), EVO (Ploom X), Fiit (lil SOLID). Aileler birbirinin yerine kullanılmaz. |
 | Menşe | Paketin üretildiği ya da satışa sunulduğu ülke/bölge. Aynı çeşidin farklı menşeli paketleri tat ve içerik olarak farklılık gösterebilir. |
 | Kapsül (pearl) | Filtredeki, sıkınca aroma veren küçük kapsül. Kapsülsüz kullanılırsa çubuk aromasız haliyle içilir. |
