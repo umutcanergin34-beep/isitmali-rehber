@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Kirinti from '../../components/Kirinti.astro';
+import Kart from '../../components/Kart.astro';
+import { KATEGORI_BILGI, KATEGORILER, type Kategori } from '../../content.config';
+
+export function getStaticPaths() {
+  return (Object.keys(KATEGORI_BILGI) as Kategori[]).map((kategori) => ({ params: { kategori } }));
+}
+const kategori = Astro.params.kategori as Kategori;
+const bilgi = KATEGORI_BILGI[kategori];
+const yazilar = (await getCollection('rehber', (r) => r.data.kategori === kategori)).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
+---
+<Base title={KATEGORILER[kategori]} description={bilgi.aciklama} noindex={yazilar.length === 0}>
+  <div class="kap sayfa" style={`--kat:${bilgi.renk}`}>
+    <Kirinti yollar={[{ ad: bilgi.kisa, href: `/kategori/${kategori}/` }]} />
+    <header class="kat-ust">
+      <h1>{KATEGORILER[kategori]}</h1>
+      <p class="ozet">{bilgi.aciklama}</p>
+    </header>
+    {yazilar.length > 0
+      ? <div class="izgara">{yazilar.map((r) => <Kart slug={r.id} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={kategori} tarih={r.data.guncelleme ?? r.data.yayin} />)}</div>
+      : <p class="bos">Bu kategoride henüz rehber yok. <a href="/rehber/">Tüm rehberlere</a> göz atın.</p>}
+  </div>
+</Base>

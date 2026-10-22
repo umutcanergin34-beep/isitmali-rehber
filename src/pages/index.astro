@@ -1,18 +1,53 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { SITE_SLOGAN } from '../lib/site';
+import Kart from '../components/Kart.astro';
+import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { webSitesiSemasi } from '../lib/sema';
 
-const son = (await getCollection('rehber')).sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime()).slice(0, 8);
+const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
+const hepsi = (await getCollection('rehber')).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const [one, ...kalan] = hepsi;
+const yan = kalan.slice(0, 4);
+const kategoriler = (Object.keys(KATEGORI_BILGI) as Kategori[]).map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: hepsi.filter((r) => r.data.kategori === k) }));
 ---
 <Base title="Isıtmalı tütün cihazları için bağımsız teknik rehber" description="IQOS, glo, Ploom ve lil cihazlarının nasıl çalıştığı, hangi çubukla uyumlu olduğu, bakımı ve Türkiye'deki mevzuat. Satış yapmayan, kaynak gösteren rehber." jsonLd={[webSitesiSemasi()]}>
-  <div class="kap duz">
-    <p class="ust-etiket">{SITE_SLOGAN}</p>
-    <h1>Cihazınız nasıl çalışır, hangi çubukla uyumludur, kurallar ne diyor?</h1>
-    <p class="ozet">IQOS, glo, Ploom ve lil cihazlarını markadan bağımsız olarak, üreticilerin kendi kılavuzlarına ve resmi kaynaklara dayanarak anlatıyoruz. Satış yapmıyoruz, ürün önermiyoruz.</p>
-    <h2 class="kat-baslik">Son güncellenen rehberler</h2>
-    <ul class="liste">{son.map((r) => <li><a href={`/rehber/${r.id}/`}><strong>{r.data.baslik}</strong><span>{r.data.aciklama}</span></a></li>)}</ul>
-    <p style="margin-top:24px"><a href="/rehber/">Tüm rehberler →</a></p>
+  <div class="kap sayfa">
+    <h1 class="gizli">Isıtmalı Rehber: ısıtmalı tütün cihazları için bağımsız teknik rehber</h1>
+    {one && (
+      <section class="manset" aria-label="Öne çıkan">
+        <Kart slug={one.id} baslik={one.data.baslik} aciklama={one.data.aciklama} kategori={one.data.kategori} tarih={tarih(one)} tur="buyuk" />
+        <div class="manset-yan">
+          <p class="bolum-baslik"><span>Son güncellenenler</span></p>
+          {yan.length > 0
+            ? yan.map((r) => <Kart slug={r.id} baslik={r.data.baslik} kategori={r.data.kategori} tarih={tarih(r)} tur="yatay" />)
+            : <p class="bos">Yeni rehberler eklendikçe burada listelenecek.</p>}
+        </div>
+      </section>
+    )}
+
+    <div class="ana-duzen">
+      <div class="ana-sol">
+        {kategoriler.map((k) => (
+          <section class="kat-blok" style={`--kat:${k.renk}`}>
+            <div class="bolum-baslik"><h2><a href={`/kategori/${k.k}/`}>{k.kisa}</a></h2><a href={`/kategori/${k.k}/`} class="tumu">Tümü →</a></div>
+            {k.yazilar.length > 0
+              ? <div class="izgara">{k.yazilar.slice(0, 3).map((r) => <Kart slug={r.id} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
+              : <p class="bos">{k.aciklama} Bu kategoride henüz rehber yok.</p>}
+          </section>
+        ))}
+      </div>
+      <aside class="ana-sag">
+        <div class="kutu">
+          <p class="kutu-baslik">Bu site hakkında</p>
+          <p>IQOS, glo, Ploom ve lil cihazlarını markadan bağımsız anlatıyoruz. Her bilgi üreticinin kendi kılavuzuna ya da resmi kaynağa dayanır; satış yapmıyor, ürün önermiyoruz.</p>
+          <a href="/yayin-ilkeleri/">Yayın ilkelerimiz →</a>
+        </div>
+        <div class="kutu">
+          <p class="kutu-baslik">Kategoriler</p>
+          <ul class="kat-liste">{kategoriler.map((k) => <li style={`--kat:${k.renk}`}><a href={`/kategori/${k.k}/`}>{k.kisa}</a><span>{k.yazilar.length}</span></li>)}</ul>
+        </div>
+      </aside>
+    </div>
   </div>
 </Base>
