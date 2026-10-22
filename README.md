@@ -18,6 +18,7 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 ## İçerik kuralları
 - Satış yok: fiyat, sipariş, "satın al", WhatsApp, indirim yok. `npm test` derlenmiş sayfalarda bu ifadeleri ve kırık iç bağlantıları arar.
 - Sağlık iddiası yok; ürün fotoğrafı yerine tablo ve çizim.
+- İthalat yasağı ve gümrük konuları işlenmez.
 - Her rehber kaynak listesiyle; doğrulanamayan bilgi yazılmaz ya da `dogrulanacak: true` ile işaretlenir.
 - Mağaza ve cubukistanbul.com'daki IQOS rehberlerini burada tekrar yazma; bu site markalar arası karşılaştırma ve mevzuat odaklı.
 - Mağazaya link: yazı başına en fazla bir, yalnızca ilgili bilgi sayfasına.

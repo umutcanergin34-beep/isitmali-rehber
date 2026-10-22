@@ -11,7 +11,7 @@ sss:
   - soru: "Bu yasak cihazları da kapsıyor mu?"
     cevap: "Hayır. Direktif ısıtmalı tütün ürünlerini, yani çubukları kapsar. Cihazların kendisi bu yasağın konusu değildir."
   - soru: "Türkiye'de bu direktif geçerli mi?"
-    cevap: "Hayır. AB direktifleri yalnızca üye ülkeleri bağlar. Türkiye'de ısıtılmış tütün ürünlerinin ithalatı ise 2020'den beri ayrı bir kararla yasaktır."
+    cevap: "Hayır. AB direktifleri yalnızca üye ülkeleri bağlar."
 kaynaklar:
   - { ad: "EUR-Lex: Commission Delegated Directive (EU) 2022/2100", url: "https://eur-lex.europa.eu/eli/dir_del/2022/2100/oj/eng/pdf" }
   - { ad: "Generation Sans Tabac: European Union bans flavourings in heated tobacco", url: "https://www.generationsanstabac.org/en/actualites/lunion-europeenne-interdit-les-aromes-dans-le-tabac-chauffe/" }
@@ -44,4 +44,4 @@ Direktif, her üye ülkenin kendi mevzuatına aktarmasıyla uygulanır. Çekya'd
 
 ## Türkiye açısından
 
-AB direktifleri Türkiye'yi bağlamaz. Türkiye'de ısıtılmış tütün ürünlerinin ithalatı 2020'den beri Cumhurbaşkanı Kararı ile yasaktır; tütün ürünlerinin reklamı ve kapalı alanda kullanımı ise 4207 sayılı Kanun ile düzenlenir. Ayrıntılar için [kapalı alanda ısıtmalı tütün](/rehber/kapali-alanda-isitmali-tutun/) rehberine bakın.
+AB direktifleri Türkiye'yi bağlamaz. Türkiye'de tütün ürünlerinin reklamı ve kapalı alanda kullanımı 4207 sayılı Kanun ile düzenlenir. Ayrıntılar için [kapalı alanda ısıtmalı tütün](/rehber/kapali-alanda-isitmali-tutun/) rehberine bakın.
