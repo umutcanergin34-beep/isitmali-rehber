@@ -1,0 +1,17 @@
+---
+// Görünür breadcrumb + BreadcrumbList şeması
+import { SITE_URL } from '../lib/site';
+interface Props { yollar: { ad: string; href: string }[] }
+const tum = [{ ad: 'Ana sayfa', href: '/' }, ...Astro.props.yollar];
+const sema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: tum.map((y, i) => ({ '@type': 'ListItem', position: i + 1, name: y.ad, item: new URL(y.href, SITE_URL).href })),
+};
+---
+<nav aria-label="Konum" class="kirinti">
+  <ol>
+    {tum.map((y, i) => <li>{i === tum.length - 1 ? <span aria-current="page">{y.ad}</span> : <a href={y.href}>{y.ad}</a>}</li>)}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(sema)} />

@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { SITE_SLOGAN } from '../lib/site';
+import { webSitesiSemasi } from '../lib/sema';
+
+const son = (await getCollection('rehber')).sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime()).slice(0, 8);
+---
+<Base title="Isıtmalı tütün cihazları için bağımsız teknik rehber" description="IQOS, glo, Ploom ve lil cihazlarının nasıl çalıştığı, hangi çubukla uyumlu olduğu, bakımı ve Türkiye'deki mevzuat. Satış yapmayan, kaynak gösteren rehber." jsonLd={[webSitesiSemasi()]}>
+  <div class="kap duz">
+    <p class="ust-etiket">{SITE_SLOGAN}</p>
+    <h1>Cihazınız nasıl çalışır, hangi çubukla uyumludur, kurallar ne diyor?</h1>
+    <p class="ozet">IQOS, glo, Ploom ve lil cihazlarını markadan bağımsız olarak, üreticilerin kendi kılavuzlarına ve resmi kaynaklara dayanarak anlatıyoruz. Satış yapmıyoruz, ürün önermiyoruz.</p>
+    <h2 class="kat-baslik">Son güncellenen rehberler</h2>
+    <ul class="liste">{son.map((r) => <li><a href={`/rehber/${r.id}/`}><strong>{r.data.baslik}</strong><span>{r.data.aciklama}</span></a></li>)}</ul>
+    <p style="margin-top:24px"><a href="/rehber/">Tüm rehberler →</a></p>
+  </div>
+</Base>

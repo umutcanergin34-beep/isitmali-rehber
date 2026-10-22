@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Kirinti from '../../components/Kirinti.astro';
+import { KATEGORILER } from '../../content.config';
+
+const rehberler = (await getCollection('rehber')).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
+const gruplar = (Object.keys(KATEGORILER) as (keyof typeof KATEGORILER)[])
+  .map((k) => ({ ad: KATEGORILER[k], yazilar: rehberler.filter((r) => r.data.kategori === k) }))
+  .filter((g) => g.yazilar.length > 0);
+---
+<Base title="Rehberler" description="Isıtmalı tütün cihazlarının çalışma prensibi, uyumluluk, bakım ve mevzuatı üzerine kaynak gösteren, markadan bağımsız rehberler.">
+  <div class="kap duz">
+    <Kirinti yollar={[{ ad: 'Rehberler', href: '/rehber/' }]} />
+    <h1>Rehberler</h1>
+    <p class="ozet">Her rehber üreticilerin kendi kılavuzlarına ve resmi kaynaklara dayanır; kaynaklar sayfanın sonunda listelenir.</p>
+    {gruplar.map((g) => (
+      <section>
+        <h2 class="kat-baslik">{g.ad}</h2>
+        <ul class="liste">{g.yazilar.map((r) => <li><a href={`/rehber/${r.id}/`}><strong>{r.data.baslik}</strong><span>{r.data.aciklama}</span></a></li>)}</ul>
+      </section>
+    ))}
+  </div>
+</Base>

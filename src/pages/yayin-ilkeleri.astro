@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Kirinti from '../components/Kirinti.astro';
+import { SITE_ADI } from '../lib/site';
+---
+<Base title="Yayın ilkeleri ve düzeltmeler" description={`${SITE_ADI} rehberlerinin hangi kaynaklara dayandığı, nasıl güncellendiği ve hataların nasıl düzeltildiği.`}>
+  <div class="kap duz">
+    <Kirinti yollar={[{ ad: 'Yayın ilkeleri', href: '/yayin-ilkeleri/' }]} />
+    <h1>Yayın ilkeleri ve düzeltmeler</h1>
+    <h2>Kaynaklar</h2>
+    <p>Her rehber önce üreticinin kendi kullanım kılavuzuna ve destek sayfalarına, mevzuat konularında Resmi Gazete ve ilgili bakanlık metinlerine dayanır. Kullanılan kaynaklar her sayfanın sonunda listelenir. Doğrulayamadığımız bir bilgiyi yazmayız ya da doğrulanmadığını açıkça belirtiriz.</p>
+    <h2>Ne yazmayız</h2>
+    <ul>
+      <li>Sağlık karşılaştırması ve "daha az zararlı" gibi iddialar.</li>
+      <li>Fiyat listesi ve satışa yönlendiren bağlantılar.</li>
+      <li>Ürün fotoğrafıyla tanıtım; görsel olarak çizim, tablo ve belge kullanırız.</li>
+    </ul>
+    <h2>Güncelleme</h2>
+    <p>Rehberler en az altı ayda bir gözden geçirilir. Sayfanın başındaki güncelleme tarihi son içerik değişikliğini gösterir.</p>
+    <h2>Düzeltmeler</h2>
+    <p>Bir hata gördüyseniz bize bildirin. Doğrulanan hatalar düzeltilir ve önemli düzeltmeler sayfanın sonunda tarihiyle not edilir.</p>
+  </div>
+</Base>

@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Kirinti from '../../components/Kirinti.astro';
+import SSS from '../../components/SSS.astro';
+import { KATEGORILER } from '../../content.config';
+import { sssSemasi, makaleSemasi } from '../../lib/sema';
+import { tarihYaz, isoGun } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const rehberler = await getCollection('rehber');
+  return rehberler.map((r) => ({ params: { slug: r.id }, props: { r } }));
+}
+const { r } = Astro.props;
+const v = r.data;
+const { Content, headings } = await render(r);
+const bolumler = headings.filter((h) => h.depth === 2);
+// Aynı kategoriden en fazla 4 rehber, yoksa diğerleri: her rehber iç link alsın
+const tumu = (await getCollection('rehber')).filter((x) => x.id !== r.id);
+const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tumu.filter((x) => x.data.kategori !== v.kategori)].slice(0, 4);
+---
+<Base title={v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak}
+  jsonLd={[makaleSemasi(r.id, v), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
+  <div class="kap">
+    <div class="yazi-duzen">
+      <article class="yazi">
+        <Kirinti yollar={[{ ad: 'Rehberler', href: '/rehber/' }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
+        <p class="ust-etiket" style="margin-top:20px">{KATEGORILER[v.kategori]}</p>
+        <h1>{v.baslik}</h1>
+        <p class="tarih">Yayın: <time datetime={isoGun(v.yayin)}>{tarihYaz(v.yayin)}</time>{v.guncelleme && <> · Güncelleme: <time datetime={isoGun(v.guncelleme)}>{tarihYaz(v.guncelleme)}</time></>}</p>
+        {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
+        <Content />
+        <p class="not18">Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
+        <SSS sorular={v.sss} />
+        {v.kaynaklar.length > 0 && (
+          <section class="bolum kaynaklar">
+            <h2>Kaynaklar</h2>
+            <ol>{v.kaynaklar.map((k) => <li><a href={k.url} rel="nofollow noopener" target="_blank">{k.ad}</a></li>)}</ol>
+          </section>
+        )}
+        {digerleri.length > 0 && (
+          <section class="bolum">
+            <h2>Diğer rehberler</h2>
+            <ul class="liste">{digerleri.map((x) => <li><a href={`/rehber/${x.id}/`}><strong>{x.data.baslik}</strong></a></li>)}</ul>
+          </section>
+        )}
+      </article>
+      {bolumler.length > 2 && (
+        <aside>
+          <nav class="icindekiler" aria-label="İçindekiler">
+            <p class="ust-etiket">Bu yazıda</p>
+            <ul>{bolumler.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+          </nav>
+        </aside>
+      )}
+    </div>
+  </div>
+</Base>

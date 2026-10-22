@@ -1,0 +1,16 @@
+---
+import { SITE_ADI } from '../lib/site';
+const yil = new Date().getFullYear();
+---
+<footer class="alt">
+  <div class="kap">
+    <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez. İçerik yalnızca 18 yaş üstü yetişkinler içindir; ısıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
+    <nav aria-label="Alt menü">
+      <a href="/rehber/">Rehberler</a>
+      <a href="/hakkimizda/">Hakkımızda</a>
+      <a href="/yayin-ilkeleri/">Yayın ilkeleri ve düzeltmeler</a>
+      <a href="/rss.xml">RSS</a>
+    </nav>
+    <p>© {yil} {SITE_ADI}</p>
+  </div>
+</footer>

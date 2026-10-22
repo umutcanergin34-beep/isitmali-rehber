@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_ADI, SITE_URL, YAYINDA } from '../lib/site';
+import { yayinciSemasi } from '../lib/sema';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>[];
+  ogTur?: 'website' | 'article';
+  yayin?: Date;
+  guncelleme?: Date;
+}
+const { title, description, noindex = false, jsonLd = [], ogTur = 'website', yayin, guncelleme } = Astro.props;
+const yol = Astro.url.pathname;
+const sayfa404 = yol.startsWith('/404');
+const canonical = new URL(yol, SITE_URL).href;
+// Arama sonucunda ~60 karakterden sonrası kesilir; uzun başlıkta site adı eklenmez
+const ekli = `${title} | ${SITE_ADI}`;
+const tamBaslik = ekli.length > 65 ? title : ekli;
+const kapali = noindex || !YAYINDA;
+---
+<!doctype html>
+<html lang="tr-TR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{tamBaslik}</title>
+    <meta name="description" content={description} />
+    {!sayfa404 && <link rel="canonical" href={canonical} />}
+    {kapali
+      ? <meta name="robots" content="noindex, follow" />
+      : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+    <meta property="og:type" content={ogTur} />
+    <meta property="og:title" content={tamBaslik} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={SITE_ADI} />
+    <meta property="og:locale" content="tr_TR" />
+    {yayin && <meta property="article:published_time" content={yayin.toISOString()} />}
+    {(guncelleme ?? yayin) && <meta property="article:modified_time" content={(guncelleme ?? yayin)!.toISOString()} />}
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#0e6b5c" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={SITE_ADI} href="/rss.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(yayinciSemasi())} />
+    {jsonLd.map((veri) => <script type="application/ld+json" set:html={JSON.stringify(veri)} />)}
+  </head>
+  <body>
+    <a href="#icerik" class="gizli">İçeriğe geç</a>
+    <Header />
+    <main id="icerik">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

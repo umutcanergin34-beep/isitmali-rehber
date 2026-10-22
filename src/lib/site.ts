@@ -1,0 +1,14 @@
+// Sitenin tek ayar dosyası. Alan adı alınınca SITE_URL'i değiştir, YAYINDA'yı true yap.
+export const SITE_ADI = 'Isıtmalı Rehber';
+export const SITE_SLOGAN = 'Isıtmalı tütün cihazları için bağımsız teknik rehber';
+export const SITE_URL = 'https://isitmalirehber.com';
+// false iken tüm sayfalar noindex, robots.txt her şeyi kapatır: alan adı ve avukat onayı gelmeden Google'a açılmaz.
+export const YAYINDA = false;
+// Sahiplik açıklaması (Hakkımızda). Mağaza adı ve linki karar verilince doldurulur; boşken gösterilmez.
+// Editör: gerçek kişi, gerçek adıyla. Boşken yazar olarak site gösterilir.
+export const EDITOR = { ad: '', unvan: '', hakkinda: '' };
+// Sahiplik açıklaması (Hakkımızda). Mağaza adı ve linki karar verilince doldurulur; boşken uyarı gösterilir.
+export const SAHIPLIK = { magazaAdi: '', magazaUrl: '' };
+
+export const tarihYaz = (d: Date) => d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
+export const isoGun = (d: Date) => d.toISOString().slice(0, 10);

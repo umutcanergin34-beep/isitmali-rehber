@@ -1,0 +1,16 @@
+---
+const yol = Astro.url.pathname;
+const menu = [
+  { ad: 'Rehberler', href: '/rehber/' },
+  { ad: 'Hakkımızda', href: '/hakkimizda/' },
+  { ad: 'Yayın ilkeleri', href: '/yayin-ilkeleri/' },
+];
+---
+<header class="ust">
+  <div class="kap">
+    <a href="/" class="logo">Isıtmalı<span>Rehber</span></a>
+    <nav class="menu" aria-label="Ana menü">
+      {menu.map((m) => <a href={m.href} aria-current={yol.startsWith(m.href) ? 'page' : undefined}>{m.ad}</a>)}
+    </nav>
+  </div>
+</header>
