@@ -1,16 +1,24 @@
 ---
+import { KATEGORI_BILGI, type Kategori } from '../content.config';
+import { SITE_SLOGAN } from '../lib/site';
 const yol = Astro.url.pathname;
-const menu = [
-  { ad: 'Rehberler', href: '/rehber/' },
-  { ad: 'Hakkımızda', href: '/hakkimizda/' },
-  { ad: 'Yayın ilkeleri', href: '/yayin-ilkeleri/' },
-];
+const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGORI_BILGI)[Kategori]][];
 ---
 <header class="ust">
-  <div class="kap">
-    <a href="/" class="logo">Isıtmalı<span>Rehber</span></a>
-    <nav class="menu" aria-label="Ana menü">
-      {menu.map((m) => <a href={m.href} aria-current={yol.startsWith(m.href) ? 'page' : undefined}>{m.ad}</a>)}
-    </nav>
+  <div class="ust-serit">
+    <div class="kap">
+      <span>Bağımsız rehber · Satış yapmaz · 18+</span>
+      <nav aria-label="Site bilgisi"><a href="/hakkimizda/">Hakkımızda</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a></nav>
+    </div>
   </div>
+  <div class="kap ust-logo">
+    <a href="/" class="logo">Isıtmalı<span>Rehber</span></a>
+    <p class="slogan">{SITE_SLOGAN}</p>
+  </div>
+  <nav class="kat-menu" aria-label="Kategoriler">
+    <div class="kap">
+      <a href="/rehber/" aria-current={yol === '/rehber/' ? 'page' : undefined}>Tüm rehberler</a>
+      {kategoriler.map(([k, b]) => <a href={`/kategori/${k}/`} style={`--kat:${b.renk}`} aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>{b.kisa}</a>)}
+    </div>
+  </nav>
 </header>

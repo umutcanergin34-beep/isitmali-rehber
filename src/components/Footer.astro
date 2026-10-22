@@ -1,16 +1,27 @@
 ---
 import { SITE_ADI } from '../lib/site';
+import { KATEGORI_BILGI, type Kategori } from '../content.config';
 const yil = new Date().getFullYear();
+const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGORI_BILGI)[Kategori]][];
 ---
 <footer class="alt">
-  <div class="kap">
-    <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez. İçerik yalnızca 18 yaş üstü yetişkinler içindir; ısıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
-    <nav aria-label="Alt menü">
-      <a href="/rehber/">Rehberler</a>
+  <div class="kap alt-izgara">
+    <div>
+      <a href="/" class="logo logo-alt">Isıtmalı<span>Rehber</span></a>
+      <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez.</p>
+      <p>İçerik yalnızca 18 yaş üstü yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
+    </div>
+    <nav aria-label="Kategoriler (alt)">
+      <p class="alt-baslik">Kategoriler</p>
+      {kategoriler.map(([k, b]) => <a href={`/kategori/${k}/`}>{b.kisa}</a>)}
+    </nav>
+    <nav aria-label="Site">
+      <p class="alt-baslik">Site</p>
+      <a href="/rehber/">Tüm rehberler</a>
       <a href="/hakkimizda/">Hakkımızda</a>
       <a href="/yayin-ilkeleri/">Yayın ilkeleri ve düzeltmeler</a>
       <a href="/rss.xml">RSS</a>
     </nav>
-    <p>© {yil} {SITE_ADI}</p>
   </div>
+  <div class="kap alt-son">© {yil} {SITE_ADI}</div>
 </footer>

@@ -3,7 +3,8 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import SSS from '../../components/SSS.astro';
-import { KATEGORILER } from '../../content.config';
+import Kapak from '../../components/Kapak.astro';
+import { KATEGORILER, KATEGORI_BILGI } from '../../content.config';
 import { sssSemasi, makaleSemasi } from '../../lib/sema';
 import { tarihYaz, isoGun } from '../../lib/site';
 
@@ -25,10 +26,11 @@ const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tum
     <div class="yazi-duzen">
       <article class="yazi">
         <Kirinti yollar={[{ ad: 'Rehberler', href: '/rehber/' }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
-        <p class="ust-etiket" style="margin-top:20px">{KATEGORILER[v.kategori]}</p>
+        <a href={`/kategori/${v.kategori}/`} class="kat-etiket" style={`--kat:${KATEGORI_BILGI[v.kategori].renk};margin-top:20px`}>{KATEGORILER[v.kategori]}</a>
         <h1>{v.baslik}</h1>
         <p class="tarih">Yayın: <time datetime={isoGun(v.yayin)}>{tarihYaz(v.yayin)}</time>{v.guncelleme && <> · Güncelleme: <time datetime={isoGun(v.guncelleme)}>{tarihYaz(v.guncelleme)}</time></>}</p>
         {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
+        <div class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk /></div>
         <Content />
         <p class="not18">Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />

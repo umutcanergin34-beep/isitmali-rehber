@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers: derlenmiş statik site (dist/) olarak yayınlanır, sunucu kodu yok
+  "name": "isitmali-rehber",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+    "html_handling": "force-trailing-slash"
+  }
+}
