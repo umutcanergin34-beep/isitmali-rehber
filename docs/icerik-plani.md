@@ -24,10 +24,10 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 6 | Güven | Batarya ısınırsa ya da şişerse ne yapılmalı? | Yazıldı |
 | 7 | Teknoloji | glo hyper serisi modelleri ve farkları | |
 | 8 | Teknoloji | Ploom X ve Ploom AURA: farklar | |
-| 9 | Kullanım | Cihaz şarj olmuyor: sık sorunlar ve çözümler | |
+| 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
 | 12 | Mevzuat | 4207 reklam yasağı: sosyal medyada neler yasak? | Yazıldı, doğrulanacak |
 | 13 | Mevzuat | Avrupa Birliği'nde aromalı ısıtmalı tütün yasağı | Yazıldı |
 | 14 | Kullanım | Soğuk ve sıcak havada cihaz kullanımı | Yazıldı |
 | 15 | Temel | Hangi marka hangi şirketin? Üreticiler ve ürün aileleri | Yazıldı |
-| 16 | Kullanım | Cihazı sıfırlama ve holder ile kutuyu eşleştirme | |
+| 16 | Kullanım | Cihazı sıfırlama | Şarj ve ışıklar yazılarına eklendi |
