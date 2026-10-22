@@ -13,6 +13,6 @@ const rehberler = (await getCollection('rehber')).sort((a, b) => b.data.yayin.ge
       <h1>Tüm rehberler</h1>
       <p class="ozet">Her rehber üreticilerin kendi kılavuzlarına ve resmi kaynaklara dayanır; kaynaklar sayfanın sonunda listelenir.</p>
     </header>
-    <div class="izgara">{rehberler.map((r) => <Kart slug={r.id} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={r.data.guncelleme ?? r.data.yayin} />)}</div>
+    <div class="izgara">{rehberler.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={r.data.guncelleme ?? r.data.yayin} />)}</div>
   </div>
 </Base>

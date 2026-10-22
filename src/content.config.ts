@@ -21,7 +21,7 @@ export const KATEGORI_BILGI: Record<Kategori, { kisa: string; renk: string; acik
 // Rehber yazıları: her yazı bir Markdown dosyası
 const rehber = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/rehber' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     baslik: z.string(),
     aciklama: z.string().max(160),
     kategori: z.enum(Object.keys(KATEGORILER) as [keyof typeof KATEGORILER, ...(keyof typeof KATEGORILER)[]]),
@@ -32,6 +32,8 @@ const rehber = defineCollection({
     kaynaklar: z.array(z.object({ ad: z.string(), url: z.string().url() })).default([]),
     // Yayın öncesi doğrulanması gereken bilgi varsa true; sayfada uyarı çıkar, sitemap'e girmez
     dogrulanacak: z.boolean().default(false),
+    // İsteğe bağlı cihaz fotoğrafı: src/assets/cihazlar/ altında, yalnızca cihaz (çubuk, duman, kutu yok)
+    gorsel: z.object({ src: image(), alt: z.string(), kaynak: z.string().optional() }).optional(),
   }),
 });
 
