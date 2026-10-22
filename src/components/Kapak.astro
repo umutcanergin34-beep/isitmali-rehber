@@ -1,8 +1,10 @@
 ---
-// Ürün fotoğrafı kullanmadığımız için her yazıya kategorisinin renginde, slug'dan türeyen soyut bir kapak çizilir
+// Yazının kendi cihaz fotoğrafı varsa o gösterilir; yoksa kategorisinin renginde, slug'dan türeyen soyut bir kapak çizilir
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
-interface Props { kategori: Kategori; slug: string; buyuk?: boolean }
-const { kategori, slug, buyuk = false } = Astro.props;
+interface Props { kategori: Kategori; slug: string; buyuk?: boolean; gorsel?: { src: ImageMetadata; alt: string } }
+const { kategori, slug, buyuk = false, gorsel } = Astro.props;
 const { renk, kisa } = KATEGORI_BILGI[kategori];
 // slug'dan sabit bir sayı: aynı yazı her derlemede aynı kapağı alır
 let tohum = 0;
@@ -11,6 +13,9 @@ const r = (n: number) => { tohum = (tohum * 1103515245 + 12345) >>> 0; return to
 const halkalar = Array.from({ length: 4 }, (_, i) => ({ cx: 120 + r(360), cy: 40 + r(200), rr: 30 + r(90) + i * 10 }));
 const aci = r(30) - 15;
 ---
+{gorsel ? (
+  <Image src={gorsel.src} alt={gorsel.alt} class={buyuk ? 'kapak kapak-foto kapak-buyuk' : 'kapak kapak-foto'} widths={buyuk ? [640, 960, 1280] : [400, 640]} sizes={buyuk ? '(max-width: 760px) 100vw, 760px' : '(max-width: 760px) 100vw, 360px'} loading={buyuk ? 'eager' : 'lazy'} />
+) : (
 <svg class={buyuk ? 'kapak kapak-buyuk' : 'kapak'} viewBox="0 0 640 360" role="img" aria-label={`${kisa} kategorisi kapak görseli`} preserveAspectRatio="xMidYMid slice">
   <rect width="640" height="360" fill={renk} />
   <g fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2">
@@ -25,3 +30,4 @@ const aci = r(30) - 15;
   </g>
   <text x="32" y="324" fill="#ffffff" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="700" letter-spacing="2">{kisa.toLocaleUpperCase('tr-TR')}</text>
 </svg>
+)}
