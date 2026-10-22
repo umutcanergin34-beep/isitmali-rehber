@@ -3,7 +3,7 @@ import Kapak from './Kapak.astro';
 import type { ImageMetadata } from 'astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { tarihYaz, isoGun } from '../lib/site';
-interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kategori; tarih: Date; tur?: 'buyuk' | 'normal' | 'yatay'; gorsel?: { src: ImageMetadata; alt: string } }
+interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kategori; tarih: Date; tur?: 'buyuk' | 'normal' | 'yatay'; gorsel?: { src: ImageMetadata | string; alt: string } }
 const { slug, baslik, aciklama, kategori, tarih, tur = 'normal', gorsel } = Astro.props;
 const { kisa, renk } = KATEGORI_BILGI[kategori];
 ---

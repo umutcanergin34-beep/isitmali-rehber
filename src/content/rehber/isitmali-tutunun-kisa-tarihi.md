@@ -5,6 +5,11 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
 dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/a/a2/IQOS_heated_tobacco_devices.jpg"
+  alt: "1998 tarihli Accord'dan 2021 tarihli IQOS ILUMA'ya kadar ısıtmalı tütün cihazları yan yana"
+  kaynak: "Wikimedia Commons, CC BY-SA 4.0"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_heated_tobacco_devices.jpg"
 etiketler: ["tarih", "IQOS", "glo", "Ploom", "lil", "Japonya"]
 sss:
   - soru: "İlk ısıtmalı tütün ürünü hangisidir?"

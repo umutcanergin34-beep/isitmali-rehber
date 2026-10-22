@@ -140,7 +140,7 @@ h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin: 8px 0 12px; }
 .kat-ust { border-top: 3px solid var(--kat, var(--metin)); padding-top: 12px; margin: 16px 0 28px; }
 .kat-ust h1 { margin-top: 0; }
 .yazi-kapak { margin: 8px 0 28px; }
-.kapak-foto { object-fit: cover; background: var(--zemin); }
+.kapak-foto { object-fit: contain; background: var(--yuzey, var(--zemin)); }
 .yazi-kapak figcaption { margin-top: 6px; font-size: .8rem; color: var(--soluk); }
 
 .alt { margin-top: 64px; background: #101614; color: #c9d3d0; font-size: .88rem; }

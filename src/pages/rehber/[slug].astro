@@ -30,7 +30,7 @@ const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tum
         <h1>{v.baslik}</h1>
         <p class="tarih">Yayın: <time datetime={isoGun(v.yayin)}>{tarihYaz(v.yayin)}</time>{v.guncelleme && <> · Güncelleme: <time datetime={isoGun(v.guncelleme)}>{tarihYaz(v.guncelleme)}</time></>}</p>
         {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
-        <figure class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk gorsel={v.gorsel} />{v.gorsel?.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynak}</figcaption>}</figure>
+        <figure class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk gorsel={v.gorsel} />{v.gorsel?.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynakUrl ? <a href={v.gorsel.kaynakUrl} rel="nofollow noopener" target="_blank">{v.gorsel.kaynak}</a> : v.gorsel.kaynak}</figcaption>}</figure>
         <Content />
         <p class="not18">Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />
