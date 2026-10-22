@@ -4,6 +4,8 @@ import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import SSS from '../../components/SSS.astro';
 import Kapak from '../../components/Kapak.astro';
+import Kart from '../../components/Kart.astro';
+import Ikon from '../../components/Ikon.astro';
 import { KATEGORILER, KATEGORI_BILGI } from '../../content.config';
 import { sssSemasi, makaleSemasi } from '../../lib/sema';
 import { tarihYaz, isoGun } from '../../lib/site';
@@ -16,45 +18,61 @@ const { r } = Astro.props;
 const v = r.data;
 const { Content, headings } = await render(r);
 const bolumler = headings.filter((h) => h.depth === 2);
-// Aynı kategoriden en fazla 4 rehber, yoksa diğerleri: her rehber iç link alsın
+// Türkçe metin için dakikada ~200 kelime
+const dakika = Math.max(1, Math.round((r.body ?? '').split(/\s+/).filter(Boolean).length / 200));
+const alanAdi = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+// Aynı kategoriden en fazla 3 rehber, yoksa diğerleri: her rehber iç link alsın
 const tumu = (await getCollection('rehber')).filter((x) => x.id !== r.id);
-const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tumu.filter((x) => x.data.kategori !== v.kategori)].slice(0, 4);
+const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tumu.filter((x) => x.data.kategori !== v.kategori)].slice(0, 3);
+const kat = KATEGORI_BILGI[v.kategori];
 ---
 <Base title={v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak}
   jsonLd={[makaleSemasi(r.id, v), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
-  <div class="kap">
+  <div class="kap" style={`--kat:${kat.renk}`}>
+    <header class="yazi-ust">
+      <Kirinti yollar={[{ ad: kat.kisa, href: `/kategori/${v.kategori}/` }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
+      <a href={`/kategori/${v.kategori}/`} class="kat-etiket"><Ikon ad={v.kategori} boyut={14} />{KATEGORILER[v.kategori]}</a>
+      <h1>{v.baslik}</h1>
+      <p class="yazi-dek">{v.aciklama}</p>
+      <ul class="meta">
+        <li><Ikon ad="saat" boyut={16} />{dakika} dk okuma</li>
+        <li><Ikon ad="kaynak" boyut={16} />{v.kaynaklar.length} kaynak</li>
+        <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
+      </ul>
+      {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
+    </header>
     <div class="yazi-duzen">
       <article class="yazi">
-        <Kirinti yollar={[{ ad: 'Rehberler', href: '/rehber/' }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
-        <a href={`/kategori/${v.kategori}/`} class="kat-etiket" style={`--kat:${KATEGORI_BILGI[v.kategori].renk};margin-top:20px`}>{KATEGORILER[v.kategori]}</a>
-        <h1>{v.baslik}</h1>
-        <p class="tarih">Yayın: <time datetime={isoGun(v.yayin)}>{tarihYaz(v.yayin)}</time>{v.guncelleme && <> · Güncelleme: <time datetime={isoGun(v.guncelleme)}>{tarihYaz(v.guncelleme)}</time></>}</p>
-        {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
-        <figure class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk gorsel={v.gorsel} />{v.gorsel?.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynakUrl ? <a href={v.gorsel.kaynakUrl} rel="nofollow noopener" target="_blank">{v.gorsel.kaynak}</a> : v.gorsel.kaynak}</figcaption>}</figure>
-        <Content />
-        <p class="not18">Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
+        {v.gorsel && <figure class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk gorsel={v.gorsel} />{v.gorsel.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynakUrl ? <a href={v.gorsel.kaynakUrl} rel="nofollow noopener" target="_blank">{v.gorsel.kaynak}</a> : v.gorsel.kaynak}</figcaption>}</figure>}
+        <div class="icerik"><Content /></div>
+        <p class="not18"><Ikon ad="kalkan" boyut={16} />Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />
         {v.kaynaklar.length > 0 && (
-          <section class="bolum kaynaklar">
+          <section class="bolum kaynaklar" id="kaynaklar">
             <h2>Kaynaklar</h2>
-            <ol>{v.kaynaklar.map((k) => <li><a href={k.url} rel="nofollow noopener" target="_blank">{k.ad}</a></li>)}</ol>
-          </section>
-        )}
-        {digerleri.length > 0 && (
-          <section class="bolum">
-            <h2>Diğer rehberler</h2>
-            <ul class="liste">{digerleri.map((x) => <li><a href={`/rehber/${x.id}/`}><strong>{x.data.baslik}</strong></a></li>)}</ul>
+            <ol>{v.kaynaklar.map((k) => <li><a href={k.url} rel="nofollow noopener" target="_blank">{k.ad}</a><span>{alanAdi(k.url)}</span></li>)}</ol>
           </section>
         )}
       </article>
-      {bolumler.length > 2 && (
-        <aside>
+      <aside class="yazi-yan">
+        {bolumler.length > 1 && (
           <nav class="icindekiler" aria-label="İçindekiler">
-            <p class="ust-etiket">Bu yazıda</p>
+            <p class="yan-baslik">Bu rehberde</p>
             <ul>{bolumler.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
           </nav>
-        </aside>
-      )}
+        )}
+        <div class="yan-kutu">
+          <p class="yan-baslik">Bu rehber hakkında</p>
+          <p>{v.kaynaklar.length} kaynağa dayanır. Yayın: {tarihYaz(v.yayin)}.</p>
+          <a href="/yayin-ilkeleri/">Yayın ilkelerimiz</a>
+        </div>
+      </aside>
     </div>
+    {digerleri.length > 0 && (
+      <section class="bolum-ana ilgili">
+        <div class="bolum-baslik"><h2>Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
+        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} baslik={x.data.baslik} aciklama={x.data.aciklama} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} />)}</div>
+      </section>
+    )}
   </div>
 </Base>
