@@ -46,8 +46,7 @@ Bu tablo ABD ve Kanada otoritelerinin yayımladığı kurallara dayanıyor. Tür
 2. **Cihazı kapatın.** Isıtıcının çantada yanlışlıkla çalışmaması için kapalı ve tercihen kendi kutusunda ya da kılıfında taşıyın.
 3. **Şarjı yerde yapın.** Uçakta şarj etmek yasak, havalimanında uçuştan önce şarj edin.
 4. **Yedek şarj kutusunu ya da powerbank'i de kabine alın.** Onlar da lityum bataryadır.
-5. **Varış ülkesinin kuralına bakın.** Bazı ülkeler ısıtmalı tütün cihazlarının ve çubuklarının ülkeye girişini yasaklar ya da sınırlar. Taşımak serbest olsa bile, bulundurmak varış ülkesinde yasak olabilir.
 
 ## Güvenlik kontrolünde
 
-Cihaz, telefon ve tablet gibi elektronik eşya olarak taranır; görevli göstermenizi isteyebilir. Çubuklar ise ayrı bir kurala tabidir: birçok ülke tütün ürünlerine gümrükte miktar sınırı koyar, bazı ülkeler hiç izin vermez.
+Cihaz, telefon ve tablet gibi elektronik eşya olarak taranır; görevli göstermenizi isteyebilir.

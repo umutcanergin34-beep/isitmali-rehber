@@ -25,7 +25,7 @@ kaynaklar:
   - { ad: "Wikipedia: List of heated tobacco products", url: "https://en.wikipedia.org/wiki/List_of_heated_tobacco_products" }
 ---
 
-**Kısaca:** Tütünü yakmadan ısıtma fikri 1980'lere kadar gider, ama ilk denemeler tutmadı. Bugünkü ısıtmalı tütün pazarı **2014'te Japonya'da IQOS** ile başladı. Ardından **glo (2016)**, **Ploom TECH (2016)** ve Kore'de **lil** geldi. 2021'den sonra bıçaksız, **indüksiyonlu** cihazlar yaygınlaştı. Türkiye'de ise ısıtılmış tütün ürünlerinin ithalatı 2020'den beri yasak.
+**Kısaca:** Tütünü yakmadan ısıtma fikri 1980'lere kadar gider, ama ilk denemeler tutmadı. Bugünkü ısıtmalı tütün pazarı **2014'te Japonya'da IQOS** ile başladı. Ardından **glo (2016)**, **Ploom TECH (2016)** ve Kore'de **lil** geldi. 2021'den sonra bıçaksız, **indüksiyonlu** cihazlar yaygınlaştı.
 
 ## Zaman çizelgesi
 
@@ -39,7 +39,6 @@ kaynaklar:
 | 2016 | JTI, Ploom TECH'i Japonya'da çıkarır. Aralık ayında British American Tobacco (BAT), glo'yu Sendai'de test pazarına sunar. |
 | 2017 | glo Japonya geneline yayılır. KT&G, lil markasıyla Güney Kore pazarına girer. |
 | Nisan 2019 | ABD Gıda ve İlaç Dairesi (FDA), IQOS'un ABD'de satışına izin verir. |
-| Şubat 2020 | Türkiye'de ısıtılmış tütün ürünlerinin ithalatı Cumhurbaşkanı Kararı ile yasaklanır. |
 | 2021 | PMI indüksiyonlu, bıçaksız IQOS ILUMA serisini çıkarır. JTI dıştan ısıtmalı Ploom X'i çıkarır. |
 | 2025 | JTI, Ploom AURA cihazını ve EVO çubuklarını tanıtır. |
 

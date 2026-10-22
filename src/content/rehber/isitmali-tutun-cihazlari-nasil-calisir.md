@@ -46,7 +46,7 @@ kaynaklar:
 | lil SOLID | KT&G | Fiit | lil SOLID 2.0 indüksiyonlu |
 | lil HYBRID | KT&G | MIIX + likit kartuş | Cihaz kendi çubuğunu algılar, başka çubukla çalışmaz |
 
-Türkiye'de ısıtılmış tütün ürünlerinin ithalatı 2020'den beri yasaktır (Cumhurbaşkanı Kararı 2149); bu tablo ürünlerin satışı ya da teminine dair bilgi vermez.
+Bu tablo yalnızca teknik uyumluluğu gösterir; ürünlerin satışı ya da teminine dair bilgi vermez.
 
 ## Neden çubuklar birbirinin yerine geçmez?
 
