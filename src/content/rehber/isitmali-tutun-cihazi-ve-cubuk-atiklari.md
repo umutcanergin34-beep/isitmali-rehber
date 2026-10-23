@@ -5,10 +5,10 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/a/a3/IQOS_-_heated_tobacco_products.jpg"
-  alt: "IQOS ısıtmalı tütün ürünleri"
+  src: "../../assets/gorseller/isitmali-tutun-cihazi-ve-cubuk-atiklari.jpg"
+  alt: "İki farklı renkte IQOS 2.4+ cihazı ve şarj kutusu"
   kaynak: "Wikimedia Commons"
-  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_-_heated_tobacco_products.jpg"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_2.4%2B.jpg"
 etiketler: ["atık", "geri dönüşüm", "elektronik atık", "batarya", "çevre"]
 sss:
   - soru: "Eski ısıtmalı tütün cihazını çöpe atabilir miyim?"

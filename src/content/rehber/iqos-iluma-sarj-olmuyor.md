@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/USB-C_cable_2017_A.jpg/1280px-USB-C_cable_2017_A.jpg"
+  src: "../../assets/gorseller/iqos-iluma-sarj-olmuyor.jpg"
   alt: "USB-C şarj kablosu"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:USB-C_cable_2017_A.jpg"

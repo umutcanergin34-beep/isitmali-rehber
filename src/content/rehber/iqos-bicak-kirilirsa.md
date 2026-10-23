@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Heets-blade.jpg/1280px-Heets-blade.jpg"
+  src: "../../assets/gorseller/iqos-bicak-kirilirsa.jpg"
   alt: "IQOS tutucusundaki ısıtma bıçağı ve HEETS çubuğu"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Heets-blade.jpg"

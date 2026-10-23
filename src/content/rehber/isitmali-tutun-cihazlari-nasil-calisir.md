@@ -5,9 +5,9 @@ yayin: 2026-10-22
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/IQOS_Iluma.jpg/1280px-IQOS_Iluma.jpg"
+  src: "../../assets/gorseller/isitmali-tutun-cihazlari-nasil-calisir.jpg"
   alt: "IQOS ILUMA ısıtmalı tütün cihazı ve tutucusu"
-  kaynak: "Wikimedia Commons, CC BY-SA 4.0"
+  kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma.jpg"
 etiketler: ["ısıtmalı tütün", "teknoloji", "uyumluluk", "IQOS", "glo", "Ploom", "lil"]
 sss:

@@ -6,7 +6,7 @@ guncelleme: 2026-10-23
 kategori: mevzuat
 dogrulanacak: true
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Volume_tobacco.jpg"
+  src: "../../assets/gorseller/tutun-ambalaj-ve-uyari-kurallari.jpg"
   alt: "Tütün"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Volume_tobacco.jpg"

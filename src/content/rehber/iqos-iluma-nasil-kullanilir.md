@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/IQOS_Iluma.jpg/1280px-IQOS_Iluma.jpg"
+  src: "../../assets/gorseller/iqos-iluma-nasil-kullanilir.jpg"
   alt: "IQOS ILUMA ısıtmalı tütün cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma.jpg"

@@ -5,9 +5,9 @@ yayin: 2026-10-22
 guncelleme: 2026-10-23
 kategori: temel
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/a/a2/IQOS_heated_tobacco_devices.jpg"
+  src: "../../assets/gorseller/isitmali-tutunun-kisa-tarihi.jpg"
   alt: "1998 tarihli Accord'dan 2021 tarihli IQOS ILUMA'ya kadar ısıtmalı tütün cihazları yan yana"
-  kaynak: "Wikimedia Commons, CC BY-SA 4.0"
+  kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_heated_tobacco_devices.jpg"
 etiketler: ["tarih", "IQOS", "glo", "Ploom", "lil", "Japonya"]
 sss:

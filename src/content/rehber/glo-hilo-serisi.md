@@ -5,10 +5,10 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/3/38/British_American_Tobacco_(BAT)_Cirebon_(3).jpg"
-  alt: "British American Tobacco'nun bir tesisi"
+  src: "../../assets/gorseller/glo-hilo-serisi.png"
+  alt: "BAT'ın glo ısıtmalı tütün cihazı"
   kaynak: "Wikimedia Commons"
-  kaynakUrl: "https://commons.wikimedia.org/wiki/File:British_American_Tobacco_(BAT)_Cirebon_(3).jpg"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Glo_-_British_American_Tobacco.png"
 etiketler: ["glo", "BAT", "glo Hilo", "Hilo Plus", "virto", "EasySwitch"]
 sss:
   - soru: "glo Hilo ne zaman çıktı?"

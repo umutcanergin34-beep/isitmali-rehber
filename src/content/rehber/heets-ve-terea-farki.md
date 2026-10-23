@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/9/91/HEETS_cigarette_and_IQOS_smoking_device_(cropped).jpg"
+  src: "../../assets/gorseller/heets-ve-terea-farki.jpg"
   alt: "Bir HEETS tütün çubuğu ve IQOS cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:HEETS_cigarette_and_IQOS_smoking_device_(cropped).jpg"

@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/IQOS_Iluma_One.jpg/1280px-IQOS_Iluma_One.jpg"
+  src: "../../assets/gorseller/tutunsuz-nikotin-cubuklari-levia.jpg"
   alt: "IQOS ILUMA ONE cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_One.jpg"

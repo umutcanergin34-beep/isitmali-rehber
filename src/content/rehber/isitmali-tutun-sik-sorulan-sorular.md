@@ -5,10 +5,10 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/4/4d/IQOS.jpg"
-  alt: "IQOS ısıtmalı tütün cihazı"
+  src: "../../assets/gorseller/isitmali-tutun-sik-sorulan-sorular.jpg"
+  alt: "IQOS 3 DUO ısıtmalı tütün cihazı ve şarj kutusu"
   kaynak: "Wikimedia Commons"
-  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS.jpg"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_3_Duo.jpg"
 etiketler: ["sık sorulan sorular", "ısıtmalı tütün", "temel"]
 sss:
   - soru: "Isıtmalı tütün nedir?"

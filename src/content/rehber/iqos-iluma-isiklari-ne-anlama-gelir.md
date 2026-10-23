@@ -5,9 +5,9 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/IQOS_Iluma_One.jpg/1280px-IQOS_Iluma_One.jpg"
+  src: "../../assets/gorseller/iqos-iluma-isiklari-ne-anlama-gelir.jpg"
   alt: "IQOS ILUMA ONE ısıtmalı tütün cihazı"
-  kaynak: "Wikimedia Commons, CC BY-SA 4.0"
+  kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_One.jpg"
 etiketler: ["IQOS", "ILUMA", "ışıklar", "hata", "sıfırlama", "sorun giderme"]
 sss:

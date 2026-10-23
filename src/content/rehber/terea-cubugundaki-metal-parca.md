@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: guven
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Heat-not-burn_tobacco_system.png"
+  src: "../../assets/gorseller/terea-cubugundaki-metal-parca.png"
   alt: "Isıtmalı tütün sisteminin şeması"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Heat-not-burn_tobacco_system.png"

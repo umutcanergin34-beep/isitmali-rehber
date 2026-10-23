@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/3/3c/IQOS_01.jpg"
+  src: "../../assets/gorseller/isitmali-tutun-cihazi-temizligi.jpg"
   alt: "IQOS ısıtmalı tütün cihazı yakın plan"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_01.jpg"

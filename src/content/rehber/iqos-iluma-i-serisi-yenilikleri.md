@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/IQOS_Iluma_Prime.jpg/1280px-IQOS_Iluma_Prime.jpg"
+  src: "../../assets/gorseller/iqos-iluma-i-serisi-yenilikleri.jpg"
   alt: "IQOS ILUMA PRIME cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_Prime.jpg"

@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/6/67/Glo_-_British_American_Tobacco.png"
+  src: "../../assets/gorseller/glo-hyper-serisi-modelleri.png"
   alt: "BAT'ın glo ısıtmalı tütün cihazları"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Glo_-_British_American_Tobacco.png"

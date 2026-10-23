@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Vape_Pen_-_E-Cigarette_(25587529206).jpg/1280px-Vape_Pen_-_E-Cigarette_(25587529206).jpg"
+  src: "../../assets/gorseller/isitmali-tutun-e-sigara-ve-sigara-farki.jpg"
   alt: "Kalem tipi bir elektronik sigara"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Vape_Pen_-_E-Cigarette_(25587529206).jpg"

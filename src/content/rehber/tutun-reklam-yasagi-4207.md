@@ -6,7 +6,7 @@ guncelleme: 2026-10-22
 kategori: mevzuat
 dogrulanacak: true
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Building_of_the_Grand_National_Assembly_of_Turkey.jpg/1280px-Building_of_the_Grand_National_Assembly_of_Turkey.jpg"
+  src: "../../assets/gorseller/tutun-reklam-yasagi-4207.jpg"
   alt: "Ankara'daki TBMM binası"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Building_of_the_Grand_National_Assembly_of_Turkey.jpg"
