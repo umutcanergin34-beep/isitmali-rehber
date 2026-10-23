@@ -34,6 +34,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 24 | Teknoloji | lil SOLID, lil HYBRID ve lil AIBLE | Yazıldı, doğrulanacak |
 | 25 | Teknoloji | glo Hilo ve Hilo Plus | Yazıldı, doğrulanacak |
 | 26 | Teknoloji | Tütünsüz nikotin çubukları: LEVIA | Yazıldı, doğrulanacak |
+| 27 | Kullanım | IQOS ILUMA nasıl kullanılır (yüksek talep) | Yazıldı, doğrulanacak |
+| 28 | Kullanım | IQOS ILUMA şarj süresi ve kullanım sayısı (yüksek talep) | Yazıldı, doğrulanacak |
+| 29 | Temel | TEREA nedir (yüksek talep) | Yazıldı, doğrulanacak |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |

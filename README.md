@@ -4,7 +4,7 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 
 ## Durum
 - **Yayında değil.** `src/lib/site.ts` içinde `YAYINDA = false`: tüm sayfalar `noindex`, `robots.txt` her şeyi kapatıyor.
-- Alan adı alınmadı; `SITE_URL` yer tutucu (`https://isitmalirehber.com`).
+- Alan adı: `https://isitmalihber.com` (Cloudflare Workers özel alan adı, `wrangler.jsonc`).
 - Editör ve sahiplik bilgisi boş (`EDITOR`, `SAHIPLIK`); boşken Hakkımızda'da uyarı görünür.
 - Vape kategorisi yok; 3 ay sonra Search Console verisine bakılıp karar verilecek.
 

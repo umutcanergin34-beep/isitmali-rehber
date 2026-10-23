@@ -2,6 +2,8 @@
   // Cloudflare Workers: derlenmiş statik site (dist/) olarak yayınlanır, sunucu kodu yok
   "name": "isitmali-rehber",
   "compatibility_date": "2026-10-01",
+  // Alan adı Cloudflare'de kayıtlı; deploy sırasında Worker'a özel alan adı olarak bağlanır
+  "routes": [{ "pattern": "isitmalihber.com", "custom_domain": true }],
   "assets": {
     "directory": "./dist",
     "not_found_handling": "404-page",
