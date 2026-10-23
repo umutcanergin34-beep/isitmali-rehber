@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün çubukları ve kullanılmış uçlar nikotin içer
 yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: guven
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/1/1c/IQOS_02.jpg"
+  alt: "Bir IQOS ısıtmalı tütün cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_02.jpg"
 etiketler: ["çocuk güvenliği", "nikotin zehirlenmesi", "saklama", "evcil hayvan"]
 sss:
   - soru: "Çocuğum ısıtmalı tütün çubuğu yuttu, ne yapmalıyım?"

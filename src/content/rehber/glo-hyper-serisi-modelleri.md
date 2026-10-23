@@ -4,7 +4,6 @@ aciklama: "BAT'ın glo hyper ailesindeki modeller ne zaman çıktı, nasıl ıs�
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
 gorsel:
   src: "https://upload.wikimedia.org/wikipedia/commons/6/67/Glo_-_British_American_Tobacco.png"
   alt: "BAT'ın glo ısıtmalı tütün cihazları"
@@ -19,6 +18,7 @@ sss:
   - soru: "glo ile IQOS ILUMA aynı çubukları kullanır mı?"
     cevap: "Hayır. Her üreticinin cihazı yalnızca kendi çubuk ailesiyle çalışacak şekilde tasarlanır. glo çubukları IQOS'ta, IQOS çubukları glo'da kullanılmamalıdır."
 kaynaklar:
+  - { ad: "Convenience Store: BAT launches new glo hyper X2", url: "https://conveniencestore.co.uk/products/bat-launches-new-glo-hyper-x2/669718.article" }
   - { ad: "BAT: glo", url: "https://www.bat.com/brands-and-innovation/glo" }
   - { ad: "BAT basın bülteni: glo hyper X2 (21 Temmuz 2022)", url: "https://www.bat.com/media/press-releases/_2022/july/jul-21---bat-launches-glo--hyper-x2--latest--state-of-the-art-he" }
   - { ad: "BAT basın bülteni: hyper pro (Ocak 2024)", url: "https://prod.bat.com/media/press-releases/_2024/january/BAT-launches-hyper-pro-its-most-innovative-glo-device-yet" }
@@ -34,7 +34,8 @@ kaynaklar:
 |---|---|---|---|
 | Çıkış | 2020 | Temmuz 2022 (Tokyo) | Aralık 2023 (Japonya), 2024'te Avrupa |
 | Öne çıkan | hyper serisinin temel modeli | Daha küçük ve hafif gövde | Renkli ekran ve HeatBoost |
-| Ekran ve modlar | Bültende belirtilmiyor | Bültende belirtilmiyor | EasyView ekran, kadranla Standart / Boost |
+| Isıtma | İndüksiyon | İndüksiyon | İndüksiyon |
+| Ekran ve modlar | Kaynaklarda belirtilmiyor | Ayrı boost düğmesi, batarya LED göstergesi | EasyView ekran, kadranla Standart / Boost |
 
 Bilgiler BAT'ın basın bültenlerinden ve ürün sayfasından alınmıştır. Model adları ve özellikler ülkeye göre farklılık gösterebilir.
 
@@ -44,7 +45,7 @@ BAT'ın ürün sayfasına göre hyper+, 2020'de çıktı ve sonraki hyper X2'nin
 
 ## hyper X2 (2022)
 
-BAT, hyper X2'yi 21 Temmuz 2022'de Tokyo'da tanıttı. Basın bültenine göre cihaz, indüksiyonlu ısıtma teknolojisini daha küçük ve daha hafif bir gövdeye taşır. Bültende, hyper X2'nin glo hyper serisinin mevcut çubuklarıyla da çalıştığı belirtiliyor.
+BAT, hyper X2'yi 21 Temmuz 2022'de Tokyo'da tanıttı. Basın bültenine göre cihaz, hyper+'ın indüksiyonlu ısıtma teknolojisini daha küçük ve daha hafif bir gövdeye taşır. Basına yansıyan bilgilere göre gövde hyper+'a göre yüzde 13 daha küçük ve yüzde 7 daha hafif. Ayrıca ayrı bir boost düğmesi, batarya durumunu gösteren LED ve hazneyi koruyan bir kapak eklendi. Bültende, hyper X2'nin glo hyper serisinin mevcut çubuklarıyla da çalıştığı belirtiliyor.
 
 ## hyper pro (2023 sonu)
 

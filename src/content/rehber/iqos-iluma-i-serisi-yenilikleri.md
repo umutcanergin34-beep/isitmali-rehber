@@ -4,7 +4,11 @@ aciklama: "ILUMA i, ILUMA i PRIME ve ILUMA i ONE ile gelen dokunmatik ekran, Dur
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/IQOS_Iluma_Prime.jpg/1280px-IQOS_Iluma_Prime.jpg"
+  alt: "IQOS ILUMA PRIME cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_Prime.jpg"
 etiketler: ["IQOS", "ILUMA i", "ILUMA i PRIME", "ILUMA i ONE", "Duraklatma modu", "FlexPuff", "FlexBattery"]
 sss:
   - soru: "ILUMA i, eski ILUMA çubuklarıyla çalışır mı?"
@@ -19,6 +23,8 @@ kaynaklar:
   - { ad: "Business Wire: PMI basın bülteni (Mart 2024)", url: "https://www.businesswire.com/news/home/20240313137812/en" }
   - { ad: "Diplomacy & Commerce: IQOS ILUMA i", url: "https://www.diplomacyandcommerce.rs/?p=108862" }
   - { ad: "iF Design Award: IQOS ILUMA i", url: "https://ifdesign.com/en/winner-ranking/project/iqos-iluma-i/639857" }
+  - { ad: "IQOS Filipinler: IQOS ILUMA i", url: "https://www.iqos.com/ph/en/iluma-i.html" }
+  - { ad: "IQOS Filipinler: FlexPuff", url: "https://www.iqos.com/ph/en/news/iqos-and-heatsticks/flexpuff-iqos-iluma-i.html" }
   - { ad: "IQOS: Différences entre IQOS ILUMA i, ILUMA i ONE et ILUMA i PRIME", url: "https://www.iqos.com/tn/fr/actualites/iqos-iluma-i/iqos-iluma-i-differences.html" }
 ---
 
@@ -45,8 +51,8 @@ PMI, ILUMA i serisini 2024'te Japonya'daki havalimanı mağazalarında, IQOS'un 
 
 - **Dokunmatik ekran:** Holder'daki küçük ekran, oturumun ne kadar sürdüğünü ve batarya durumunu gösterir. Duraklatma da bu ekrandan yapılır.
 - **Duraklatma modu (Pause):** Ekranda yukarı ya da aşağı kaydırarak kullanıma ara verebilir, sonra çubuğu boşa harcamadan kaldığınız yerden devam edebilirsiniz. Üretici açıklamalarına göre ara en fazla 8 dakika sürebilir. Hangi koşullarda kullanılabildiği (mod, oturumun ilk dakikaları gibi) kaynaklarda farklı anlatıldığı için kılavuzu kontrol edin.
-- **FlexPuff:** Eko modunda, oturumu kullanım temposuna göre ayarlar.
-- **FlexBattery:** Holder bataryasının nasıl kullanılacağını IQOS uygulamasından seçmeyi sağlar. Bir seçenek art arda daha fazla kullanım sunar: basına yansıyan bilgilere göre ara vermeden 3 ya da aralı 2 kullanım. Diğer seçenek, batarya ömrünü uzatmaya yöneliktir.
+- **FlexPuff:** IQOS'a göre nefes temponuza uyum sağlar ve en fazla 4 ek nefes verebilir. Etkinleşmesi kullanım alışkanlığına bağlıdır, duraklatma kullanıldığında çalışmaz.
+- **FlexBattery:** Holder bataryasının iki moddan biriyle kullanılmasını sağlar. Varsayılan **Performance modunda** holder, her birinde bir duraklatma hakkıyla art arda 2 kullanım ya da duraklatmasız art arda 3 kullanım sunar. **Eco modunda** holder tek kullanımla sınırlanır; IQOS'a göre bu, sürekli Eco modunda kullanıldığında holder bataryasının ömrünü bir yıla kadar uzatabilir. Mod, IQOS uygulamasından değiştirilebilir.
 
 ## Neler değişmedi?
 

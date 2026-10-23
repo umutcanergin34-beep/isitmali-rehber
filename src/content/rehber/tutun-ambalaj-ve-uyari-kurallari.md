@@ -5,6 +5,11 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: mevzuat
 dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Volume_tobacco.jpg"
+  alt: "Tütün"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Volume_tobacco.jpg"
 etiketler: ["ambalaj", "düz paket", "sağlık uyarısı", "4207", "7151", "AB", "2022/2100"]
 sss:
   - soru: "Türkiye'de düz paket uygulaması ne zaman başladı?"

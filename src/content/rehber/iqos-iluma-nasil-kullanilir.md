@@ -4,7 +4,11 @@ aciklama: "IQOS ILUMA nasıl açılır, çubuk nasıl takılır, ısınma ne kad
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/IQOS_Iluma.jpg/1280px-IQOS_Iluma.jpg"
+  alt: "IQOS ILUMA ısıtmalı tütün cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma.jpg"
 etiketler: ["IQOS ILUMA", "nasıl kullanılır", "açma kapatma", "TEREA", "ILUMA i"]
 sss:
   - soru: "IQOS ILUMA nasıl açılır ve kapatılır?"

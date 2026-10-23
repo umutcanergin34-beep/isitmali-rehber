@@ -4,7 +4,11 @@ aciklama: "Güney Koreli KT&G'nin lil ailesindeki üç cihaz arasındaki fark ne
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/3/36/Foglie_di_tabacco_essiccate.jpg"
+  alt: "Kurutulmuş tütün yaprakları"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Foglie_di_tabacco_essiccate.jpg"
 etiketler: ["lil", "KT&G", "lil SOLID", "lil HYBRID", "lil AIBLE", "Güney Kore"]
 sss:
   - soru: "lil hangi şirketin markası?"
