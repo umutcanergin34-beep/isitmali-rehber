@@ -4,7 +4,8 @@ import type { APIContext } from 'astro';
 import { SITE_ADI, SITE_SLOGAN } from '../lib/site';
 
 export async function GET(context: APIContext) {
-  const rehberler = (await getCollection('rehber')).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
+  // noindex taslaklar (dogrulanacak) akışa da girmez
+  const rehberler = (await getCollection('rehber', (r) => !r.data.dogrulanacak)).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
   return rss({
     title: SITE_ADI,
     description: SITE_SLOGAN,

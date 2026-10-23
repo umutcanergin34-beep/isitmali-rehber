@@ -1,5 +1,5 @@
 // JSON-LD yardımcıları. Sabit @id'ler sayfalar arası varlıkları birbirine bağlar.
-import { SITE_ADI, SITE_URL, SITE_SLOGAN, EDITOR } from './site';
+import { SITE_ADI, SITE_URL, SITE_SLOGAN, EDITOR, ILETISIM } from './site';
 
 type Sema = Record<string, unknown>;
 const BAGLAM = 'https://schema.org';
@@ -17,6 +17,9 @@ export const yayinciSemasi = (): Sema => ({
   description: SITE_SLOGAN,
   url: mutlakUrl('/'),
   logo: mutlakUrl('/favicon.svg'),
+  publishingPrinciples: mutlakUrl('/yayin-ilkeleri/'),
+  correctionsPolicy: mutlakUrl('/yayin-ilkeleri/#duzeltmeler'),
+  ...(ILETISIM.eposta ? { email: ILETISIM.eposta, contactPoint: { '@type': 'ContactPoint', contactType: 'editorial', email: ILETISIM.eposta, availableLanguage: 'tr' } } : {}),
 });
 
 export const webSitesiSemasi = (): Sema => ({
@@ -29,7 +32,11 @@ export const webSitesiSemasi = (): Sema => ({
   publisher: { '@id': YAYINCI_ID },
 });
 
-export const makaleSemasi = (slug: string, v: { baslik: string; aciklama: string; yayin: Date; guncelleme?: Date; etiketler: string[] }): Sema => ({
+export const makaleSemasi = (
+  slug: string,
+  v: { baslik: string; aciklama: string; yayin: Date; guncelleme?: Date; etiketler: string[]; kaynaklar: { ad: string; url: string }[]; kategori: string },
+  gorseller: string[] = [],
+): Sema => ({
   '@context': BAGLAM,
   '@type': 'TechArticle',
   headline: v.baslik,
@@ -40,7 +47,12 @@ export const makaleSemasi = (slug: string, v: { baslik: string; aciklama: string
   dateModified: (v.guncelleme ?? v.yayin).toISOString(),
   inLanguage: 'tr-TR',
   keywords: v.etiketler.join(', '),
-  author: EDITOR.ad ? { '@type': 'Person', '@id': EDITOR_ID, name: EDITOR.ad } : { '@id': YAYINCI_ID },
+  articleSection: v.kategori,
+  ...(gorseller.length ? { image: gorseller.map(mutlakUrl) } : {}),
+  ...(v.kaynaklar.length ? { citation: v.kaynaklar.map((k) => ({ '@type': 'CreativeWork', name: k.ad, url: k.url })) } : {}),
+  author: EDITOR.ad
+    ? { '@type': 'Person', '@id': EDITOR_ID, name: EDITOR.ad, url: mutlakUrl('/hakkimizda/#editor'), ...(EDITOR.unvan ? { jobTitle: EDITOR.unvan } : {}) }
+    : { '@type': 'Organization', '@id': YAYINCI_ID, name: SITE_ADI, url: mutlakUrl('/') },
   publisher: { '@id': YAYINCI_ID },
   isPartOf: { '@id': WEBSITESI_ID },
 });

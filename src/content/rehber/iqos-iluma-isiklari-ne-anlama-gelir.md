@@ -1,5 +1,6 @@
 ---
 baslik: "IQOS ILUMA Işıkları Ne Anlama Gelir? Kırmızı ve Beyaz Yanıp Sönme"
+seoBaslik: "IQOS ILUMA Işıkları Ne Anlama Gelir?"
 aciklama: "ILUMA holder'da kırmızı ya da beyaz yanıp sönen ışık, şarj kutusunda kırmızı şerit ne demek? Üreticinin destek sayfalarına göre anlamları ve sıfırlama."
 yayin: 2026-10-22
 guncelleme: 2026-10-22

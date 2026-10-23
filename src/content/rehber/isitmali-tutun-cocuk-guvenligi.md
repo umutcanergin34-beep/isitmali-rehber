@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Çubuklarını Çocuklardan ve Evcil Hayvanlardan Uzak Tutmak"
+seoBaslik: "Isıtmalı Tütün Çubukları ve Çocuk Güvenliği"
 aciklama: "Isıtmalı tütün çubukları ve kullanılmış uçlar nikotin içerir. Çocuk ya da evcil hayvan yutarsa ne yapılmalı, evde nasıl saklanmalı?"
 yayin: 2026-10-22
 guncelleme: 2026-10-22

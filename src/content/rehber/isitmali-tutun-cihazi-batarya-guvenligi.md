@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Cihazında Batarya Isınırsa ya da Şişerse Ne Yapmalı?"
+seoBaslik: "Isıtmalı Tütün Cihazında Batarya Isınırsa Ne Yapmalı?"
 aciklama: "Isıtmalı tütün cihazları lityum iyon batarya taşır. Cihaz aşırı ısınır, şişer ya da duman çıkarırsa ne yapılmalı, nasıl şarj edilmeli ve atılmalı?"
 yayin: 2026-10-22
 guncelleme: 2026-10-22

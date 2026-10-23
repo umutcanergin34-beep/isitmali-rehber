@@ -1,7 +1,9 @@
 ---
-import '@fontsource-variable/inter';
-import '@fontsource-variable/source-serif-4';
 import '../styles/global.css';
+// Latin yazı tipi dosyaları HTML ile birlikte istensin: geç gelince giriş başlığı yeniden kırılıp alttaki kutuyu kaydırıyor (Lighthouse CLS 0.15).
+// ?url, CSS'teki @font-face ile aynı hash'li dosyayı verir
+import interLatin from '../assets/fonts/inter-latin-wght-normal.woff2?url';
+import serifLatin from '../assets/fonts/source-serif-4-latin-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_ADI, SITE_URL, YAYINDA } from '../lib/site';
@@ -11,18 +13,21 @@ interface Props {
   title: string;
   description: string;
   noindex?: boolean;
+  // false: canonical ve og:url basılmaz (404 her adreste sunulur)
+  canonical?: boolean;
   jsonLd?: Record<string, unknown>[];
   ogTur?: 'website' | 'article';
   yayin?: Date;
   guncelleme?: Date;
+  // Paylaşım görseli: mutlak ya da kök-göreli URL, 1200 px genişlikte
+  ogGorsel?: { src: string; width: number; height: number; alt: string };
 }
-const { title, description, noindex = false, jsonLd = [], ogTur = 'website', yayin, guncelleme } = Astro.props;
+const { title, description, noindex = false, canonical: canonicalVar = true, jsonLd = [], ogTur = 'website', yayin, guncelleme, ogGorsel } = Astro.props;
 const yol = Astro.url.pathname;
-const sayfa404 = yol.startsWith('/404');
 const canonical = new URL(yol, SITE_URL).href;
 // Arama sonucunda ~60 karakterden sonrası kesilir; uzun başlıkta site adı eklenmez
 const ekli = `${title} | ${SITE_ADI}`;
-const tamBaslik = ekli.length > 65 ? title : ekli;
+const tamBaslik = ekli.length > 60 ? title : ekli;
 const kapali = noindex || !YAYINDA;
 ---
 <!doctype html>
@@ -31,20 +36,26 @@ const kapali = noindex || !YAYINDA;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{tamBaslik}</title>
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serifLatin} as="font" type="font/woff2" crossorigin />
     <meta name="description" content={description} />
-    {!sayfa404 && <link rel="canonical" href={canonical} />}
+    {canonicalVar && <link rel="canonical" href={canonical} />}
     {kapali
       ? <meta name="robots" content="noindex, follow" />
       : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
     <meta property="og:type" content={ogTur} />
     <meta property="og:title" content={tamBaslik} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
+    {canonicalVar && <meta property="og:url" content={canonical} />}
     <meta property="og:site_name" content={SITE_ADI} />
     <meta property="og:locale" content="tr_TR" />
     {yayin && <meta property="article:published_time" content={yayin.toISOString()} />}
     {(guncelleme ?? yayin) && <meta property="article:modified_time" content={(guncelleme ?? yayin)!.toISOString()} />}
-    <meta name="twitter:card" content="summary" />
+    {ogGorsel && <meta property="og:image" content={new URL(ogGorsel.src, SITE_URL).href} />}
+    {ogGorsel && <meta property="og:image:width" content={String(ogGorsel.width)} />}
+    {ogGorsel && <meta property="og:image:height" content={String(ogGorsel.height)} />}
+    {ogGorsel && <meta property="og:image:alt" content={ogGorsel.alt} />}
+    <meta name="twitter:card" content={ogGorsel ? 'summary_large_image' : 'summary'} />
     <meta name="theme-color" content="#0e6b5c" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />

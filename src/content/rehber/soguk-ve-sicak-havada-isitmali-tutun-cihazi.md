@@ -1,5 +1,6 @@
 ---
 baslik: "Soğuk ve Sıcak Havada Isıtmalı Tütün Cihazı: Çalışma Sıcaklığı ve Öneriler"
+seoBaslik: "Soğuk ve Sıcak Havada Isıtmalı Tütün Cihazı"
 aciklama: "Isıtmalı tütün cihazı soğukta neden çalışmaz, sıcakta neden hata verir? Üreticinin belirttiği çalışma sıcaklığı aralığı ve kışın, yazın dikkat edilecekler."
 yayin: 2026-10-22
 guncelleme: 2026-10-22

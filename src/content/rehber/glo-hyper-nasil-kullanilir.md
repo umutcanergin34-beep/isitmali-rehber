@@ -53,3 +53,5 @@ Ayrıntılar için [glo hyper serisi modelleri](/rehber/glo-hyper-serisi-modelle
 ## Sorun olursa
 
 Işıklar sırayla yanıp sönüyor ve cihaz ısıtmıyorsa cihaz fazla ısınmış olabilir. Basına yansıyan önerilere göre yaklaşık 90 saniye soğumasını bekleyip yeniden deneyin. Hazne temizliği için [cihaz temizliği](/rehber/isitmali-tutun-cihazi-temizligi/) yazısına bakın.
+
+Işıklar yanıp sönüyorsa ya da cihaz şarj olmuyorsa [glo hyper ışıkları ve sorun giderme](/rehber/glo-hyper-isiklari-ve-sorun-giderme/) yazısına bakın.

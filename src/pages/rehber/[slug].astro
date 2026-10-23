@@ -1,5 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content';
+import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import SSS from '../../components/SSS.astro';
@@ -21,13 +22,28 @@ const bolumler = headings.filter((h) => h.depth === 2);
 // Türkçe metin için dakikada ~200 kelime
 const dakika = Math.max(1, Math.round((r.body ?? '').split(/\s+/).filter(Boolean).length / 200));
 const alanAdi = (u: string) => new URL(u).hostname.replace(/^www\./, '');
-// Aynı kategoriden en fazla 3 rehber, yoksa diğerleri: her rehber iç link alsın
-const tumu = (await getCollection('rehber')).filter((x) => x.id !== r.id);
-const digerleri = [...tumu.filter((x) => x.data.kategori === v.kategori), ...tumu.filter((x) => x.data.kategori !== v.kategori)].slice(0, 3);
+// İlgili rehberler: ortak etiket (x3) + aynı kategori (x2); eşitlikte sayfaya özgü karışık sıra.
+// Taslaklar (noindex) önerilmez. Alfabetik sıra her sayfada aynı 3 yazıyı öne çıkarıyordu.
+const etiket = (x: string[]) => new Set(x.map((e) => e.toLocaleLowerCase('tr')));
+const benim = etiket(v.etiketler);
+const karis = (a: string) => [...a].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const tumu = (await getCollection('rehber', (x) => !x.data.dogrulanacak)).filter((x) => x.id !== r.id);
+const puan = (x: (typeof tumu)[number]) => [...etiket(x.data.etiketler)].filter((e) => benim.has(e)).length * 3 + (x.data.kategori === v.kategori ? 2 : 0);
+const digerleri = tumu
+  .map((x) => ({ x, p: puan(x), k: karis(r.id + x.id) }))
+  .sort((a, b) => b.p - a.p || a.k - b.k)
+  .slice(0, 3)
+  .map((o) => o.x);
+// Paylaşım ve Article şeması için 1200 px görseller (16:9, 4:3, 1:1)
+const oranlar = [[1200, 675], [1200, 900], [1200, 1200]] as const;
+const ogResimler = v.gorsel
+  ? await Promise.all(oranlar.map(([width, height]) => getImage({ src: v.gorsel!.src, width, height, fit: 'cover', format: 'jpg', quality: 80 })))
+  : [];
+const ogGorsel = ogResimler[0] ? { src: ogResimler[0].src, width: 1200, height: 675, alt: v.gorsel!.alt } : undefined;
 const kat = KATEGORI_BILGI[v.kategori];
 ---
-<Base title={v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak}
-  jsonLd={[makaleSemasi(r.id, v), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
+<Base title={v.seoBaslik ?? v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak} ogGorsel={ogGorsel}
+  jsonLd={[makaleSemasi(r.id, v, ogResimler.map((o) => o.src)), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
   <div class="kap" style={`--kat:${kat.renk}`}>
     <header class="yazi-ust">
       <Kirinti yollar={[{ ad: kat.kisa, href: `/kategori/${v.kategori}/` }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
@@ -43,7 +59,13 @@ const kat = KATEGORI_BILGI[v.kategori];
     </header>
     <div class="yazi-duzen">
       <article class="yazi">
-        {v.gorsel && <figure class="yazi-kapak"><Kapak kategori={v.kategori} slug={r.id} buyuk gorsel={v.gorsel} />{v.gorsel.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynakUrl ? <a href={v.gorsel.kaynakUrl} rel="nofollow noopener" target="_blank">{v.gorsel.kaynak}</a> : v.gorsel.kaynak}</figcaption>}</figure>}
+        {v.gorsel && <figure class="yazi-kapak"><Kapak kategori={v.kategori} buyuk oncelikli gorsel={v.gorsel} />{v.gorsel.kaynak && <figcaption>Fotoğraf: {v.gorsel.kaynakUrl ? <a href={v.gorsel.kaynakUrl} rel="nofollow noopener" target="_blank">{v.gorsel.kaynak}</a> : v.gorsel.kaynak}</figcaption>}</figure>}
+        {bolumler.length > 1 && (
+          <details class="icindekiler-mobil">
+            <summary>Bu rehberde · {bolumler.length} bölüm</summary>
+            <ol>{bolumler.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+          </details>
+        )}
         <div class="icerik"><Content /></div>
         <p class="not18"><Ikon ad="kalkan" boyut={16} />Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />

@@ -1,5 +1,6 @@
 ---
 baslik: "IQOS ILUMA Şarj Süresi: Kaç Dakikada Dolar, Kaç Kullanım Sağlar?"
+seoBaslik: "IQOS ILUMA Şarj Süresi ve Kullanım Sayısı"
 aciklama: "IQOS ILUMA, ILUMA PRIME ve ILUMA ONE kaç dakikada şarj olur, holder kaç kez art arda kullanılır, şarj kutusu kaç kullanım sağlar? Üretici verileri."
 yayin: 2026-10-23
 guncelleme: 2026-10-23

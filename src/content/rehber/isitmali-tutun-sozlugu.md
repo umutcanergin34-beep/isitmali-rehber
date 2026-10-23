@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Sözlüğü: Holder, SMARTCORE, Stick ve Diğer Terimler"
+seoBaslik: "Isıtmalı Tütün Sözlüğü: Holder, SMARTCORE ve Diğerleri"
 aciklama: "Isıtmalı tütün cihazlarında geçen terimlerin markadan bağımsız açıklamaları: holder, şarj kutusu, indüksiyon, bıçak, stick, menşe, seans."
 yayin: 2026-10-22
 guncelleme: 2026-10-22
@@ -53,9 +54,9 @@ kaynaklar:
 | Terim | Anlamı |
 |---|---|
 | Stick / çubuk | Cihaza takılan, işlenmiş tütün içeren tek kullanımlık parça. |
-| SMARTCORE | TEREA çubuklarının içindeki metal parça. ILUMA bu parçayı indüksiyonla ısıtır; yutulursa yaralanmaya yol açabilir. |
+| SMARTCORE | [TEREA](/rehber/terea-nedir/) çubuklarının içindeki metal parça. ILUMA bu parçayı indüksiyonla ısıtır; yutulursa yaralanmaya yol açabilir. [Ayrıntı](/rehber/terea-cubugundaki-metal-parca/) |
 | Kapalı uç | TEREA'nın ucunun kapalı olması; hazneye kalıntı geçmez, cihaz temizliği gerekmez. |
-| Çubuk ailesi | Bir cihazla uyumlu çubuk markası: TEREA (ILUMA), HEETS (eski IQOS), neo (glo), EVO (Ploom X), Fiit (lil SOLID). Aileler birbirinin yerine kullanılmaz. |
+| Çubuk ailesi | Bir cihazla uyumlu çubuk markası: [TEREA](/rehber/terea-nedir/) (ILUMA), [HEETS](/rehber/heets-ve-terea-farki/) (eski IQOS), neo (glo), EVO ([Ploom X](/rehber/ploom-x-nasil-kullanilir/)), Fiit ([lil SOLID](/rehber/lil-solid-hybrid-aible-farki/)). Aileler birbirinin yerine kullanılmaz. |
 | Menşe | Paketin üretildiği ya da satışa sunulduğu ülke/bölge. Aynı çeşidin farklı menşeli paketleri tat ve içerik olarak farklılık gösterebilir. |
 | Kapsül (pearl) | Filtredeki, sıkınca aroma veren küçük kapsül. Kapsülsüz kullanılırsa çubuk aromasız haliyle içilir. |
 | Yoğunluk | Üreticinin çubuğa verdiği tat sertliği derecesi; markalar farklı ölçek kullanır, karşılaştırılamaz. |

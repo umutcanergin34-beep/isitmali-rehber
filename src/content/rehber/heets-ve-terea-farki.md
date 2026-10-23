@@ -1,5 +1,6 @@
 ---
 baslik: "HEETS ile TEREA Arasındaki Fark: Hangi Çubuk Hangi IQOS'ta Çalışır?"
+seoBaslik: "HEETS ile TEREA Farkı: Hangi IQOS'ta Hangi Çubuk?"
 aciklama: "HEETS ve TEREA çubuklarının teknik farkı ne? SMARTCORE metal parça, kapalı uç, temizlik ve neden birbirinin cihazında kullanılmadıkları."
 yayin: 2026-10-22
 guncelleme: 2026-10-22
@@ -23,7 +24,7 @@ kaynaklar:
   - { ad: "IQOS: IQOS 3 DUO vs IQOS ILUMA", url: "https://www.iqos.com/gb/en/blog/difference-between-iqos-iluma-and-iqos-3-duo.html" }
 ---
 
-**Kısaca:** İkisi de Philip Morris International'ın çubuğu, ama farklı cihaz kuşakları için yapılmış. **HEETS**, ısıtıcı bıçaklı eski IQOS'lar (IQOS ORIGINALS, IQOS 3 DUO ve öncekiler) içindir; bıçak çubuğun içine batar. **TEREA**, bıçaksız **ILUMA** serisi içindir; çubuğun içinde **SMARTCORE** adlı metal bir parça vardır ve cihaz bu parçayı indüksiyonla ısıtır. Bu yüzden ikisi birbirinin cihazında kullanılmaz.
+**Kısaca:** İkisi de Philip Morris International'ın çubuğu, ama farklı cihaz kuşakları için yapılmış. **HEETS**, ısıtıcı bıçaklı eski IQOS'lar (IQOS ORIGINALS, IQOS 3 DUO ve öncekiler) içindir; bıçak çubuğun içine batar. **[TEREA](/rehber/terea-nedir/)**, bıçaksız **ILUMA** serisi içindir; çubuğun içinde **SMARTCORE** adlı metal bir parça vardır ve cihaz bu parçayı indüksiyonla ısıtır. Bu yüzden ikisi birbirinin cihazında kullanılmaz.
 
 ## Teknik karşılaştırma
 

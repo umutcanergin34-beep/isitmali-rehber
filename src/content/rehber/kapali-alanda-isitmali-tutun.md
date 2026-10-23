@@ -1,5 +1,6 @@
 ---
 baslik: "Kapalı Alanda Isıtmalı Tütün Kullanmak Yasak mı? 4207 Sayılı Kanun Ne Diyor"
+seoBaslik: "Kapalı Alanda Isıtmalı Tütün Yasak mı? 4207 Sayılı Kanun"
 aciklama: "Isıtmalı tütün ve elektronik sigara 4207 sayılı Kanun'a göre tütün ürünü mü sayılır, hangi yerlerde kullanılamaz, cezayı kim öder?"
 yayin: 2026-10-22
 guncelleme: 2026-10-22

@@ -1,5 +1,6 @@
 ---
 baslik: "glo hyper Serisi: hyper+, hyper X2 ve hyper pro Arasındaki Farklar"
+seoBaslik: "glo hyper Serisi: hyper+, X2 ve pro Farkları"
 aciklama: "BAT'ın glo hyper ailesindeki modeller ne zaman çıktı, nasıl ısıtıyor ve birbirinden nasıl ayrılıyor? Kuşaklara göre kısa bir karşılaştırma."
 yayin: 2026-10-23
 guncelleme: 2026-10-23

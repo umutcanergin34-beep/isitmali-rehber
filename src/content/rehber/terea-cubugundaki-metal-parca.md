@@ -1,5 +1,6 @@
 ---
 baslik: "TEREA Çubuğundaki Metal Parça: Neden Var, Neden Dikkat Gerekir?"
+seoBaslik: "TEREA Çubuğundaki Metal Parça Neden Var?"
 aciklama: "TEREA çubuklarının içinde keskin bir metal parça var. Ne işe yarar, neden çocuklardan uzak tutulmalı, İtalya uyarıyı neden büyüttü?"
 yayin: 2026-10-23
 guncelleme: 2026-10-23
