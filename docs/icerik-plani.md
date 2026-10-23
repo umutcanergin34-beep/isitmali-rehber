@@ -25,6 +25,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 7 | Teknoloji | glo hyper serisi modelleri ve farkları | Yazıldı, doğrulanacak |
 | 8 | Teknoloji | Ploom X ve Ploom AURA: farklar | Yazıldı, doğrulanacak |
 | 17 | Teknoloji | IQOS ILUMA i serisi: önceki ILUMA'dan farkı | Yazıldı, doğrulanacak |
+| 18 | Kullanım | Kullanılmış çubuklar ve eski cihazlar nasıl atılır? | Yazıldı |
+| 19 | Mevzuat | Türkiye'de tütün ürünlerinde 18 yaş sınırı | Yazıldı, doğrulanacak |
+| 20 | Mevzuat | DSÖ FCTC ve ısıtmalı tütün (COP8 kararı) | Yazıldı, doğrulanacak |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
 | 12 | Mevzuat | 4207 reklam yasağı: sosyal medyada neler yasak? | Yazıldı, doğrulanacak |
