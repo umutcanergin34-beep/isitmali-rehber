@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Kirinti from '../components/Kirinti.astro';
-import { SITE_ADI, EDITOR, SAHIPLIK } from '../lib/site';
+import { SITE_ADI, EDITOR, SAHIPLIK, YAYINDA } from '../lib/site';
 ---
 <Base title="Hakkımızda" description={`${SITE_ADI} kim tarafından, hangi amaçla yayımlanıyor; editör, sahiplik ve bağımsızlık bilgisi.`}>
   <div class="kap duz">
@@ -14,14 +14,14 @@ import { SITE_ADI, EDITOR, SAHIPLIK } from '../lib/site';
       <li>Bir markayı ya da ürünü önermiyor, sağlık iddiasında bulunmuyoruz.</li>
       <li>Reklam ve sponsorlu içerik yayımlamıyoruz.</li>
     </ul>
-    <h2 id="editor">Editör</h2>
+    {EDITOR.ad && <h2 id="editor">Editör</h2>}
     {EDITOR.ad
       ? <p><strong>{EDITOR.ad}</strong>{EDITOR.unvan && `, ${EDITOR.unvan}`}. {EDITOR.hakkinda}</p>
-      : <p class="uyari">Editör bilgisi eklenecek: gerçek ad ve kısa özgeçmiş.</p>}
-    <h2>Sahiplik</h2>
+      : !YAYINDA && <p class="uyari">Editör bilgisi eklenecek: gerçek ad ve kısa özgeçmiş.</p>}
+    {SAHIPLIK.magazaAdi && <h2>Sahiplik</h2>}
     {SAHIPLIK.magazaAdi
       ? <p>Bu site, <a href={SAHIPLIK.magazaUrl}>{SAHIPLIK.magazaAdi}</a> mağazasının sahibi tarafından yayımlanır. Rehberlerde satış yapılmaz; mağazaya verilen bağlantılar yalnızca konuyla doğrudan ilgili bilgi sayfalarına gider.</p>
-      : <p class="uyari">Sahiplik açıklaması eklenecek (mağaza adı ve bağlantısı).</p>}
+      : !YAYINDA && <p class="uyari">Sahiplik açıklaması eklenecek (mağaza adı ve bağlantısı).</p>}
     <p>İçerik yalnızca 18 yaş üstü yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
   </div>
 </Base>

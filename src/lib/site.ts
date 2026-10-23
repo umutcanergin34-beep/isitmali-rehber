@@ -1,9 +1,9 @@
-// Sitenin tek ayar dosyası. Alan adı alınınca SITE_URL'i değiştir, YAYINDA'yı true yap.
+// Sitenin tek ayar dosyası.
 export const SITE_ADI = 'Isıtmalı Rehber';
 export const SITE_SLOGAN = 'Isıtmalı tütün cihazları için bağımsız teknik rehber';
-export const SITE_URL = 'https://isitmalirehber.com';
+export const SITE_URL = 'https://isitmalihber.com';
 // false iken tüm sayfalar noindex, robots.txt her şeyi kapatır: alan adı ve avukat onayı gelmeden Google'a açılmaz.
-export const YAYINDA = false;
+export const YAYINDA = true;
 // Sahiplik açıklaması (Hakkımızda). Mağaza adı ve linki karar verilince doldurulur; boşken gösterilmez.
 // Editör: gerçek kişi, gerçek adıyla. Boşken yazar olarak site gösterilir.
 export const EDITOR = { ad: '', unvan: '', hakkinda: '' };
