@@ -52,6 +52,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 42 | Teknoloji | IQOS ILUMA ile hangi çubuklar kullanılır (TEREA, DELIA, LEVIA, SENTIA) | Yazıldı |
 | 43 | Kullanım | lil SOLID nasıl kullanılır | Yazıldı |
 | 44 | Temel | Isıtmalı tütün cihazları hakkında yanlış bilinenler | Yazıldı |
+| 45 | Güven | Cihaz suya düşerse ya da ıslanırsa | Yazıldı |
+| 46 | Kullanım | Isıtmalı tütün çubukları nasıl saklanır | Yazıldı |
+| 47 | Kullanım | IQOS yazılım güncellemesi | Yazıldı |
 | — | Güven | Sahte ürün nasıl anlaşılır | Ertelendi: resmi kaynak yok, kaçakçılık/gümrük konusuna değmeden yazılması zor |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
