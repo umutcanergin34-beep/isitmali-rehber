@@ -5,6 +5,11 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: mevzuat
 dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/3/3d/TBMM_meclis_binas%C4%B1_1.jpg"
+  alt: "Türkiye Büyük Millet Meclisi binası"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:TBMM_meclis_binas%C4%B1_1.jpg"
 etiketler: ["4207", "18 yaş", "yaş sınırı", "mevzuat", "Türkiye"]
 sss:
   - soru: "Türkiye'de tütün ürünleri hangi yaştan itibaren satılabilir?"

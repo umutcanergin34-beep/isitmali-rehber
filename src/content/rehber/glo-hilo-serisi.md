@@ -4,7 +4,11 @@ aciklama: "glo Hilo serisi ne zaman çıktı, virto çubuğu ve EasySwitch ısı
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/3/38/British_American_Tobacco_(BAT)_Cirebon_(3).jpg"
+  alt: "British American Tobacco'nun bir tesisi"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:British_American_Tobacco_(BAT)_Cirebon_(3).jpg"
 etiketler: ["glo", "BAT", "glo Hilo", "Hilo Plus", "virto", "EasySwitch"]
 sss:
   - soru: "glo Hilo ne zaman çıktı?"

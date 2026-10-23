@@ -4,7 +4,11 @@ aciklama: "PMI'ın IQOS ILUMA için geliştirdiği LEVIA tütün yerine başka b
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/IQOS_Iluma_One.jpg/1280px-IQOS_Iluma_One.jpg"
+  alt: "IQOS ILUMA ONE cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_One.jpg"
 etiketler: ["LEVIA", "tütünsüz çubuk", "nikotin", "IQOS ILUMA", "mevzuat"]
 sss:
   - soru: "LEVIA ısıtmalı tütün mü?"

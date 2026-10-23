@@ -4,7 +4,11 @@ aciklama: "TEREA, IQOS ILUMA için yapılmış ısıtmalı tütün çubuğudur. 
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: temel
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/a/a2/IQOS_heated_tobacco_devices.jpg"
+  alt: "IQOS ısıtmalı tütün cihazları"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_heated_tobacco_devices.jpg"
 etiketler: ["TEREA", "IQOS ILUMA", "SMARTCORE", "tütün çubuğu", "nedir"]
 sss:
   - soru: "TEREA nedir?"

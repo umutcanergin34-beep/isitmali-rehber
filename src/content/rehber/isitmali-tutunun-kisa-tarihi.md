@@ -2,9 +2,8 @@
 baslik: "Isıtmalı Tütünün Kısa Tarihi: İlk Denemelerden ILUMA'ya"
 aciklama: "Isıtmalı tütün fikri nereden çıktı? Accord denemelerinden IQOS, glo, Ploom ve lil'e, ardından indüksiyonlu cihazlara uzanan kısa bir zaman çizelgesi."
 yayin: 2026-10-22
-guncelleme: 2026-10-22
+guncelleme: 2026-10-23
 kategori: temel
-dogrulanacak: true
 gorsel:
   src: "https://upload.wikimedia.org/wikipedia/commons/a/a2/IQOS_heated_tobacco_devices.jpg"
   alt: "1998 tarihli Accord'dan 2021 tarihli IQOS ILUMA'ya kadar ısıtmalı tütün cihazları yan yana"
@@ -19,6 +18,8 @@ sss:
   - soru: "İndüksiyonlu cihazlar ne zaman çıktı?"
     cevap: "IQOS'un indüksiyonlu ILUMA serisi 2021'de çıktı. Bıçağı olmayan bu cihazlarda ısı, çubuğun içindeki metal parçada üretilir."
 kaynaklar:
+  - { ad: "PMI 2014 Faaliyet Raporu: iQOS", url: "https://media.corporate-ir.net/media_files/IROL/14/146476/PM_AR_2014/pdf/pmi-iqos.pdf" }
+  - { ad: "Business Wire: JTI acquires Ploom intellectual property rights (Şubat 2015)", url: "https://www.businesswire.com/news/home/20150216005085/en/" }
   - { ad: "Tobacco Tactics: Heated Tobacco Products", url: "https://www.tobaccotactics.org/article/heated-tobacco-products/" }
   - { ad: "Tobacco in Australia: The heated tobacco product market", url: "https://www.tobaccoinaustralia.org.au/chapter-18-e-cigarettes/indepth-18b-non-combustible-cigarettes/18b-2-the-heated-tobacco-product-market" }
   - { ad: "Tobacco Tactics: Heated Tobacco Products, British American Tobacco", url: "https://www.tobaccotactics.org/article/heated-tobacco-products-british-american-tobacco/" }
@@ -32,15 +33,14 @@ kaynaklar:
 | Yıl | Gelişme |
 |---|---|
 | 1998-2006 | Philip Morris'in ABD şirketi (bugünkü Altria), Accord adlı ısıtmalı tütün cihazını Japonya ve ABD'de test eder. Ürün yaygınlaşmaz. |
-| 2010 | Japan Tobacco International (JTI), ABD'deki Ploom Inc. şirketinin yüzde 27'sini alır. |
-| 2013 | JTI, Ploom markasını test pazarlarında dener. |
-| Kasım 2014 | Philip Morris International (PMI), IQOS'u Japonya'nın seçili şehirlerinde satışa çıkarır. |
-| 2015 | IQOS İtalya ve İsviçre'de satışa çıkar. JTI, Ploom ürünlerinin fikri mülkiyet haklarını devralır. |
+| Aralık 2011 | Japan Tobacco International (JTI), ABD'deki Ploom Inc. şirketinde azınlık hissesi alır ve ürünlerin ABD dışındaki ticari ortağı olur. |
+| Kasım 2014 | Philip Morris International (PMI), IQOS'u pilot pazar olarak Nagoya'da (Japonya) ve Milano'da (İtalya) satışa çıkarır. |
+| Şubat 2015 | JTI, Ploom markasını ve ürünlerinin fikri mülkiyet haklarını devralır. Ploom Inc.'in adı PAX Labs olur. |
 | 2016 | JTI, Ploom TECH'i Japonya'da çıkarır. Aralık ayında British American Tobacco (BAT), glo'yu Sendai'de test pazarına sunar. |
 | 2017 | glo Japonya geneline yayılır. KT&G, lil markasıyla Güney Kore pazarına girer. |
 | Nisan 2019 | ABD Gıda ve İlaç Dairesi (FDA), IQOS'un ABD'de satışına izin verir. |
 | 2021 | PMI indüksiyonlu, bıçaksız IQOS ILUMA serisini çıkarır. JTI dıştan ısıtmalı Ploom X'i çıkarır. |
-| 2025 | JTI, Ploom AURA cihazını ve EVO çubuklarını tanıtır. |
+| 2025 | JTI, Ploom AURA cihazını tanıtır. |
 
 ## Neden Japonya?
 

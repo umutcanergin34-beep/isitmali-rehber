@@ -4,6 +4,11 @@ aciklama: "Isıtmalı tütün cihazı elektronik atıktır ve içinde lityum iyo
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/a/a3/IQOS_-_heated_tobacco_products.jpg"
+  alt: "IQOS ısıtmalı tütün ürünleri"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_-_heated_tobacco_products.jpg"
 etiketler: ["atık", "geri dönüşüm", "elektronik atık", "batarya", "çevre"]
 sss:
   - soru: "Eski ısıtmalı tütün cihazını çöpe atabilir miyim?"

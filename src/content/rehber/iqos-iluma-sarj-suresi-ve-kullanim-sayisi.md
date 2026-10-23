@@ -4,7 +4,11 @@ aciklama: "IQOS ILUMA, ILUMA PRIME ve ILUMA ONE kaç dakikada şarj olur, holder
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Usb_type-c_plug_socket.jpg"
+  alt: "USB-C şarj fişi ve girişi"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Usb_type-c_plug_socket.jpg"
 etiketler: ["IQOS ILUMA", "şarj süresi", "batarya", "ILUMA ONE", "holder"]
 sss:
   - soru: "IQOS ILUMA kaç dakikada şarj olur?"

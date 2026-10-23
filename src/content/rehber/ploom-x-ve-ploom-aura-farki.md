@@ -4,7 +4,11 @@ aciklama: "JT Group'un Ploom ailesindeki cihazlar ne zaman çıktı ve HEATFLOW,
 yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
+gorsel:
+  src: "https://upload.wikimedia.org/wikipedia/commons/2/26/Ploom_TECH_Device_(cropped).jpg"
+  alt: "JT Group'un Ploom cihazı"
+  kaynak: "Wikimedia Commons"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Ploom_TECH_Device_(cropped).jpg"
 etiketler: ["Ploom", "JTI", "Ploom X", "Ploom X Advanced", "Ploom AURA", "karşılaştırma"]
 sss:
   - soru: "Ploom X Advanced'ın Ploom X'ten farkı ne?"

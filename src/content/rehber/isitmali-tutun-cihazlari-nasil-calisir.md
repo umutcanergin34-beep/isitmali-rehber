@@ -2,9 +2,8 @@
 baslik: "Isıtmalı Tütün Cihazları Nasıl Çalışır? Bıçak, İndüksiyon ve Çevresel Isıtma"
 aciklama: "IQOS, glo, Ploom ve lil cihazları tütünü nasıl ısıtır, hangi çubukla çalışır? Üretici kaynaklı teknik karşılaştırma ve uyumluluk tablosu."
 yayin: 2026-10-22
-guncelleme: 2026-10-22
+guncelleme: 2026-10-23
 kategori: teknoloji
-dogrulanacak: true
 gorsel:
   src: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/IQOS_Iluma.jpg/1280px-IQOS_Iluma.jpg"
   alt: "IQOS ILUMA ısıtmalı tütün cihazı ve tutucusu"
