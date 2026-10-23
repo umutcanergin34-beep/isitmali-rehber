@@ -46,6 +46,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 36 | Kullanım | IQOS uygulaması: eşleştirme ve ayarlar | Yazıldı |
 | 37 | Kullanım | glo hyper ışıkları ve sorun giderme | Yazıldı (kullanıcı rehberlerine dayanıyor) |
 | 38 | Kullanım | Ploom X ışıkları ve sorun giderme | Yazıldı |
+| 39 | Teknoloji | Isıtmalı tütün çubuğu kaç dakika sürer (marka karşılaştırması) | Yazıldı |
+| 40 | Kullanım | IQOS ILUMA ONE nasıl kullanılır | Yazıldı |
+| 41 | Kullanım | Cihaz uzun süre kullanılmazsa: saklama ve yeniden çalıştırma | Yazıldı |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
