@@ -5,9 +5,9 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: guven
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/2/2a/Liion-18650-AA-battery.jpg"
+  src: "../../assets/gorseller/isitmali-tutun-cihazi-batarya-guvenligi.jpg"
   alt: "18650 lityum iyon pil hücresi ve yanında bir AA pil"
-  kaynak: "Wikimedia Commons, CC BY-SA 3.0"
+  kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Liion-18650-AA-battery.jpg"
 etiketler: ["batarya", "lityum iyon", "şarj", "güvenlik", "yangın"]
 sss:

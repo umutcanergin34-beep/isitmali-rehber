@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/3/36/Foglie_di_tabacco_essiccate.jpg"
+  src: "../../assets/gorseller/lil-solid-hybrid-aible-farki.jpg"
   alt: "Kurutulmuş tütün yaprakları"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Foglie_di_tabacco_essiccate.jpg"

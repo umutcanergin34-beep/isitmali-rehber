@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: mevzuat
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/World_Health_Organisation_headquarters,_Geneva,_north_and_west_sides_2007.jpg/1280px-World_Health_Organisation_headquarters,_Geneva,_north_and_west_sides_2007.jpg"
+  src: "../../assets/gorseller/dso-fctc-isitmali-tutun.jpg"
   alt: "Dünya Sağlık Örgütü'nün Cenevre'deki genel merkezi"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:World_Health_Organisation_headquarters,_Geneva,_north_and_west_sides_2007.jpg"

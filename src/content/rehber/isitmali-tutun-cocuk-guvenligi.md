@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: guven
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/1/1c/IQOS_02.jpg"
+  src: "../../assets/gorseller/isitmali-tutun-cocuk-guvenligi.jpg"
   alt: "Bir IQOS ısıtmalı tütün cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_02.jpg"

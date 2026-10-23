@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: temel
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/1/12/IQOS_3_Multi.jpg"
+  src: "../../assets/gorseller/isitmali-tutun-sozlugu.jpg"
   alt: "IQOS 3 Multi ısıtmalı tütün cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_3_Multi.jpg"

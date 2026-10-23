@@ -4,14 +4,12 @@ import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import Ikon from './Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
-interface Props { kategori: Kategori; slug: string; buyuk?: boolean; gorsel?: { src: ImageMetadata | string; alt: string } }
+interface Props { kategori: Kategori; slug: string; buyuk?: boolean; gorsel?: { src: ImageMetadata; alt: string } }
 const { kategori, buyuk = false, gorsel } = Astro.props;
 const { renk, kisa } = KATEGORI_BILGI[kategori];
 const sinif = buyuk ? 'kapak kapak-buyuk' : 'kapak';
 ---
-{gorsel && typeof gorsel.src === 'string' ? (
-  <img src={gorsel.src} alt={gorsel.alt} class={`${sinif} kapak-foto`} loading={buyuk ? 'eager' : 'lazy'} decoding="async" referrerpolicy="no-referrer" />
-) : gorsel ? (
+{gorsel ? (
   <Image src={gorsel.src} alt={gorsel.alt} class={`${sinif} kapak-foto`} widths={buyuk ? [640, 960, 1280] : [400, 640]} sizes={buyuk ? '(max-width: 760px) 100vw, 760px' : '(max-width: 760px) 100vw, 360px'} loading={buyuk ? 'eager' : 'lazy'} />
 ) : (
   <div class={`${sinif} kapak-cizim`} style={`--kat:${renk}`} role="img" aria-label={`${kisa} kategorisi`}>

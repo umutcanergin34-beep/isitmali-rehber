@@ -5,10 +5,10 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: temel
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Iluma_mall.jpg"
-  alt: "Bir alışveriş merkezinde IQOS ILUMA tanıtım alanı"
+  src: "../../assets/gorseller/isitmali-tutun-hangi-ulkelerde-yaygin.jpg"
+  alt: "Yıllar içinde çıkan ısıtmalı tütün cihazları yan yana"
   kaynak: "Wikimedia Commons"
-  kaynakUrl: "https://commons.wikimedia.org/wiki/File:Iluma_mall.jpg"
+  kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_heated_tobacco_devices.jpg"
 etiketler: ["pazar", "Japonya", "Güney Kore", "İtalya", "dünya"]
 sss:
   - soru: "Isıtmalı tütünün en yaygın olduğu ülke hangisi?"

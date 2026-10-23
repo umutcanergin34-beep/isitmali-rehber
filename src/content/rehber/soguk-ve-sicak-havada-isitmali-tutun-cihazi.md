@@ -5,7 +5,7 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg/1280px-Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg"
+  src: "../../assets/gorseller/soguk-ve-sicak-havada-isitmali-tutun-cihazi.jpg"
   alt: "İstanbul'da yoğun kar yağışı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Turkey_(Istanbul)_Heavy_snow_(31790759470).jpg"

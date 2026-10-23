@@ -5,9 +5,9 @@ yayin: 2026-10-22
 guncelleme: 2026-10-22
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/IQOS_Iluma_Prime.jpg/1280px-IQOS_Iluma_Prime.jpg"
+  src: "../../assets/gorseller/iqos-iluma-modelleri-farklari.jpg"
   alt: "IQOS ILUMA PRIME ısıtmalı tütün cihazı"
-  kaynak: "Wikimedia Commons, CC BY-SA 4.0"
+  kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:IQOS_Iluma_Prime.jpg"
 etiketler: ["IQOS", "ILUMA", "ILUMA PRIME", "ILUMA ONE", "karşılaştırma"]
 sss:

@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: teknoloji
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/2/26/Ploom_TECH_Device_(cropped).jpg"
+  src: "../../assets/gorseller/ploom-x-ve-ploom-aura-farki.jpg"
   alt: "JT Group'un Ploom cihazı"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Ploom_TECH_Device_(cropped).jpg"

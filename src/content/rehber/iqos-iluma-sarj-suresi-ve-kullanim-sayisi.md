@@ -5,7 +5,7 @@ yayin: 2026-10-23
 guncelleme: 2026-10-23
 kategori: kullanim
 gorsel:
-  src: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Usb_type-c_plug_socket.jpg"
+  src: "../../assets/gorseller/iqos-iluma-sarj-suresi-ve-kullanim-sayisi.jpg"
   alt: "USB-C şarj fişi ve girişi"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Usb_type-c_plug_socket.jpg"
