@@ -49,6 +49,10 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 39 | Teknoloji | Isıtmalı tütün çubuğu kaç dakika sürer (marka karşılaştırması) | Yazıldı |
 | 40 | Kullanım | IQOS ILUMA ONE nasıl kullanılır | Yazıldı |
 | 41 | Kullanım | Cihaz uzun süre kullanılmazsa: saklama ve yeniden çalıştırma | Yazıldı |
+| 42 | Teknoloji | IQOS ILUMA ile hangi çubuklar kullanılır (TEREA, DELIA, LEVIA, SENTIA) | Yazıldı |
+| 43 | Kullanım | lil SOLID nasıl kullanılır | Yazıldı |
+| 44 | Temel | Isıtmalı tütün cihazları hakkında yanlış bilinenler | Yazıldı |
+| — | Güven | Sahte ürün nasıl anlaşılır | Ertelendi: resmi kaynak yok, kaçakçılık/gümrük konusuna değmeden yazılması zor |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
