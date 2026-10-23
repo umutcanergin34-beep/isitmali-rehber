@@ -31,6 +31,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 21 | Temel | Isıtmalı tütün hangi ülkelerde yaygın? | Yazıldı, doğrulanacak |
 | 22 | Mevzuat | Tütün ambalajı ve uyarı kuralları (düz paket, AB 2022/2100) | Yazıldı, doğrulanacak |
 | 23 | Güven | TEREA çubuğundaki metal parça | Yazıldı |
+| 24 | Teknoloji | lil SOLID, lil HYBRID ve lil AIBLE | Yazıldı, doğrulanacak |
+| 25 | Teknoloji | glo Hilo ve Hilo Plus | Yazıldı, doğrulanacak |
+| 26 | Teknoloji | Tütünsüz nikotin çubukları: LEVIA | Yazıldı, doğrulanacak |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
