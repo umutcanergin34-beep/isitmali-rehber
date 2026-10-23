@@ -37,6 +37,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 27 | Kullanım | IQOS ILUMA nasıl kullanılır (yüksek talep) | Yazıldı, doğrulandı |
 | 28 | Kullanım | IQOS ILUMA şarj süresi ve kullanım sayısı (yüksek talep) | Yazıldı, doğrulandı |
 | 29 | Temel | TEREA nedir (yüksek talep) | Yazıldı, doğrulandı |
+| 30 | Kullanım | IQOS ILUMA çubuk sıkıştı / kırıldı | Yazıldı |
+| 31 | Kullanım | IQOS ILUMA çubuğu ısıtmıyor | Yazıldı |
+| 32 | Kullanım | IQOS ILUMA kaç yıl dayanır: batarya ve garanti | Yazıldı |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
