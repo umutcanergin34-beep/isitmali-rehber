@@ -48,7 +48,7 @@ Değerler üreticinin destek sayfalarından alınmıştır; ülkeye ve cihaz ku�
 
 ## Kuşaklar: ILUMA ve ILUMA i
 
-PMI, ILUMA serisinin ardından **ILUMA i** kuşağını çıkardı: ILUMA i, ILUMA i PRIME ve ILUMA i ONE. Üçlü yapı ve TEREA uyumu aynı kaldı. Işıkların anlamı kuşağa göre değişebileceği için sorun giderirken modelinizin tam adına bakın: [ILUMA ışıkları ne anlama gelir](/rehber/iqos-iluma-isiklari-ne-anlama-gelir/).
+PMI, ILUMA serisinin ardından **ILUMA i** kuşağını çıkardı: ILUMA i, ILUMA i PRIME ve ILUMA i ONE. Üçlü yapı ve TEREA uyumu aynı kaldı; dokunmatik ekran, Duraklatma modu ve FlexBattery gibi yenilikler için [ILUMA i serisi](/rehber/iqos-iluma-i-serisi-yenilikleri/) yazısına bakın. Işıkların anlamı kuşağa göre değişebileceği için sorun giderirken modelinizin tam adına bakın: [ILUMA ışıkları ne anlama gelir](/rehber/iqos-iluma-isiklari-ne-anlama-gelir/).
 
 ## Ortak noktalar
 

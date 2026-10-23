@@ -22,8 +22,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 3 | Kullanım | IQOS ILUMA ışıkları ne anlama gelir? | Yazıldı; glo ve Ploom için ayrı yazı |
 | 5 | Teknoloji | IQOS ILUMA serisi modelleri arasındaki farklar | Yazıldı |
 | 6 | Güven | Batarya ısınırsa ya da şişerse ne yapılmalı? | Yazıldı |
-| 7 | Teknoloji | glo hyper serisi modelleri ve farkları | |
-| 8 | Teknoloji | Ploom X ve Ploom AURA: farklar | |
+| 7 | Teknoloji | glo hyper serisi modelleri ve farkları | Yazıldı, doğrulanacak |
+| 8 | Teknoloji | Ploom X ve Ploom AURA: farklar | Yazıldı, doğrulanacak |
+| 17 | Teknoloji | IQOS ILUMA i serisi: önceki ILUMA'dan farkı | Yazıldı, doğrulanacak |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
 | 12 | Mevzuat | 4207 reklam yasağı: sosyal medyada neler yasak? | Yazıldı, doğrulanacak |
