@@ -1,5 +1,6 @@
 ---
 baslik: "Tütün Ambalajı ve Uyarı Kuralları: Türkiye'de Düz Paket, AB'de Yeni Kurallar"
+seoBaslik: "Tütün Ambalajı ve Uyarı Kuralları: Düz Paket"
 aciklama: "Türkiye'de tütün ürünleri neden standart düz pakette satılıyor? AB, ısıtmalı tütün ambalajları için hangi muafiyeti kaldırdı?"
 yayin: 2026-10-23
 guncelleme: 2026-10-23
@@ -7,7 +8,7 @@ kategori: mevzuat
 dogrulanacak: true
 gorsel:
   src: "../../assets/gorseller/tutun-ambalaj-ve-uyari-kurallari.jpg"
-  alt: "Tütün"
+  alt: "Yakından kıyılmış kuru tütün yaprakları"
   kaynak: "Wikimedia Commons"
   kaynakUrl: "https://commons.wikimedia.org/wiki/File:Volume_tobacco.jpg"
 etiketler: ["ambalaj", "düz paket", "sağlık uyarısı", "4207", "7151", "AB", "2022/2100"]

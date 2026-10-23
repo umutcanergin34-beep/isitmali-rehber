@@ -30,7 +30,7 @@ kaynaklar:
 
 1. **Kapağı açın.** Cihazın üstündeki kaydırmalı kapağı açın.
 2. **Çubuğu takın.** EVO çubuğunu, üzerindeki baskılı çizgi cihazın üst kenarıyla aynı hizaya gelecek şekilde yerleştirin.
-3. **Isınmayı bekleyin.** Cihaz çalıştığında ışıklar sırayla yanar. Tüm ışıklar yanıp cihaz titreyince hazırdır.
+3. **Isınmayı bekleyin.** Cihaz çalıştığında ışıklar sırayla yanar. Tüm ışıklar yanıp cihaz titreyince hazırdır. Işıklar farklı yanıp sönüyorsa [Ploom X ışıkları ve sorun giderme](/rehber/ploom-x-isiklari-ve-sorun-giderme/) yazısına bakın.
 4. **Kullanım süresi.** Basına yansıyan bilgilere göre bir kullanım yaklaşık 5 dakika sürer ve bu sürede nefes sayısı sınırlı değildir.
 5. **Çubuğu çıkarın.** Kullanım bitince çubuğu çıkarın ve kapağı kapatın.
 

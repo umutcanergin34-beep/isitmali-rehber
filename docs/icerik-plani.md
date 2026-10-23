@@ -43,6 +43,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 33 | Kullanım | IQOS 3 DUO nasıl kullanılır | Yazıldı |
 | 34 | Kullanım | glo hyper nasıl kullanılır | Yazıldı |
 | 35 | Kullanım | Ploom X nasıl kullanılır | Yazıldı |
+| 36 | Kullanım | IQOS uygulaması: eşleştirme ve ayarlar | Yazıldı |
+| 37 | Kullanım | glo hyper ışıkları ve sorun giderme | Yazıldı (kullanıcı rehberlerine dayanıyor) |
+| 38 | Kullanım | Ploom X ışıkları ve sorun giderme | Yazıldı |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |

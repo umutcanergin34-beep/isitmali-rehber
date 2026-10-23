@@ -23,7 +23,7 @@ const linkler = [
 
     <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" data-menu-ac>
       <span class="menu-cizgi" aria-hidden="true"></span>
-      <span class="gizli">Menüyü aç</span>
+      <span class="gizli" data-menu-etiket>Menüyü aç</span>
     </button>
 
     <nav class="ana-menu" id="ana-menu" aria-label="Ana menü">
@@ -67,11 +67,17 @@ const linkler = [
     const acik = !acikMi(menuDugme);
     ayarla(menuDugme, acik);
     document.documentElement.classList.toggle('menu-acik', acik);
+    const etiket = menuDugme.querySelector('[data-menu-etiket]');
+    if (etiket) etiket.textContent = acik ? 'Menüyü kapat' : 'Menüyü aç';
   });
   konuDugme?.addEventListener('click', () => ayarla(konuDugme, !acikMi(konuDugme)));
 
   document.addEventListener('click', (e) => {
     if (!konuDugme?.parentElement?.contains(e.target as Node)) ayarla(konuDugme, false);
+  });
+  // Klavyeyle panelden çıkınca (Tab) panel açık kalıp içeriği örtmesin
+  konuDugme?.parentElement?.addEventListener('focusout', (e) => {
+    if (!konuDugme.parentElement?.contains(e.relatedTarget as Node | null)) ayarla(konuDugme, false);
   });
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;

@@ -1,5 +1,6 @@
 ---
 baslik: "Uçakta Isıtmalı Tütün Cihazı: Kabin Bagajı, Batarya ve Şarj Kuralları"
+seoBaslik: "Uçakta Isıtmalı Tütün Cihazı: Bagaj ve Batarya Kuralları"
 aciklama: "Isıtmalı tütün cihazı neden bavula konmaz, kabinde nasıl taşınır, uçakta şarj edilebilir mi? Lityum batarya kurallarının kısa özeti."
 yayin: 2026-10-22
 guncelleme: 2026-10-23

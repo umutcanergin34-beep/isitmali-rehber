@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Markaları ve Üreticileri: Hangi Marka Hangi Şirketin?"
+seoBaslik: "Isıtmalı Tütün Markaları ve Üreticileri"
 aciklama: "IQOS, glo, Ploom, lil ve Pulze hangi şirketin? Dünyadaki büyük ısıtmalı tütün markalarının üreticileri, cihaz aileleri ve çubuk adları tek tabloda."
 yayin: 2026-10-22
 guncelleme: 2026-10-22

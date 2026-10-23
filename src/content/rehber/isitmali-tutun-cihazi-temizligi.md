@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Cihazı Temizliği: Bıçaklı ve İndüksiyonlu Modellerde Bakım"
+seoBaslik: "Isıtmalı Tütün Cihazı Temizliği: Adım Adım Bakım"
 aciklama: "Bıçaklı IQOS'larda başlık ve hazne nasıl temizlenir, ILUMA gibi indüksiyonlu cihazlar neden temizlik istemez? Yapılmaması gerekenler."
 yayin: 2026-10-22
 guncelleme: 2026-10-22

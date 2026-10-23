@@ -1,5 +1,6 @@
 ---
 baslik: "IQOS ILUMA Nasıl Kullanılır? Adım Adım Açma, Kullanma ve Kapatma"
+seoBaslik: "IQOS ILUMA Nasıl Kullanılır? Adım Adım Anlatım"
 aciklama: "IQOS ILUMA nasıl açılır, çubuk nasıl takılır, ısınma ne kadar sürer ve cihaz nasıl kapatılır? Üreticinin kılavuzuna dayanan adım adım anlatım."
 yayin: 2026-10-23
 guncelleme: 2026-10-23

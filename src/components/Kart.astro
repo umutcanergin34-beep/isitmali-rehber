@@ -10,8 +10,8 @@ const { slug, baslik, aciklama, kategori, tarih, tur = 'normal', gorsel } = Astr
 const { kisa, renk } = KATEGORI_BILGI[kategori];
 ---
 <article class={`kart kart-${tur}`} style={`--kat:${renk}`}>
-  {tur === 'buyuk' && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} slug={slug} buyuk gorsel={gorsel} /></a>}
-  {tur === 'normal' && gorsel && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} slug={slug} gorsel={gorsel} /></a>}
+  {tur === 'buyuk' && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} buyuk yer="manset" gorsel={gorsel} /></a>}
+  {tur === 'normal' && gorsel && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} gorsel={gorsel} /></a>}
   {tur === 'yatay' && <span class="kart-ikon"><Ikon ad={kategori} boyut={18} /></span>}
   <div class="kart-metin">
     {tur !== 'yatay' && <a href={`/kategori/${kategori}/`} class="kat-etiket"><Ikon ad={kategori} boyut={14} />{kisa}</a>}

@@ -1,5 +1,6 @@
 ---
 baslik: "Isıtmalı Tütün Cihazları Nasıl Çalışır? Bıçak, İndüksiyon ve Çevresel Isıtma"
+seoBaslik: "Isıtmalı Tütün Cihazları Nasıl Çalışır? 3 Isıtma Yöntemi"
 aciklama: "IQOS, glo, Ploom ve lil cihazları tütünü nasıl ısıtır, hangi çubukla çalışır? Üretici kaynaklı teknik karşılaştırma ve uyumluluk tablosu."
 yayin: 2026-10-22
 guncelleme: 2026-10-23
@@ -27,7 +28,7 @@ kaynaklar:
   - { ad: "The Korea Times: KT&G lil SOLID 2.0", url: "https://www.koreatimes.co.kr/www/tech/2021/08/694_313247.html" }
 ---
 
-**Kısaca:** Isıtmalı tütün cihazları tütünü yakmaz, elektronik olarak ısıtır. Üç ana yöntem var: **içten bıçakla ısıtma** (IQOS ORIGINALS / IQOS 3 DUO), **indüksiyonla ısıtma** (IQOS ILUMA, glo hyper, lil SOLID 2.0) ve **dıştan çevreleyerek ısıtma** (Ploom X'in HeatFlow sistemi). Her cihaz yalnızca kendi çubuk ailesiyle çalışır; markalar arası çubuk kullanılmaz.
+**Kısaca:** Isıtmalı tütün cihazları tütünü yakmaz, elektronik olarak ısıtır. Üç ana yöntem var: **içten bıçakla ısıtma** (IQOS ORIGINALS / IQOS 3 DUO), **indüksiyonla ısıtma** (IQOS ILUMA, glo hyper, [lil SOLID 2.0](/rehber/lil-solid-hybrid-aible-farki/)) ve **dıştan çevreleyerek ısıtma** (Ploom X'in HeatFlow sistemi). Her cihaz yalnızca kendi çubuk ailesiyle çalışır; markalar arası çubuk kullanılmaz.
 
 ## Üç ısıtma yöntemi
 

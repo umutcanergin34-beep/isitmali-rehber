@@ -52,7 +52,7 @@ PMI, ILUMA i serisini 2024'te Japonya'daki havalimanı mağazalarında, IQOS'un 
 - **Dokunmatik ekran:** Holder'daki küçük ekran, oturumun ne kadar sürdüğünü ve batarya durumunu gösterir. Duraklatma da bu ekrandan yapılır.
 - **Duraklatma modu (Pause):** Ekranda yukarı ya da aşağı kaydırarak kullanıma ara verebilir, sonra çubuğu boşa harcamadan kaldığınız yerden devam edebilirsiniz. Üretici açıklamalarına göre ara en fazla 8 dakika sürebilir. Hangi koşullarda kullanılabildiği (mod, oturumun ilk dakikaları gibi) kaynaklarda farklı anlatıldığı için kılavuzu kontrol edin.
 - **FlexPuff:** IQOS'a göre nefes temponuza uyum sağlar ve en fazla 4 ek nefes verebilir. Etkinleşmesi kullanım alışkanlığına bağlıdır, duraklatma kullanıldığında çalışmaz.
-- **FlexBattery:** Holder bataryasının iki moddan biriyle kullanılmasını sağlar. Varsayılan **Performance modunda** holder, her birinde bir duraklatma hakkıyla art arda 2 kullanım ya da duraklatmasız art arda 3 kullanım sunar. **Eco modunda** holder tek kullanımla sınırlanır; IQOS'a göre bu, sürekli Eco modunda kullanıldığında holder bataryasının ömrünü bir yıla kadar uzatabilir. Mod, IQOS uygulamasından değiştirilebilir.
+- **FlexBattery:** Holder bataryasının iki moddan biriyle kullanılmasını sağlar. Varsayılan **Performance modunda** holder, her birinde bir duraklatma hakkıyla art arda 2 kullanım ya da duraklatmasız art arda 3 kullanım sunar. **Eco modunda** holder tek kullanımla sınırlanır; IQOS'a göre bu, sürekli Eco modunda kullanıldığında holder bataryasının ömrünü bir yıla kadar uzatabilir. Mod, [IQOS uygulamasından](/rehber/iqos-uygulamasi-ve-cihaz-eslestirme/) değiştirilebilir.
 
 ## Neler değişmedi?
 

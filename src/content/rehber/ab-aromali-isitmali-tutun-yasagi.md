@@ -1,5 +1,6 @@
 ---
 baslik: "Avrupa Birliği'nde Aromalı Isıtmalı Tütün Yasağı: 2022/2100 Sayılı Direktif"
+seoBaslik: "AB'de Aromalı Isıtmalı Tütün Yasağı: 2022/2100 Direktifi"
 aciklama: "AB, Ekim 2023'ten beri ısıtmalı tütünde tütün dışındaki karakteristik aromaları yasaklıyor. Direktif neyi kapsar, ne zaman yürürlüğe girdi?"
 yayin: 2026-10-22
 guncelleme: 2026-10-22

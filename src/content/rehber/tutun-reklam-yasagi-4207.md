@@ -1,5 +1,6 @@
 ---
 baslik: "Tütün Reklam Yasağı: 4207 Sayılı Kanun Sosyal Medyada Neyi Yasaklıyor?"
+seoBaslik: "Tütün Reklam Yasağı: 4207 Sayılı Kanun ve Sosyal Medya"
 aciklama: "4207 sayılı Kanun'un 3. maddesi tütün ürünlerinin reklamını ve tanıtımını nasıl yasaklıyor? İnternet, sosyal medya ve dizilerde neler sınırlı?"
 yayin: 2026-10-22
 guncelleme: 2026-10-22

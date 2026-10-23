@@ -1,11 +1,11 @@
 # Isıtmalı Rehber
 
-Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız, satış yapmayan teknik rehber sitesi. Astro ile statik site; Cloudflare Pages'e uygun.
+Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız, satış yapmayan teknik rehber sitesi. Astro ile statik site; Cloudflare Workers (statik varlıklar) üzerinde yayınlanır.
 
 ## Durum
-- **Yayında değil.** `src/lib/site.ts` içinde `YAYINDA = false`: tüm sayfalar `noindex`, `robots.txt` her şeyi kapatıyor.
+- **Yayında.** `src/lib/site.ts` içinde `YAYINDA = true`. `false` yapılırsa tüm sayfalar `noindex` olur, `robots.txt` her şeyi kapatır.
 - Alan adı: `https://isitmalihber.com` (Cloudflare Workers özel alan adı, `wrangler.jsonc`).
-- Editör ve sahiplik bilgisi boş (`EDITOR`, `SAHIPLIK`); boşken Hakkımızda'da uyarı görünür.
+- Editör ve sahiplik bilgisi boş (`EDITOR`, `SAHIPLIK`). Uyarı yalnızca `YAYINDA = false` iken görünür; yayındayken Hakkımızda'da sahiplik açıklaması hiç yok. **Yapılacak.**
 - Vape kategorisi yok; 3 ay sonra Search Console verisine bakılıp karar verilecek.
 
 ## Yayına alma listesi
@@ -13,7 +13,7 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 2. Alan adını al, `SITE_URL`'i değiştir.
 3. `EDITOR` ve `SAHIPLIK` bilgilerini doldur.
 4. `dogrulanacak: true` olan rehberlerdeki bilgileri resmi kaynaktan doğrula, bayrağı kaldır.
-5. `YAYINDA = true`, Cloudflare Pages'e bağla, Search Console ve Bing'e ekle.
+5. `YAYINDA = true`, `npx wrangler deploy`, Search Console ve Bing'e ekle.
 
 ## İçerik kuralları
 - Satış yok: fiyat, sipariş, "satın al", WhatsApp, indirim yok. `npm test` derlenmiş sayfalarda bu ifadeleri ve kırık iç bağlantıları arar.
@@ -31,5 +31,5 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 npm install
 npm run dev     # geliştirme sunucusu
 npm run build   # dist/
-npm test        # satış dili ve kırık bağlantı kontrolü (önce build)
+npm test        # satış dili, kırık bağlantı/çapa, başlık sırası, site haritası (önce build)
 ```
