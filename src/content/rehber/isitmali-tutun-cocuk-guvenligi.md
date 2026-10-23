@@ -48,5 +48,6 @@ Belirtiler yutmadan sonraki dakikalar içinde başlayabilir. Hafif görünse bil
 - **Cihaz:** Cihazı da çocuğun ulaşamayacağı yerde tutun.
 - **Misafirler:** Evinize gelen yetişkinlerden de çubuklarını ve kullanılmış uçlarını ortada bırakmamalarını isteyin.
 - **Seyahat:** Otel odasında, arabada ya da akraba evinde de aynı kurallara uyun; çocuklar yeni ortamlarda her şeyi daha çok merak eder.
+- **İndüksiyonlu çubuklar:** TEREA gibi indüksiyonlu cihaz çubuklarının içinde keskin bir metal parça bulunur. Ayrıntılar için [TEREA çubuğundaki metal parça](/rehber/terea-cubugundaki-metal-parca/) yazısına bakın.
 
 Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir.
