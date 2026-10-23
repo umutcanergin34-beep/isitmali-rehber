@@ -40,6 +40,9 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 30 | Kullanım | IQOS ILUMA çubuk sıkıştı / kırıldı | Yazıldı |
 | 31 | Kullanım | IQOS ILUMA çubuğu ısıtmıyor | Yazıldı |
 | 32 | Kullanım | IQOS ILUMA kaç yıl dayanır: batarya ve garanti | Yazıldı |
+| 33 | Kullanım | IQOS 3 DUO nasıl kullanılır | Yazıldı |
+| 34 | Kullanım | glo hyper nasıl kullanılır | Yazıldı |
+| 35 | Kullanım | Ploom X nasıl kullanılır | Yazıldı |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
 | 11 | Güven | Çubukları çocuklardan ve evcil hayvanlardan uzak tutmak | Yazıldı |
