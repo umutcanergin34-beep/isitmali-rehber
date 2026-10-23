@@ -55,6 +55,10 @@ hyper pro, Japonya'da Aralık 2023'te çıktı. BAT, Ocak 2024 tarihli bültenin
 
 2026'da Güney Kore'de **hyper pro+** adıyla, daha hızlı ısınma öne çıkarılan bir sürüm çıktı. Bu model her ülkede bulunmayabilir.
 
+## Sonraki kuşak: glo Hilo
+
+BAT, 2025'te Japonya'da virto çubuklarıyla çalışan yeni **glo Hilo** ailesini tanıttı. Ayrıntılar için [glo Hilo ve Hilo Plus](/rehber/glo-hilo-serisi/) yazısına bakın.
+
 ## glo, IQOS ve Ploom farkı
 
 Üç büyük üreticinin cihazları aynı fikre dayanır: tütünü yakmadan ısıtmak. Ancak her biri yalnızca kendi çubuk ailesiyle çalışır. Hangi markanın hangi şirkete ait olduğu için [markalar ve üreticiler rehberine](/rehber/isitmali-tutun-markalari-ve-ureticileri/), ısıtma yöntemlerinin farkı için [ısıtmalı tütün cihazları nasıl çalışır](/rehber/isitmali-tutun-cihazlari-nasil-calisir/) yazısına bakabilirsiniz.
