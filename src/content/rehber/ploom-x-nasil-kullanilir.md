@@ -47,7 +47,7 @@ Kuşaklar ve yeni Ploom AURA için [Ploom X ve Ploom AURA farkı](/rehber/ploom-
 
 ## Şarj ve batarya
 
-JTI'nın duyurusuna göre Ploom X Advanced USB-C ile şarj olur ve tam şarj 90 dakikadan kısa sürer. Bir ürün sayfası tam şarjla art arda yaklaşık 22 kullanım bildiriyor. Gerçek sayı kullanım alışkanlığına ve batarya yaşına bağlıdır. Güvenli şarj için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) yazısına bakın.
+Ploom X Advanced USB-C ile şarj olur. JTI'nın İngiltere duyurusu 90 dakikanın altında tam şarj bildiriyordu; JT'nin Japonya destek sayfası ise birlikte gelen adaptör ve kabloyla boştan tam şarjın yaklaşık 110 dakika sürdüğünü ve tam şarjla yaklaşık 23 çubuk kullanılabildiğini söylüyor. Ayrıntılar için [Ploom X şarj süresi](/rehber/ploom-x-sarj-suresi-ve-sarj-olmuyor/) yazısına bakın. Gerçek sayı kullanım alışkanlığına ve batarya yaşına bağlıdır. Güvenli şarj için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) yazısına bakın.
 
 ## Nasıl ısıtır?
 
