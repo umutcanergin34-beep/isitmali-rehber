@@ -77,3 +77,5 @@ Işıkların tamamı için [VEEV ONE çalışmıyor](/rehber/veev-one-calismiyor
 - **Başka marka pod kullanmayın.** Cihaz yalnızca VEEV ONE pod'larıyla çalışır.
 - **Sıvısı bitmiş pod'la devam etmeyin.** Kuru pod yanık tat verir.
 - **Pod'ları baş aşağı ve sıcakta saklamayın.** Üreticiye göre baş aşağı saklanan pod yanık tat verebilir ve sızdırabilir.
+
+Pod'la ilgili tüm bilgilerin özeti için [VEEV ONE pod rehberi](/rehber/veev-one-pod-rehberi/) yazısına bakın.

@@ -81,3 +81,5 @@ Sıvı yutulursa ya da şikâyet geçmezse bir hekime başvurun. Pod'ları ve s�
 ## Uçakta sızıntı
 
 Kabin basıncı uçuş boyunca değiştiği için üretici, uçuştan önce pod'un bitirilmesini öneriyor; kullanım kılavuzu da uçuş sırasında kullanılmamasını söylüyor. Lityum bataryalı cihazların bagaj kuralları için [uçakta ısıtmalı tütün cihazı](/rehber/ucakta-isitmali-tutun-cihazi/) yazısına bakın; elektronik sigaralar da aynı kurallara tabidir.
+
+Pod'la ilgili tüm bilgilerin özeti için [VEEV ONE pod rehberi](/rehber/veev-one-pod-rehberi/) yazısına bakın.

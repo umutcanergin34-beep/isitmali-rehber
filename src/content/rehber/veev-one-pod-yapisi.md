@@ -77,3 +77,5 @@ TEREA tarafı için [TEREA çubuğunun yapısı](/rehber/terea-cubugunun-yapisi/
 ## Temas noktaları ve bakım
 
 Pod ile cihaz, pod yuvasındaki temas noktalarından elektrik bağlantısı kurar. Üretici bu noktaların ve ağızlığın yalnızca **kuru bezle** silinmesini istiyor. Temas noktası kirlenirse cihaz pod'u tanımayabilir; bu durumda ne yapılacağı [VEEV ONE çalışmıyor](/rehber/veev-one-calismiyor/) yazısında.
+
+Pod'la ilgili tüm bilgilerin özeti için [VEEV ONE pod rehberi](/rehber/veev-one-pod-rehberi/) yazısına bakın.

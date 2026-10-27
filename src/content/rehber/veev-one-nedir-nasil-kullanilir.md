@@ -130,6 +130,7 @@ Basına yansıyan bilgilere göre 2026'da daha büyük bataryalı ve pod saklama
 
 ## VEEV ONE dizisindeki diğer yazılar
 
+- [VEEV ONE pod rehberi: takma, saklama, tat sorunları, ömür ve uyum](/rehber/veev-one-pod-rehberi/) (pod hakkında her şey tek sayfada)
 - [VEEV ONE pod kaç nefes gider, ne zaman değiştirilir?](/rehber/veev-one-pod-kac-nefes-gider/)
 - [VEEV ONE pod sızdırıyor: nedenleri ve ne yapılmalı](/rehber/veev-one-pod-sizdiriyor/)
 - [VEEV ONE çalışmıyor: kırmızı ışık, buhar gelmiyor, şarj olmuyor](/rehber/veev-one-calismiyor/)

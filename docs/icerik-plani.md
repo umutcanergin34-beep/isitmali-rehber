@@ -85,6 +85,7 @@ VEEV ONE ısıtmalı tütün değil, kapalı pod e-sigara; her yazıda bu açık
 | V8 | Kullanım | VEEV ONE şarj süresi ve batarya | Yazıldı; mAh resmi kaynakta yok, yazılmadı |
 | V9 | Kullanım | Kullanılmış pod ve e-sigara cihazları nasıl atılır | Yazıldı |
 | V10 | Teknoloji | VEEV ONE, VEEV ONE PLUS ve VEEV inPRIME farkı | Yazıldı; ONE PLUS ve ONE SE bilgisi basına dayanıyor, resmi sayfa çıkınca güncellenecek |
+| V11 | Kullanım | VEEV ONE pod rehberi (ana sayfa): takma, tanınma, saklama, tat sorunları, uyum, atık | Yazıldı; sıvı içerik listesi ve raf ömrü resmi sayfada yok, yazılmadı |
 
 ## ILUMA i dizisi
 
