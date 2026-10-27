@@ -100,3 +100,17 @@ Genel tanıtım `iqos-iluma-i-serisi-yenilikleri` yazısında; dizi her özelli�
 | I5 | Teknoloji | FlexBattery (Performance/Eco) ve FlexPuff | Yazıldı; modun nereden değiştirildiği (uygulama ya da mağaza) kaynaklarda çelişkili, ikisi de belirtildi |
 | I6 | Teknoloji | ILUMA i ile eski ILUMA uyumu | Yazıldı; tabloda olmayan eşleşmeler uyumlu varsayılmadı |
 | I7 | Kullanım | ILUMA i şarj süresi ve adaptör | Yazıldı |
+
+## Ploom dizisi
+
+Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japonya sürümüne ait olduğu her yazıda belirtilir. Aroma listesi, fiyat ve kampanya sayfaları kullanılmaz.
+
+| # | Kategori | Başlık | Durum |
+|---|---|---|---|
+| P1 | Kullanım | Ploom AURA nasıl kullanılır | Yazıldı |
+| P2 | Teknoloji | Ploom ısıtma modları (AURA dört mod, X Advanced iki mod) | Yazıldı; X Advanced için moda göre çubuk sayısı resmi sayfada yok |
+| P3 | Kullanım | Ploom AURA ışıkları ve sorun giderme | Yazıldı |
+| P4 | Kullanım | Ploom AURA şarj süresi ve adaptör | Yazıldı |
+| P5 | Kullanım | Ploom temizliği ve saklama | Yazıldı |
+| P6 | Kullanım | Ploom'da çubuk sıkıştı ve uyumlu çubuklar | Yazıldı |
+| P7 | Kullanım | Ploom Bluetooth, uygulama ve cihaz kilidi | Yazıldı; uygulama adları Japonya'ya ait |

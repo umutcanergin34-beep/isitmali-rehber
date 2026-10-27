@@ -46,3 +46,5 @@ JT, çubuk sayısının kullanım ortamına göre artıp azalabileceğini belirt
 5. **Destek.** Sorun sürerse üreticinin destek hattına başvurun.
 
 Diğer ışık düzenleri ve ısıtma sorunları için [Ploom X ışıkları ve sorun giderme](/rehber/ploom-x-isiklari-ve-sorun-giderme/), kullanım adımları için [Ploom X nasıl kullanılır](/rehber/ploom-x-nasil-kullanilir/) yazısına bakın. Hangi kablo ve adaptörün kullanılacağı için [cihaz hangi şarj aletiyle şarj edilir](/rehber/isitmali-tutun-cihazi-sarj-aleti-ve-kablo/) yazısına bakın.
+
+Ploom AURA'nın şarjı için [Ploom AURA şarj süresi ve adaptör](/rehber/ploom-aura-sarj-suresi-ve-adaptor/) yazısına bakın.
