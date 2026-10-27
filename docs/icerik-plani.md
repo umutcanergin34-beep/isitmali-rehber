@@ -85,3 +85,17 @@ VEEV ONE ısıtmalı tütün değil, kapalı pod e-sigara; her yazıda bu açık
 | V8 | Kullanım | VEEV ONE şarj süresi ve batarya | Yazıldı; mAh resmi kaynakta yok, yazılmadı |
 | V9 | Kullanım | Kullanılmış pod ve e-sigara cihazları nasıl atılır | Yazıldı |
 | V10 | Teknoloji | VEEV ONE, VEEV ONE PLUS ve VEEV inPRIME farkı | Yazıldı; ONE PLUS ve ONE SE bilgisi basına dayanıyor, resmi sayfa çıkınca güncellenecek |
+
+## ILUMA i dizisi
+
+Genel tanıtım `iqos-iluma-i-serisi-yenilikleri` yazısında; dizi her özelliği ayrı ve ayrıntılı anlatır. Kaynak: PMI'nın bölgesel IQOS destek sayfaları (İngiltere, BAE, Ürdün, Mısır, Malta, Malezya). Perakendeci sayfaları kaynak gösterilmez.
+
+| # | Kategori | Başlık | Durum |
+|---|---|---|---|
+| I1 | Kullanım | ILUMA i Duraklatma (Pause) modu: nasıl kullanılır, neden çalışmaz | Yazıldı |
+| I2 | Kullanım | ILUMA i ekran işaretleri ve i ONE ışıkları | Yazıldı; i ve i PRIME için ayrı sıfırlama adımı resmi sayfada yok, yazılmadı |
+| I3 | Kullanım | ILUMA i ONE nasıl kullanılır | Yazıldı |
+| I4 | Kullanım | ILUMA i ve i PRIME nasıl kullanılır | Yazıldı |
+| I5 | Teknoloji | FlexBattery (Performance/Eco) ve FlexPuff | Yazıldı; modun nereden değiştirildiği (uygulama ya da mağaza) kaynaklarda çelişkili, ikisi de belirtildi |
+| I6 | Teknoloji | ILUMA i ile eski ILUMA uyumu | Yazıldı; tabloda olmayan eşleşmeler uyumlu varsayılmadı |
+| I7 | Kullanım | ILUMA i şarj süresi ve adaptör | Yazıldı |

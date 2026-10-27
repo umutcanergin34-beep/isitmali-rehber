@@ -2,7 +2,7 @@
 baslik: "IQOS ILUMA i Serisi: Önceki ILUMA'dan Farkı Ne?"
 aciklama: "ILUMA i, ILUMA i PRIME ve ILUMA i ONE ile gelen dokunmatik ekran, Duraklatma modu, FlexPuff ve FlexBattery ne işe yarıyor? Önceki ILUMA kuşağıyla karşılaştırma."
 yayin: 2026-10-23
-guncelleme: 2026-10-23
+guncelleme: 2026-10-27
 kategori: teknoloji
 gorsel:
   src: "../../assets/gorseller/iqos-iluma-i-serisi-yenilikleri.jpg"
@@ -50,7 +50,7 @@ PMI, ILUMA i serisini 2024'te Japonya'daki havalimanı mağazalarında, IQOS'un 
 ## Yeni özellikler
 
 - **Dokunmatik ekran:** Holder'daki küçük ekran, oturumun ne kadar sürdüğünü ve batarya durumunu gösterir. Duraklatma da bu ekrandan yapılır.
-- **Duraklatma modu (Pause):** Ekranda yukarı ya da aşağı kaydırarak kullanıma ara verebilir, sonra çubuğu boşa harcamadan kaldığınız yerden devam edebilirsiniz. Üretici açıklamalarına göre ara en fazla 8 dakika sürebilir. Hangi koşullarda kullanılabildiği (mod, oturumun ilk dakikaları gibi) kaynaklarda farklı anlatıldığı için kılavuzu kontrol edin.
+- **Duraklatma modu (Pause):** Ekranı aşağı kaydırarak kullanıma ara verebilir, yukarı kaydırarak çubuğu boşa harcamadan kaldığınız yerden devam edebilirsiniz. Üretici açıklamalarına göre ara en fazla 8 dakika sürebilir. Koşulları (yalnızca Performance modu, ilk 3 dakika ya da 8 nefes) ve çalışmadığında yapılacaklar [ILUMA i Duraklatma modu](/rehber/iqos-iluma-i-duraklatma-modu/) yazısında.
 - **FlexPuff:** IQOS'a göre nefes temponuza uyum sağlar ve en fazla 4 ek nefes verebilir. Etkinleşmesi kullanım alışkanlığına bağlıdır, duraklatma kullanıldığında çalışmaz.
 - **FlexBattery:** Holder bataryasının iki moddan biriyle kullanılmasını sağlar. Varsayılan **Performance modunda** holder, her birinde bir duraklatma hakkıyla art arda 2 kullanım ya da duraklatmasız art arda 3 kullanım sunar. **Eco modunda** holder tek kullanımla sınırlanır; IQOS'a göre bu, sürekli Eco modunda kullanıldığında holder bataryasının ömrünü bir yıla kadar uzatabilir. Mod, [IQOS uygulamasından](/rehber/iqos-uygulamasi-ve-cihaz-eslestirme/) değiştirilebilir.
 
@@ -61,3 +61,13 @@ PMI, ILUMA i serisini 2024'te Japonya'daki havalimanı mağazalarında, IQOS'un 
 - **Üçlü yapı:** PRIME ve standart model iki parçalı (holder ve şarj kutusu), ONE tek parça. Ağırlık ve şarj süreleri için [ILUMA modelleri karşılaştırmasına](/rehber/iqos-iluma-modelleri-farklari/) bakın.
 
 Işıkların ve ekran simgelerinin anlamı kuşağa göre değişebilir: [ILUMA ışıkları ne anlama gelir](/rehber/iqos-iluma-isiklari-ne-anlama-gelir/).
+
+## ILUMA i dizisindeki diğer yazılar
+
+- [ILUMA i Duraklatma (Pause) modu](/rehber/iqos-iluma-i-duraklatma-modu/)
+- [ILUMA i ekran işaretleri ve ışıkları](/rehber/iqos-iluma-i-ekran-isaretleri-ve-isiklari/)
+- [ILUMA i ONE nasıl kullanılır](/rehber/iqos-iluma-i-one-nasil-kullanilir/)
+- [ILUMA i ve i PRIME nasıl kullanılır](/rehber/iqos-iluma-i-ve-i-prime-nasil-kullanilir/)
+- [ILUMA i FlexBattery ve FlexPuff](/rehber/iqos-iluma-i-flexbattery-ve-flexpuff/)
+- [ILUMA i ile eski ILUMA uyumu](/rehber/iqos-iluma-i-ve-eski-iluma-uyumu/)
+- [ILUMA i şarj süresi ve adaptör](/rehber/iqos-iluma-i-sarj-suresi-ve-adaptor/)
