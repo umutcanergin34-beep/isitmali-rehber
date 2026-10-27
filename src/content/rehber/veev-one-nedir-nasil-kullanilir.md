@@ -58,7 +58,7 @@ VEEV ONE bir **elektronik sigaradır**. IQOS ile aynı şirketin ürünü olduğ
 - **Çıkış:** VEEV ONE 2023'te Red Dot tasarım ödülü aldı. İngiltere'ye Ağustos 2024'te, ilk çıkışından bir yıl dolmadan geldi. VEEV markası daha önce İtalya ve Çekya gibi Avrupa ülkelerinde satılıyordu.
 - **Gövde:** Tek parça alüminyum, yassı ve uzun bir form. Sıvı seviyesi dışarıdan görülür.
 - **Isıtıcı:** Üreticinin "Compact Ceramic" adını verdiği seramik ısıtma teknolojisi.
-- **Pod:** 2 ml, önceden doldurulmuş ve kapalı. Doldurulmaz, temizlenmez. Farklı aromalı pod'lar üzerlerindeki renkli halkalarla ayırt edilir.
+- **Pod:** 2 ml, önceden doldurulmuş ve kapalı ([pod'un yapısı](/rehber/veev-one-pod-yapisi/), [kaç nefes gider](/rehber/veev-one-pod-kac-nefes-gider/)). Doldurulmaz, temizlenmez. Farklı aromalı pod'lar üzerlerindeki renkli halkalarla ayırt edilir.
 - **Düşük sıvı algılama:** Cihaz sıvı azaldığında uyarır ve üreticiye göre bu, yanık tadı önlemek içindir.
 - **Nikotin:** Avrupa Birliği'nde e-sigara sıvılarındaki nikotin, Tütün Ürünleri Direktifi gereği en fazla 20 mg/ml olabilir ve pod hacmi en fazla 2 ml'dir. Bir pod'un nikotin oranı paketinin üzerinde yazar ve ülkeye göre değişebilir.
 - **Batarya:** Şarj edilebilir, cihaza gömülü batarya. Resmi sayfalarda batarya kapasitesi (mAh) verilmiyor; bu yüzden burada bir sayı yazmıyoruz.
@@ -97,7 +97,7 @@ PMI'nın Mısır destek sayfasındaki ışık kodları aşağıdadır. İngilter
 - **Şarj sırasında:** Bir ışık yanıp söner, şarj bitince ışıklar söner.
 - **Şarj seviyesi:** Düğmeye kısaca basınca seviye görünür. Mısır sayfasına göre parlak beyaz ışık %50-100, daha sönük beyaz ışık %1-50 aralığını gösterir. %1 ve altında ışık kırmızı, ardından 5 kez beyaz yanıp söner.
 
-Genel şarj güvenliği için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) ve [şarj aleti ve kablo](/rehber/isitmali-tutun-cihazi-sarj-aleti-ve-kablo/) yazılarına bakın. Bu yazılar ısıtmalı tütün cihazları için hazırlandı ama lityum bataryayla ilgili kurallar VEEV ONE için de geçerlidir.
+Şarj süresi ve seviye göstergesinin ayrıntıları için [VEEV ONE şarj süresi ve batarya](/rehber/veev-one-sarj-suresi-ve-batarya/) yazısına bakın. Genel şarj güvenliği için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) ve [şarj aleti ve kablo](/rehber/isitmali-tutun-cihazi-sarj-aleti-ve-kablo/) yazılarına bakın. Bu yazılar ısıtmalı tütün cihazları için hazırlandı ama lityum bataryayla ilgili kurallar VEEV ONE için de geçerlidir.
 
 ## Çocuk kilidi
 
@@ -126,4 +126,4 @@ Diğer ışık kodları, şarj sorunları ve garanti için [VEEV ONE çalışmı
 
 ## VEEV ONE ve VEEV ONE PLUS
 
-Basına yansıyan bilgilere göre 2026'da daha büyük bataryalı ve pod saklama bölmeli bir **VEEV ONE PLUS** modeli duyuruldu ve aynı pod'larla çalıştığı belirtiliyor. Bu model için resmi bir kullanım sayfası bulamadığımız için teknik ayrıntısını burada vermiyoruz. Markanın gelişimi için [VEEV'in kısa tarihi](/rehber/veev-markasinin-kisa-tarihi/) yazısına bakın.
+Basına yansıyan bilgilere göre 2026'da daha büyük bataryalı ve pod saklama bölmeli bir **VEEV ONE PLUS** modeli duyuruldu ve aynı pod'larla çalıştığı belirtiliyor. Bu model için resmi bir kullanım sayfası bulamadığımız için teknik ayrıntısını burada vermiyoruz. Modeller ve pod uyumu için [VEEV ONE, ONE PLUS ve inPRIME farkı](/rehber/veev-one-plus-ve-veev-inprime-farki/) yazısına bakın. Markanın gelişimi için [VEEV'in kısa tarihi](/rehber/veev-markasinin-kisa-tarihi/) yazısına bakın.

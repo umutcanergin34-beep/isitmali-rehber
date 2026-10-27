@@ -44,6 +44,7 @@ kaynaklar:
 | 2024 | VEEV ONE ve VEEV NOW Nisan'da Malezya'da, VEEV ONE Ağustos'ta İngiltere'de satışa çıktı. |
 | 2025 | İngiltere'de tek kullanımlık e-sigaraların satışı 1 Haziran 2025'te yasaklandı. Basına yansıyan bilgilere göre VEEV NOW İngiltere sitesinden kaldırıldı; VEEV ONE ve **VEEV ONE SE** cihazları ile pod'lar için yeni ürün kayıtları yapıldı. |
 | 2026 | Basına yansıyan bilgilere göre daha büyük bataryalı **VEEV ONE PLUS** duyuruldu ve aynı pod'larla çalıştığı belirtiliyor. |
+| 2026 | PMI, kendi pod'larıyla çalışan ve indüksiyonlu ısıtma kullanan **VEEV inPRIME** için çevresel ürün beyanı yayımladı (Temmuz). Ayrıntılar: [VEEV ONE, ONE PLUS ve inPRIME farkı](/rehber/veev-one-plus-ve-veev-inprime-farki/). |
 
 ## VEEV ürün aileleri
 
