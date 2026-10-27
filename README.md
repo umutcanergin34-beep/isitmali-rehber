@@ -26,6 +26,9 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 ## Yeni rehber
 `src/content/rehber/<slug>.md` dosyası ekle. Alanlar `src/content.config.ts` içinde: `baslik`, `aciklama` (en fazla 160 karakter), `kategori` (teknoloji, kullanim, mevzuat, guven, temel), `yayin`, `guncelleme`, `etiketler`, `sss`, `kaynaklar`, `dogrulanacak`.
 
+## IndexNow (Bing, Yandex)
+Anahtar dosyası: `public/dd85c5ae6b50b5a0c7e185f5d761ffa8.txt`. Yeni ya da güncellenen sayfalar yayına çıktıktan sonra `https://api.indexnow.org/indexnow` adresine bu anahtarla bildirilir. Google IndexNow kullanmaz; Google için Search Console.
+
 ## Komutlar
 ```bash
 npm install
