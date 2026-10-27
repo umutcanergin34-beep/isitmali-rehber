@@ -58,6 +58,7 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 48 | Teknoloji | TEREA çubuğunun yapısı | Yazıldı |
 | 49 | Kullanım | Ploom X şarj süresi ve şarj olmuyor | Yazıldı |
 | 50 | Kullanım | Cihaz hangi şarj aleti ve kabloyla şarj edilmeli | Yazıldı |
+| 51 | Kullanım | VEEV ONE nedir, nasıl kullanılır (sitedeki ilk e-sigara yazısı, ısıtmalı tütünle farkı vurgulanıyor) | Yazıldı |
 | — | Güven | Sahte ürün nasıl anlaşılır | Ertelendi: resmi kaynak yok, kaçakçılık/gümrük konusuna değmeden yazılması zor |
 | — | Kullanım | İndüksiyonlu cihazlarda mıknatıs | Bekliyor: resmi kaynak bulunamadı |
 | 9 | Kullanım | IQOS ILUMA şarj olmuyor: kontrol listesi ve sıfırlama | Yazıldı |
