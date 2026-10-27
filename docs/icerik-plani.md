@@ -68,3 +68,20 @@ Kurallar: satış yok, fiyat yok, sağlık iddiası yok, ithalat yasağı ve gü
 | 14 | Kullanım | Soğuk ve sıcak havada cihaz kullanımı | Yazıldı |
 | 15 | Temel | Hangi marka hangi şirketin? Üreticiler ve ürün aileleri | Yazıldı |
 | 16 | Kullanım | Cihazı sıfırlama | Şarj ve ışıklar yazılarına eklendi |
+
+## VEEV ONE dizisi
+
+VEEV ONE ısıtmalı tütün değil, kapalı pod e-sigara; her yazıda bu açıkça belirtilir. Kaynak: PMI'nın bölgesel destek sayfaları ve kullanım kılavuzu, gerekirse sektör basını. Perakendeci sayfaları kaynak gösterilmez.
+
+| # | Kategori | Başlık | Durum |
+|---|---|---|---|
+| V1 | Kullanım | VEEV ONE nedir, nasıl kullanılır | Yayında (#21) |
+| V2 | Kullanım | VEEV ONE pod sızdırıyor: nedenleri ve ne yapılmalı | Yazıldı |
+| V3 | Kullanım | VEEV ONE çalışmıyor: kırmızı ışık, buhar gelmiyor, şarj olmuyor | Yazıldı |
+| V4 | Temel | VEEV'in kısa tarihi: IQOS MESH'ten VEEV ONE'a | Yazıldı |
+| V5 | Kullanım | VEEV ONE pod kaç nefes gider, ne zaman değiştirilir (sıvı seviyesi, düşük sıvı uyarısı, yanık tat) | Sırada |
+| V6 | Teknoloji | VEEV ONE pod'unun yapısı: seramik ısıtıcı, mıknatıslı bağlantı, renk halkaları | Sırada; resmi teknik kaynak aranacak |
+| V7 | Temel | Kapalı pod, açık sistem ve tek kullanımlık e-sigara farkı (AB TPD 2 ml sınırı) | Sırada |
+| V8 | Kullanım | VEEV ONE şarj süresi ve batarya ömrü | Sırada; resmi kapasite bilgisi yoksa yazılmaz |
+| V9 | Kullanım | Kullanılmış pod ve e-sigara cihazları nasıl atılır | Sırada |
+| V10 | Teknoloji | VEEV ONE, VEEV ONE SE ve VEEV ONE PLUS farkı | Bekliyor: resmi ürün sayfası bulunamadı |

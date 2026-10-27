@@ -109,7 +109,9 @@ PMI'nın Mısır sayfasına göre cihaz kilitlenebilir. Kilitlemek ya da kilidi 
 - **Pod takılınca kırmızı ışık:** Pod'u çıkarın, yönünü kontrol edip yeniden takın.
 - **Tat bozuk ya da yanık:** Pod bitmek üzere olabilir; yeni bir pod deneyin.
 - **Sıfırlama:** Düğmeyi 10 saniye basılı tutun.
-- **Sızıntı:** Sızdıran, hasarlı ya da kurcalanmış pod'u kullanmayın, değiştirin. Sıvı cilde değerse sabun ve suyla yıkayın. Pod'un takıldığı yuvada görülen sıvı her zaman sızıntı değildir, yoğuşma da olabilir.
+- **Sızıntı:** Sızdıran, hasarlı ya da kurcalanmış pod'u kullanmayın, değiştirin. Sıvı cilde değerse sabun ve suyla yıkayın. Pod'un takıldığı yuvada görülen sıvı her zaman sızıntı değildir, yoğuşma da olabilir. Ayrıntılar için [VEEV ONE pod sızdırıyor](/rehber/veev-one-pod-sizdiriyor/) yazısına bakın.
+
+Diğer ışık kodları, şarj sorunları ve garanti için [VEEV ONE çalışmıyor](/rehber/veev-one-calismiyor/) yazısına bakın.
 
 ## Temizlik ve saklama
 
@@ -124,4 +126,4 @@ PMI'nın Mısır sayfasına göre cihaz kilitlenebilir. Kilitlemek ya da kilidi 
 
 ## VEEV ONE ve VEEV ONE PLUS
 
-Basına yansıyan bilgilere göre 2026'da daha büyük bataryalı ve pod saklama bölmeli bir **VEEV ONE PLUS** modeli duyuruldu ve aynı pod'larla çalıştığı belirtiliyor. Bu model için resmi bir kullanım sayfası bulamadığımız için teknik ayrıntısını burada vermiyoruz.
+Basına yansıyan bilgilere göre 2026'da daha büyük bataryalı ve pod saklama bölmeli bir **VEEV ONE PLUS** modeli duyuruldu ve aynı pod'larla çalıştığı belirtiliyor. Bu model için resmi bir kullanım sayfası bulamadığımız için teknik ayrıntısını burada vermiyoruz. Markanın gelişimi için [VEEV'in kısa tarihi](/rehber/veev-markasinin-kisa-tarihi/) yazısına bakın.
