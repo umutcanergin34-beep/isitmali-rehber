@@ -6,7 +6,7 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 - **Yayında.** `src/lib/site.ts` içinde `YAYINDA = true`. `false` yapılırsa tüm sayfalar `noindex` olur, `robots.txt` her şeyi kapatır.
 - Alan adı: `https://isitmalihber.com` (Cloudflare Workers özel alan adı, `wrangler.jsonc`).
 - Editör ve sahiplik bilgisi boş (`EDITOR`, `SAHIPLIK`). Uyarı yalnızca `YAYINDA = false` iken görünür; yayındayken Hakkımızda'da sahiplik açıklaması hiç yok. **Yapılacak.**
-- Vape kategorisi yok; 3 ay sonra Search Console verisine bakılıp karar verilecek. İstisna: VEEV ONE dizisi ve kapalı pod/açık sistem yazısı (`docs/icerik-plani.md`, V1-V10); her yazıda e-sigara olduğu açıkça belirtiliyor.
+- Vape kategorisi yok; 3 ay sonra Search Console verisine bakılıp karar verilecek. İstisna: VEEV ONE dizisi ve kapalı pod/açık sistem yazısı (`docs/icerik-plani.md`, V1-V11); her yazıda e-sigara olduğu açıkça belirtiliyor.
 
 ## Yayına alma listesi
 1. Avukat görüşmesi (4207 reklam yasağı ve mağazaya link konusu).
