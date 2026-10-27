@@ -76,12 +76,12 @@ VEEV ONE ısıtmalı tütün değil, kapalı pod e-sigara; her yazıda bu açık
 | # | Kategori | Başlık | Durum |
 |---|---|---|---|
 | V1 | Kullanım | VEEV ONE nedir, nasıl kullanılır | Yayında (#21) |
-| V2 | Kullanım | VEEV ONE pod sızdırıyor: nedenleri ve ne yapılmalı | Yazıldı |
-| V3 | Kullanım | VEEV ONE çalışmıyor: kırmızı ışık, buhar gelmiyor, şarj olmuyor | Yazıldı |
-| V4 | Temel | VEEV'in kısa tarihi: IQOS MESH'ten VEEV ONE'a | Yazıldı |
-| V5 | Kullanım | VEEV ONE pod kaç nefes gider, ne zaman değiştirilir (sıvı seviyesi, düşük sıvı uyarısı, yanık tat) | Sırada |
-| V6 | Teknoloji | VEEV ONE pod'unun yapısı: seramik ısıtıcı, mıknatıslı bağlantı, renk halkaları | Sırada; resmi teknik kaynak aranacak |
-| V7 | Temel | Kapalı pod, açık sistem ve tek kullanımlık e-sigara farkı (AB TPD 2 ml sınırı) | Sırada |
-| V8 | Kullanım | VEEV ONE şarj süresi ve batarya ömrü | Sırada; resmi kapasite bilgisi yoksa yazılmaz |
-| V9 | Kullanım | Kullanılmış pod ve e-sigara cihazları nasıl atılır | Sırada |
-| V10 | Teknoloji | VEEV ONE, VEEV ONE SE ve VEEV ONE PLUS farkı | Bekliyor: resmi ürün sayfası bulunamadı |
+| V2 | Kullanım | VEEV ONE pod sızdırıyor: nedenleri ve ne yapılmalı | Yayında (#22) |
+| V3 | Kullanım | VEEV ONE çalışmıyor: kırmızı ışık, buhar gelmiyor, şarj olmuyor | Yayında (#22) |
+| V4 | Temel | VEEV'in kısa tarihi: IQOS MESH'ten VEEV ONE'a | Yayında (#22) |
+| V5 | Kullanım | VEEV ONE pod kaç nefes gider, ne zaman değiştirilir (sıvı seviyesi, düşük sıvı uyarısı, yanık tat) | Yazıldı |
+| V6 | Teknoloji | VEEV ONE pod'unun yapısı: seramik ısıtıcı, mıknatıslı bağlantı, renk halkaları | Yazıldı; ısıtıcının iç yapısı resmi kaynakta yok, yazılmadı |
+| V7 | Temel | Kapalı pod, açık sistem ve tek kullanımlık e-sigara farkı (AB TPD 2 ml sınırı, İngiltere 2025 tanımı) | Yazıldı |
+| V8 | Kullanım | VEEV ONE şarj süresi ve batarya | Yazıldı; mAh resmi kaynakta yok, yazılmadı |
+| V9 | Kullanım | Kullanılmış pod ve e-sigara cihazları nasıl atılır | Yazıldı |
+| V10 | Teknoloji | VEEV ONE, VEEV ONE PLUS ve VEEV inPRIME farkı | Yazıldı; ONE PLUS ve ONE SE bilgisi basına dayanıyor, resmi sayfa çıkınca güncellenecek |
