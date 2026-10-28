@@ -3,26 +3,40 @@ import { SITE_ADI } from '../lib/site';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 const yil = new Date().getFullYear();
 const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGORI_BILGI)[Kategori]][];
+const temel = [
+  ['/rehber/isitmali-tutun-cihazlari-nasil-calisir/', 'Cihazlar nasıl çalışır?'],
+  ['/rehber/heets-ve-terea-farki/', 'HEETS ve TEREA farkı'],
+  ['/rehber/isitmali-tutun-e-sigara-ve-sigara-farki/', 'E-sigara ve sigaradan farkı'],
+  ['/rehber/isitmali-tutun-sozlugu/', 'Sözlük'],
+  ['/rehber/isitmali-tutun-sik-sorulan-sorular/', 'Sık sorulan sorular'],
+];
 ---
 <footer class="alt">
   <div class="kap alt-izgara">
-    <div>
-      <a href="/" class="logo logo-alt"><span>Isıtmalı<b>Rehber</b></span></a>
+    <div class="alt-marka">
+      <a href="/" class="logo logo-alt">
+        <svg class="logo-isaret" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><rect x="9" y="7" width="5" height="18" rx="2.5" fill="#fff"/><path d="M19 9c3 2 3 4 0 6s-3 4 0 6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+        <span>Isıtmalı<b>Rehber</b></span>
+      </a>
       <p>{SITE_ADI}, ısıtmalı tütün cihazlarının çalışma prensibi, kullanımı ve mevzuatı hakkında kaynak gösteren bağımsız bir rehberdir. Satış yapmaz, ürün önermez, reklam almaz.</p>
-      <p class="alt-18">18+ · İçerik yalnızca yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar.</p>
+      <ul class="alt-rozet"><li>Bağımsız</li><li>Kaynaklı</li><li>Satış yok</li></ul>
     </div>
-    <nav aria-label="Kategoriler (alt)">
-      <p class="alt-baslik">Kategoriler</p>
+    <nav aria-label="Konular (alt)">
+      <p class="alt-baslik">Konular</p>
       {kategoriler.map(([k, b]) => <a href={`/kategori/${k}/`}>{b.kisa}</a>)}
+      <a href="/rehber/">Tüm rehberler</a>
+    </nav>
+    <nav aria-label="Başlangıç rehberleri">
+      <p class="alt-baslik">Başlangıç</p>
+      {temel.map(([href, ad]) => <a href={href}>{ad}</a>)}
     </nav>
     <nav aria-label="Site">
       <p class="alt-baslik">Site</p>
-      <a href="/rehber/">Tüm rehberler</a>
-      <a href="/rehber/isitmali-tutun-sik-sorulan-sorular/">Sık sorulan sorular</a>
       <a href="/hakkimizda/">Hakkımızda</a>
       <a href="/yayin-ilkeleri/">Yayın ilkeleri ve düzeltmeler</a>
       <a href="/rss.xml">RSS</a>
     </nav>
   </div>
+  <div class="kap"><p class="alt-18"><strong>18+</strong> İçerik yalnızca yetişkinler içindir. Isıtmalı tütün ürünleri sağlık riski taşır ve bağımlılık yapar. Bu site bilgilendirme amaçlıdır.</p></div>
   <div class="kap"><div class="alt-son"><span>© {yil} {SITE_ADI}</span><span>Bağımsız · Kaynaklı · Satış yapmaz</span></div></div>
 </footer>

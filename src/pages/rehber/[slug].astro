@@ -9,7 +9,7 @@ import Kart from '../../components/Kart.astro';
 import Ikon from '../../components/Ikon.astro';
 import { KATEGORILER, KATEGORI_BILGI } from '../../content.config';
 import { sssSemasi, makaleSemasi } from '../../lib/sema';
-import { tarihYaz, isoGun } from '../../lib/site';
+import { tarihYaz, isoGun, okumaSuresi, EDITOR, SITE_ADI } from '../../lib/site';
 
 export async function getStaticPaths() {
   const rehberler = await getCollection('rehber');
@@ -19,8 +19,7 @@ const { r } = Astro.props;
 const v = r.data;
 const { Content, headings } = await render(r);
 const bolumler = headings.filter((h) => h.depth === 2);
-// Türkçe metin için dakikada ~200 kelime
-const dakika = Math.max(1, Math.round((r.body ?? '').split(/\s+/).filter(Boolean).length / 200));
+const dakika = okumaSuresi(r.body);
 const alanAdi = (u: string) => new URL(u).hostname.replace(/^www\./, '');
 // İlgili rehberler: ortak etiket (x3) + aynı kategori (x2); eşitlikte sayfaya özgü karışık sıra.
 // Taslaklar (noindex) önerilmez. Alfabetik sıra her sayfada aynı 3 yazıyı öne çıkarıyordu.
@@ -41,20 +40,31 @@ const ogResimler = v.gorsel
   : [];
 const ogGorsel = ogResimler[0] ? { src: ogResimler[0].src, width: 1200, height: 675, alt: v.gorsel!.alt } : undefined;
 const kat = KATEGORI_BILGI[v.kategori];
+// Yan sütun: aynı konudaki en yeni dört rehber (ilgili rehberlerde çıkanlar hariç)
+const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri.includes(x))
+  .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime())
+  .slice(0, 4);
 ---
 <Base title={v.seoBaslik ?? v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak} ogGorsel={ogGorsel}
   jsonLd={[makaleSemasi(r.id, v, ogResimler.map((o) => o.src)), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
+  <div class="okuma-cubugu" aria-hidden="true" data-okuma></div>
   <div class="kap" style={`--kat:${kat.renk}`}>
     <header class="yazi-ust">
       <Kirinti yollar={[{ ad: kat.kisa, href: `/kategori/${v.kategori}/` }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
       <a href={`/kategori/${v.kategori}/`} class="kat-etiket"><Ikon ad={v.kategori} boyut={14} />{KATEGORILER[v.kategori]}</a>
       <h1>{v.baslik}</h1>
       <p class="yazi-dek">{v.aciklama}</p>
-      <ul class="meta">
-        <li><Ikon ad="saat" boyut={16} />{dakika} dk okuma</li>
-        <li><Ikon ad="kaynak" boyut={16} />{v.kaynaklar.length} kaynak</li>
-        <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
-      </ul>
+      <div class="imza">
+        <span class="imza-foto" aria-hidden="true"><Ikon ad={EDITOR.ad ? 'kisi' : 'kitap'} boyut={20} /></span>
+        <div class="imza-metin">
+          <p class="imza-ad">{EDITOR.ad ? <a href="/hakkimizda/#editor">{EDITOR.ad}</a> : <a href="/hakkimizda/">{SITE_ADI} editörlüğü</a>}</p>
+          <p class="imza-alt"><Ikon ad="onay" boyut={14} />{v.kaynaklar.length} kaynakla kontrol edildi · <a href="/yayin-ilkeleri/">Yayın ilkeleri</a></p>
+        </div>
+        <ul class="meta">
+          <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
+          <li><Ikon ad="saat" boyut={15} />{dakika} dk okuma</li>
+        </ul>
+      </div>
       {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
     </header>
     <div class="yazi-duzen">
@@ -83,18 +93,55 @@ const kat = KATEGORI_BILGI[v.kategori];
             <ul>{bolumler.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
           </nav>
         )}
-        <div class="yan-kutu">
+        <div class="yan-kutu yan-guven">
           <p class="yan-baslik">Bu rehber hakkında</p>
-          <p>{v.kaynaklar.length} kaynağa dayanır. Yayın: {tarihYaz(v.yayin)}.</p>
-          <a href="/yayin-ilkeleri/">Yayın ilkelerimiz</a>
+          <ul>
+            <li><Ikon ad="kaynak" boyut={15} />{v.kaynaklar.length} kaynağa dayanır</li>
+            <li><Ikon ad="kalkan" boyut={15} />Markadan bağımsız, satış yok</li>
+            <li><Ikon ad="saat" boyut={15} />İlk yayın: {tarihYaz(v.yayin)}</li>
+          </ul>
+          <a href="/yayin-ilkeleri/">Nasıl çalışıyoruz?</a>
         </div>
+        {konudaki.length > 0 && (
+          <nav class="yan-kutu yan-liste" aria-label={`${kat.kisa} konusundaki diğer rehberler`}>
+            <p class="yan-baslik">{kat.kisa} konusunda</p>
+            <ul>{konudaki.map((x) => <li><a href={`/rehber/${x.id}/`}>{x.data.baslik}</a></li>)}</ul>
+            <a href={`/kategori/${v.kategori}/`} class="tumu">Tümü</a>
+          </nav>
+        )}
       </aside>
     </div>
     {digerleri.length > 0 && (
       <section class="bolum-ana ilgili">
-        <div class="bolum-baslik"><h2>Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} aciklama={x.data.aciklama} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} />)}</div>
+        <div class="bolum-baslik"><h2>Bunları da okuyun</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
+        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} dakika={okumaSuresi(x.body)} />)}</div>
       </section>
     )}
   </div>
 </Base>
+
+<script>
+  // Okuma ilerleme çubuğu: yazı gövdesinin ne kadarının geçildiği
+  const cubuk = document.querySelector<HTMLElement>('[data-okuma]');
+  const yazi = document.querySelector<HTMLElement>('.yazi');
+  if (cubuk && yazi) {
+    let bekliyor = false;
+    const guncelle = () => {
+      const k = yazi.getBoundingClientRect();
+      const oran = Math.min(1, Math.max(0, -k.top / Math.max(1, k.height - innerHeight)));
+      cubuk.style.transform = `scaleX(${oran})`;
+      bekliyor = false;
+    };
+    addEventListener('scroll', () => { if (!bekliyor) { bekliyor = true; requestAnimationFrame(guncelle); } }, { passive: true });
+    guncelle();
+  }
+  // İçindekiler: ekranın üst üçte birindeki bölümün bağlantısı işaretlenir
+  const baglar = [...document.querySelectorAll<HTMLAnchorElement>('.icindekiler a')];
+  const bolumler = baglar.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter((b): b is HTMLElement => Boolean(b));
+  if (bolumler.length && 'IntersectionObserver' in window) {
+    const gozcu = new IntersectionObserver((girdiler) => {
+      for (const g of girdiler) if (g.isIntersecting) baglar.forEach((a) => a.toggleAttribute('aria-current', a.hash === `#${g.target.id}`));
+    }, { rootMargin: '-80px 0px -66% 0px' });
+    bolumler.forEach((b) => gozcu.observe(b));
+  }
+</script>

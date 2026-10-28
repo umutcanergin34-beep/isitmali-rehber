@@ -1,22 +1,27 @@
 ---
-// buyuk: kapaklı öne çıkan kart; normal: metin ağırlıklı kutu kart; yatay: ikonlu kısa liste satırı
+// buyuk: manşet kartı (geniş kapak, büyük başlık); normal: kapaklı ızgara kartı; yatay: küçük resimli liste satırı; sira: numaralı liste satırı
 import Kapak from './Kapak.astro';
 import Ikon from './Ikon.astro';
 import type { ImageMetadata } from 'astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { tarihYaz, isoGun } from '../lib/site';
-interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kategori; tarih: Date; tur?: 'buyuk' | 'normal' | 'yatay'; gorsel?: { src: ImageMetadata; alt: string } }
-const { slug, baslik, aciklama, kategori, tarih, tur = 'normal', gorsel } = Astro.props;
+interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kategori; tarih: Date; dakika?: number; no?: number; tur?: 'buyuk' | 'normal' | 'yatay' | 'sira'; gorsel?: { src: ImageMetadata; alt: string } }
+const { slug, baslik, aciklama, kategori, tarih, dakika, no, tur = 'normal', gorsel } = Astro.props;
 const { kisa, renk } = KATEGORI_BILGI[kategori];
+const href = `/rehber/${slug}/`;
 ---
 <article class={`kart kart-${tur}`} style={`--kat:${renk}`}>
-  {tur === 'buyuk' && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} buyuk yer="manset" gorsel={gorsel} /></a>}
-  {tur === 'normal' && gorsel && <a href={`/rehber/${slug}/`} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} gorsel={gorsel} /></a>}
-  {tur === 'yatay' && <span class="kart-ikon"><Ikon ad={kategori} boyut={18} /></span>}
+  {tur === 'buyuk' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} buyuk yer="manset" gorsel={gorsel} /></a>}
+  {tur === 'normal' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} gorsel={gorsel} /></a>}
+  {tur === 'yatay' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} kucuk gorsel={gorsel} /></a>}
+  {tur === 'sira' && <span class="kart-no" aria-hidden="true">{String(no ?? 0).padStart(2, '0')}</span>}
   <div class="kart-metin">
-    {tur !== 'yatay' && <a href={`/kategori/${kategori}/`} class="kat-etiket"><Ikon ad={kategori} boyut={14} />{kisa}</a>}
-    <h3><a href={`/rehber/${slug}/`}>{baslik}</a></h3>
-    {aciklama && tur !== 'yatay' && <p>{aciklama}</p>}
-    <time datetime={isoGun(tarih)}>{tarihYaz(tarih)}</time>
+    {tur !== 'sira' && <a href={`/kategori/${kategori}/`} class="kat-etiket">{kisa}</a>}
+    <h3><a href={href}>{baslik}</a></h3>
+    {aciklama && (tur === 'buyuk' || tur === 'normal') && <p>{aciklama}</p>}
+    <p class="kart-meta">
+      <time datetime={isoGun(tarih)}>{tarihYaz(tarih)}</time>
+      {dakika && <span><Ikon ad="saat" boyut={13} />{dakika} dk</span>}
+    </p>
   </div>
 </article>

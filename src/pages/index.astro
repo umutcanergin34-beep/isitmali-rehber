@@ -5,78 +5,122 @@ import Kart from '../components/Kart.astro';
 import Ikon from '../components/Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { webSitesiSemasi } from '../lib/sema';
+import { okumaSuresi } from '../lib/site';
 
-const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
+type Rehber = Awaited<ReturnType<typeof getCollection<'rehber'>>>[number];
+const tarih = (r: Rehber) => r.data.guncelleme ?? r.data.yayin;
 const hepsi = (await getCollection('rehber')).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
-// Manşet: temel çalışma prensibi yazısı; yoksa en yeni yazı
-const one = hepsi.find((r) => r.id === 'isitmali-tutun-cihazlari-nasil-calisir') ?? hepsi[0];
+const bul = (id: string) => hepsi.find((r) => r.id === id);
+const kart = (r: Rehber) => ({ slug: r.id, baslik: r.data.baslik, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
+
+// Manşet: temel çalışma prensibi yazısı (yoksa en yeni) + yanında en yeni dört yazı
+const one = bul('isitmali-tutun-cihazlari-nasil-calisir') ?? hepsi[0];
 const yan = hepsi.filter((r) => r !== one).slice(0, 4);
-const son = hepsi.filter((r) => r !== one && !yan.includes(r)).slice(0, 6);
-const kategoriler = (Object.keys(KATEGORI_BILGI) as Kategori[]).map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: hepsi.filter((r) => r.data.kategori === k) }));
+const gosterilen = new Set([one, ...yan]);
+// Giriş bandındaki hızlı bağlantılar: en çok aranan sorun ve karşılaştırma yazıları
+const hizli = [
+  ['iqos-iluma-isiklari-ne-anlama-gelir', 'ILUMA ışıkları'],
+  ['iqos-iluma-sarj-olmuyor', 'Şarj olmuyor'],
+  ['heets-ve-terea-farki', 'HEETS ve TEREA'],
+  ['iqos-iluma-modelleri-farklari', 'ILUMA modelleri'],
+  ['isitmali-tutun-cihazi-temizligi', 'Temizlik'],
+  ['ucakta-isitmali-tutun-cihazi', 'Uçakta kullanım'],
+].filter(([id]) => bul(id));
+// Yeni başlayanlar için sıralı okuma listesi
+const baslangic = [
+  'isitmali-tutun-cihazlari-nasil-calisir', 'isitmali-tutun-e-sigara-ve-sigara-farki', 'isitmali-tutun-markalari-ve-ureticileri',
+  'heets-ve-terea-farki', 'isitmali-tutun-cubugu-kac-dakika-surer', 'isitmali-tutun-sozlugu',
+].map(bul).filter((r): r is Rehber => Boolean(r));
+const kategoriler = (Object.keys(KATEGORI_BILGI) as Kategori[])
+  .map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: hepsi.filter((r) => r.data.kategori === k) }))
+  .filter((k) => k.yazilar.length > 0);
+// Konu blokları: manşette görünenler tekrar edilmez; her konuda 1 kart + 4 satır
+const bloklar = kategoriler.map((k) => ({ ...k, secilen: k.yazilar.filter((r) => !gosterilen.has(r)).slice(0, 5) })).filter((k) => k.secilen.length > 0);
 const kaynakSayisi = new Set(hepsi.flatMap((r) => r.data.kaynaklar.map((k) => k.url))).size;
-const sss = hepsi.find((r) => r.id === 'isitmali-tutun-sik-sorulan-sorular');
 ---
 <Base title="Isıtmalı tütün cihazları için bağımsız teknik rehber" description="IQOS, glo, Ploom ve lil cihazlarının nasıl çalıştığı, hangi çubukla uyumlu olduğu, bakımı ve Türkiye'deki mevzuat. Satış yapmayan, kaynak gösteren rehber." jsonLd={[webSitesiSemasi()]}>
   <section class="giris">
-    <div class="kap giris-izgara">
-      <div>
-        <p class="ust-etiket">Bağımsız teknik başvuru kaynağı</p>
-        <h1>Isıtmalı tütün cihazları hakkında <em>kaynağıyla</em> doğru bilgi</h1>
-        <p class="giris-ozet">Cihazlar nasıl çalışır, hangi çubuk hangi cihazda kullanılır, nasıl bakılır, kurallar neler? Her bilgi üreticinin kılavuzuna ya da resmi kaynağa dayanır. Satış yapmıyor, ürün önermiyoruz.</p>
-        <div class="dugmeler">
-          <a href="/rehber/" class="dugme dugme-ana">Rehberlere göz at <Ikon ad="ok" boyut={18} /></a>
-          {sss && <a href={`/rehber/${sss.id}/`} class="dugme">Sık sorulan sorular</a>}
-        </div>
-      </div>
-      <dl class="sayilar">
-        <div><dt>Rehber</dt><dd>{hepsi.length}</dd></div>
-        <div><dt>Kategori</dt><dd>{kategoriler.length}</dd></div>
-        <div><dt>Kaynak</dt><dd>{kaynakSayisi}</dd></div>
-        <div><dt>Satış ve reklam</dt><dd>0</dd></div>
-      </dl>
+    <div class="kap giris-ic">
+      <p class="ust-etiket">Bağımsız teknik başvuru kaynağı</p>
+      <h1>Isıtmalı tütün cihazları hakkında <em>kaynağıyla</em> doğru bilgi</h1>
+      <p class="giris-ozet">IQOS, glo, Ploom, lil ve VEEV: nasıl çalışır, hangi çubukla uyumludur, nasıl bakılır, kurallar neler? {hepsi.length} rehber, {kaynakSayisi} kaynak.</p>
+      <button type="button" class="giris-ara" data-ara-ac>
+        <Ikon ad="ara" boyut={20} /><span>Ne öğrenmek istiyorsunuz? Örneğin “ışık yanıp sönüyor”</span>
+      </button>
+      {hizli.length > 0 && (
+        <nav class="hizli" aria-label="Çok okunan konular">
+          <span>Çok okunan:</span>
+          {hizli.map(([id, ad]) => <a href={`/rehber/${id}/`}>{ad}</a>)}
+        </nav>
+      )}
     </div>
   </section>
 
   <div class="kap sayfa">
     {one && (
       <section class="manset" aria-labelledby="one-cikan">
-        <div>
-          <div class="bolum-baslik"><h2 id="one-cikan">Öne çıkan</h2></div>
-          <Kart slug={one.id} gorsel={one.data.gorsel} baslik={one.data.baslik} aciklama={one.data.aciklama} kategori={one.data.kategori} tarih={tarih(one)} tur="buyuk" />
-        </div>
-        <div>
-          <div class="bolum-baslik"><h2>Son güncellenenler</h2><a href="/rehber/" class="tumu">Tümü</a></div>
-          <div class="manset-yan">{yan.map((r) => <Kart slug={r.id} baslik={r.data.baslik} kategori={r.data.kategori} tarih={tarih(r)} tur="yatay" />)}</div>
-        </div>
+        <h2 id="one-cikan" class="gizli">Öne çıkan rehberler</h2>
+        <Kart {...kart(one)} aciklama={one.data.aciklama} tur="buyuk" />
+        <div class="manset-yan">{yan.map((r) => <Kart {...kart(r)} />)}</div>
       </section>
     )}
 
-    <section class="bolum-ana" aria-labelledby="kategoriler">
-      <div class="bolum-baslik"><h2 id="kategoriler">Konulara göre</h2></div>
+    <section class="konu-serit" aria-labelledby="konular">
+      <div class="bolum-baslik"><h2 id="konular">Konulara göre keşfet</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
       <div class="kat-izgara">
         {kategoriler.map((k) => (
           <a href={`/kategori/${k.k}/`} class="kat-kart" style={`--kat:${k.renk}`}>
             <span class="kat-kart-ikon"><Ikon ad={k.k} boyut={22} /></span>
             <span class="kat-kart-ad">{k.kisa}</span>
-            <span class="kat-kart-aciklama">{k.aciklama}</span>
-            <span class="kat-kart-sayi">{k.yazilar.length} rehber <Ikon ad="ok" boyut={14} /></span>
+            <span class="kat-kart-sayi">{k.yazilar.length} rehber</span>
           </a>
         ))}
       </div>
     </section>
-
-    {son.length > 0 && (
-      <section class="bolum-ana" aria-labelledby="diger">
-        <div class="bolum-baslik"><h2 id="diger">Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{son.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
-      </section>
-    )}
-
-    <section class="ilkeler" aria-labelledby="ilkeler">
-      <h2 id="ilkeler" class="gizli">Yayın ilkelerimiz</h2>
-      <div><Ikon ad="kaynak" boyut={22} /><h3>Her bilgi kaynaklı</h3><p>Rehberlerin sonunda üretici kılavuzları ve resmi metinler listelenir. Doğrulanamayan bilgi yazılmaz.</p></div>
-      <div><Ikon ad="kalkan" boyut={22} /><h3>Markadan bağımsız</h3><p>IQOS, glo, Ploom ve lil'i aynı ölçütle anlatırız. Hiçbir markayı önermeyiz.</p></div>
-      <div><Ikon ad="kitap" boyut={22} /><h3>Satış ve reklam yok</h3><p>Fiyat, satış bağlantısı ya da sponsorlu içerik yayımlamayız. <a href="/yayin-ilkeleri/">Yayın ilkelerimiz</a></p></div>
-    </section>
   </div>
+
+  {baslangic.length > 0 && (
+    <section class="baslangic" aria-labelledby="baslangic">
+      <div class="kap">
+        <div class="baslangic-ust">
+          <div>
+            <p class="ust-etiket">Isıtmalı tütün 101</p>
+            <h2 id="baslangic">Yeni başlayanlar için okuma sırası</h2>
+          </div>
+          <p>Kavramları, cihazların çalışma prensibini ve çubuk farklarını sırayla öğrenmek için bu altı rehberle başlayın.</p>
+        </div>
+        <div class="baslangic-liste">{baslangic.map((r, i) => <Kart {...kart(r)} tur="sira" no={i + 1} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <div class="kap sayfa">
+    {bloklar.map((b) => (
+      <section class="konu-blok" style={`--kat:${b.renk}`} aria-labelledby={`blok-${b.k}`}>
+        <div class="bolum-baslik bolum-baslik-kat">
+          <h2 id={`blok-${b.k}`}><a href={`/kategori/${b.k}/`}><span class="bolum-ikon"><Ikon ad={b.k} boyut={18} /></span>{b.kisa}</a></h2>
+          <a href={`/kategori/${b.k}/`} class="tumu">{b.yazilar.length} rehberin tümü</a>
+        </div>
+        <div class="konu-blok-izgara">
+          <Kart {...kart(b.secilen[0])} aciklama={b.secilen[0].data.aciklama} />
+          {b.secilen.length > 1 && <div class="konu-blok-liste">{b.secilen.slice(1).map((r) => <Kart {...kart(r)} tur="yatay" />)}</div>}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <section class="ilkeler" aria-labelledby="ilkeler">
+    <div class="kap">
+      <div class="ilkeler-ust">
+        <p class="ust-etiket">Nasıl çalışıyoruz</p>
+        <h2 id="ilkeler">Neden bu rehbere güvenebilirsiniz?</h2>
+      </div>
+      <div class="ilkeler-izgara">
+        <div><span class="ilke-ikon"><Ikon ad="kaynak" boyut={22} /></span><h3>Her bilgi kaynaklı</h3><p>Rehberlerin sonunda üretici kılavuzları ve resmi metinler listelenir. Doğrulanamayan bilgi yazılmaz.</p></div>
+        <div><span class="ilke-ikon"><Ikon ad="kalkan" boyut={22} /></span><h3>Markadan bağımsız</h3><p>IQOS, glo, Ploom ve lil'i aynı ölçütle anlatırız. Hiçbir markayı önermeyiz.</p></div>
+        <div><span class="ilke-ikon"><Ikon ad="onay" boyut={22} /></span><h3>Satış ve reklam yok</h3><p>Fiyat, satış bağlantısı ya da sponsorlu içerik yayımlamayız. Hatalar bildirildiğinde düzeltilir.</p></div>
+      </div>
+      <a href="/yayin-ilkeleri/" class="dugme dugme-acik">Yayın ilkelerimizi okuyun <Ikon ad="ok" boyut={16} /></a>
+    </div>
+  </section>
 </Base>
