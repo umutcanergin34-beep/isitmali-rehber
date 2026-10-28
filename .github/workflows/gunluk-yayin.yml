@@ -1,0 +1,32 @@
+# Kademeli yayın: her sabah 06:00'da (TSİ, 03:00 UTC) site yeniden derlenir; yayin tarihi gelen rehberler açılır.
+# Gerekli depo sırları: CLOUDFLARE_API_TOKEN ("Edit Cloudflare Workers" yetkili) ve CLOUDFLARE_ACCOUNT_ID.
+name: Günlük yayın
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: gunluk-yayin
+  cancel-in-progress: false
+
+jobs:
+  yayinla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # Test geçmezse yayınlanmaz
+      - run: npm test
+      - run: npx --yes wrangler@4 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
