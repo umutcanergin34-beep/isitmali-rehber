@@ -128,5 +128,7 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-01 | Kullanım | glo Hilo nasıl kullanılır: ısınma, modlar, şarj | BAT Japan bültenleri |
 | 2026-11-02 | Kullanım | glo hyper temizliği | glo Japonya resmi bakım SSS'si, DIME |
 | 2026-11-03 | Teknoloji | Isıtmalı tütün cihazlarının ısınma süreleri | Merkez sayfa; mevcut rehberlerin kaynakları |
+| 2026-11-04 | Teknoloji | Hangi çubuk hangi cihazla uyumlu (uyum tablosu) | Merkez sayfa; üretici sayfaları |
+| 2026-11-05 | Kullanım | Art arda kaç çubuk kullanılır, soğuma ve bekleme | IQOS ve lil kılavuzları; glo ve Ploom için sınır bulunamadı |
 
-Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme, çubukların cihazlar arası uyumu (tek tablo), lil AIBLE nasıl kullanılır, Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
+Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), lil AIBLE nasıl kullanılır (resmi kaynak bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
