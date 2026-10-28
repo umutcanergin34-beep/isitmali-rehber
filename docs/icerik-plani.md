@@ -125,5 +125,8 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-10-29 | Kullanım | lil SOLID şarj süresi, ışıkları ve sıfırlama | lil SOLID hücreleri; IQOS kullanım kılavuzları |
 | 2026-10-30 | Kullanım | lil HYBRID nasıl kullanılır | lil HYBRID hücreleri; Japonya basını (2020), resmi kılavuz bulunamadı |
 | 2026-10-31 | Kullanım | Isıtmalı tütün cihazlarının şarj süreleri (marka marka) | Şarj yazılarının merkez sayfası |
+| 2026-11-01 | Kullanım | glo Hilo nasıl kullanılır: ısınma, modlar, şarj | BAT Japan bültenleri |
+| 2026-11-02 | Kullanım | glo hyper temizliği | glo Japonya resmi bakım SSS'si, DIME |
+| 2026-11-03 | Teknoloji | Isıtmalı tütün cihazlarının ısınma süreleri | Merkez sayfa; mevcut rehberlerin kaynakları |
 
-Sıradaki adaylar: glo Hilo nasıl kullanılır, glo hyper temizliği, lil SOLID temizliği, ısıtmalı tütün cihazlarında ısınma süreleri karşılaştırması, Ploom X Advanced nasıl kullanılır.
+Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme, çubukların cihazlar arası uyumu (tek tablo), lil AIBLE nasıl kullanılır, Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
