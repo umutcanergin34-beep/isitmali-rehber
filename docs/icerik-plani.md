@@ -130,5 +130,7 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-03 | Teknoloji | Isıtmalı tütün cihazlarının ısınma süreleri | Merkez sayfa; mevcut rehberlerin kaynakları |
 | 2026-11-04 | Teknoloji | Hangi çubuk hangi cihazla uyumlu (uyum tablosu) | Merkez sayfa; üretici sayfaları |
 | 2026-11-05 | Kullanım | Art arda kaç çubuk kullanılır, soğuma ve bekleme | IQOS ve lil kılavuzları; glo ve Ploom için sınır bulunamadı |
+| 2026-11-06 | Güven | Garanti süreleri: IQOS, glo, Ploom | Üreticilerin garanti sayfaları; lil için kaynak yok |
+| 2026-11-07 | Kullanım | Cihaz uygulamaları: IQOS, myglo, Ploom | Destek sayfaları ve BAT bültenleri |
 
 Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), lil AIBLE nasıl kullanılır (resmi kaynak bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
