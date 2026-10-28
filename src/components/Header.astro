@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../lib/rehberler';
 import Ikon from './Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 const yol = Astro.url.pathname;
 const kategoriler = Object.entries(KATEGORI_BILGI) as [Kategori, (typeof KATEGORI_BILGI)[Kategori]][];
-const rehberler = await getCollection('rehber');
+const rehberler = await yayindakiRehberler();
 const sayi = (k: Kategori) => rehberler.filter((r) => r.data.kategori === k).length;
 const konuAcik = yol.startsWith('/kategori/');
 const linkler = [

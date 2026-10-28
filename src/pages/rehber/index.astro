@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../../lib/rehberler';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import Kart from '../../components/Kart.astro';
@@ -10,7 +10,7 @@ import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
 import { okumaSuresi } from '../../lib/site';
 
 const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
-const rehberler = await getCollection('rehber');
+const rehberler = await yayindakiRehberler();
 const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
   .map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: rehberler.filter((r) => r.data.kategori === k).sort((a, b) => tarih(b).getTime() - tarih(a).getTime()) }))
   .filter((g) => g.yazilar.length > 0);

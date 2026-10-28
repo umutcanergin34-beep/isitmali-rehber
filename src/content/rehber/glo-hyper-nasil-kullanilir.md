@@ -2,7 +2,7 @@
 baslik: "glo hyper Nasıl Kullanılır? Standart ve Boost Modu"
 aciklama: "glo hyper serisinde çubuk nasıl takılır, ısıtma nasıl başlatılır, standart ve boost modu arasındaki süre farkı nedir? Adım adım anlatım."
 yayin: 2026-10-23
-guncelleme: 2026-10-23
+guncelleme: 2026-10-28
 kategori: kullanim
 gorsel:
   src: "../../assets/gorseller/glo-hyper-serisi-modelleri.png"
@@ -18,6 +18,7 @@ sss:
   - soru: "glo hyper'da IQOS çubuğu kullanılabilir mi?"
     cevap: "Hayır. glo hyper serisi kendi hyper tipi çubuklarıyla çalışır. Başka markanın çubukları uyumlu değildir."
 kaynaklar:
+  - { ad: "BAT Japonya (discoverglo.jp): glo ürünlerinin şarj süresi ve kullanım sayısı", url: "https://www.discoverglo.jp/support/faq/device/q002" }
   - { ad: "DIME: glo hyper kullanımı ve boost modu", url: "https://dime.jp/genre/989272/" }
   - { ad: "DIME: glo hyper", url: "https://dime.jp/genre/1103480/" }
   - { ad: "All About: glo hyper", url: "https://allabout.co.jp/gm/gc/520650/" }
@@ -48,7 +49,7 @@ Ayrıntılar için [glo hyper serisi modelleri](/rehber/glo-hyper-serisi-modelle
 
 ## Şarj
 
-Şarj süresi modele göre değişir. Basına yansıyan bilgiler ilk glo hyper için yaklaşık 90 dakika ile 3 saat arasında farklı süreler veriyor. Cihazınızın kılavuzundaki süreyi esas alın. Güvenli şarj için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) yazısına bakın.
+Şarj süresi modele göre değişir. BAT Japonya'nın resmi verilerine göre boştan tam şarj hyper pro+'ta yaklaşık 90, hyper X2'de yaklaşık 210 dakikadır ve tam şarjla yaklaşık 20 kullanım yapılır. Model model tablo için [glo hyper şarj süresi](/rehber/glo-hyper-sarj-suresi-ve-kac-cubuk/) yazısına bakın. Güvenli şarj için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) yazısına bakın.
 
 ## Sorun olursa
 

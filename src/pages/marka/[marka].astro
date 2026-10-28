@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../../lib/rehberler';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import Kart from '../../components/Kart.astro';
@@ -14,7 +14,7 @@ export function getStaticPaths() {
 }
 const { m } = Astro.props as { m: Marka };
 const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
-const yazilar = (await getCollection('rehber', (r) => rehberMarkalari(r.data).includes(m.slug))).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const yazilar = (await yayindakiRehberler((r) => rehberMarkalari(r.data).includes(m.slug))).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
 const kart = (r: (typeof yazilar)[number]) => ({ slug: r.id, baslik: r.data.baslik, etiketler: r.data.etiketler, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
 const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
   .map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: yazilar.filter((r) => r.data.kategori === k) }))

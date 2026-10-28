@@ -3,7 +3,7 @@ baslik: "glo hyper Serisi: hyper+, hyper X2 ve hyper pro Arasındaki Farklar"
 seoBaslik: "glo hyper Serisi: hyper+, X2 ve pro Farkları"
 aciklama: "BAT'ın glo hyper ailesindeki modeller ne zaman çıktı, nasıl ısıtıyor ve birbirinden nasıl ayrılıyor? Kuşaklara göre kısa bir karşılaştırma."
 yayin: 2026-10-23
-guncelleme: 2026-10-23
+guncelleme: 2026-10-28
 kategori: teknoloji
 gorsel:
   src: "../../assets/gorseller/glo-hyper-serisi-modelleri.png"
@@ -60,6 +60,8 @@ hyper pro, Japonya'da Aralık 2023'te çıktı. BAT, Ocak 2024 tarihli bültenin
 ## Sonraki kuşak: glo Hilo
 
 BAT, 2025'te Japonya'da virto çubuklarıyla çalışan yeni **glo Hilo** ailesini tanıttı. Ayrıntılar için [glo Hilo ve Hilo Plus](/rehber/glo-hilo-serisi/) yazısına bakın.
+
+Modellerin şarj süreleri ve tam şarjla kaç çubuk verdiği [glo hyper şarj süresi](/rehber/glo-hyper-sarj-suresi-ve-kac-cubuk/) yazısında.
 
 ## glo, IQOS ve Ploom farkı
 

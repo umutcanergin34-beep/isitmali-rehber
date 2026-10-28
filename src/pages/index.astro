@@ -1,5 +1,6 @@
 ---
-import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import { yayindakiRehberler } from '../lib/rehberler';
 import Base from '../layouts/Base.astro';
 import Kart from '../components/Kart.astro';
 import Ikon from '../components/Ikon.astro';
@@ -8,9 +9,9 @@ import { webSitesiSemasi } from '../lib/sema';
 import { okumaSuresi } from '../lib/site';
 import { MARKALAR, rehberMarkalari } from '../lib/markalar';
 
-type Rehber = Awaited<ReturnType<typeof getCollection<'rehber'>>>[number];
+type Rehber = CollectionEntry<'rehber'>;
 const tarih = (r: Rehber) => r.data.guncelleme ?? r.data.yayin;
-const hepsi = (await getCollection('rehber')).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const hepsi = (await yayindakiRehberler()).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
 const bul = (id: string) => hepsi.find((r) => r.id === id);
 const kart = (r: Rehber) => ({ slug: r.id, baslik: r.data.baslik, etiketler: r.data.etiketler, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
 
