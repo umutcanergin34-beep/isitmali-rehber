@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Kirinti from '../components/Kirinti.astro';
+import Ikon from '../components/Ikon.astro';
+import { CIHAZLAR, ISITMA_AD, type Isitma } from '../lib/cihazlar';
+import { MARKALAR } from '../lib/markalar';
+import { mutlakUrl } from '../lib/sema';
+
+const rehberler = new Map((await getCollection('rehber')).map((r) => [r.id, r]));
+const markaAd = Object.fromEntries(MARKALAR.map((m) => [m.slug, m]));
+const turler = [...new Set(CIHAZLAR.map((c) => c.isitma))] as Isitma[];
+const bos = '—';
+const sema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Isıtmalı tütün cihazları karşılaştırma tablosu',
+  url: mutlakUrl('/karsilastirma/'),
+  inLanguage: 'tr-TR',
+  isPartOf: { '@id': mutlakUrl('/#websitesi') },
+  significantLink: [...new Set(CIHAZLAR.map((c) => mutlakUrl(`/rehber/${c.rehber}/`)))],
+};
+---
+<Base title="Isıtmalı tütün cihazları karşılaştırma tablosu" description="IQOS ILUMA, ILUMA i, IQOS 3 DUO, glo hyper, Ploom X Advanced, Ploom AURA ve lil: ısıtma yöntemi, çubuk, yapı, kullanım ve şarj süresi tek tabloda." jsonLd={[sema]}>
+  <div class="kap sayfa">
+    <Kirinti yollar={[{ ad: 'Karşılaştırma', href: '/karsilastirma/' }]} />
+    <header class="kat-ust">
+      <p class="ust-etiket">Yan yana</p>
+      <h1>Isıtmalı tütün cihazları karşılaştırma tablosu</h1>
+      <p class="ozet">{CIHAZLAR.length} cihaz ailesinin ısıtma yöntemi, çubuğu, yapısı, kullanım ve şarj süreleri. Her satırın değerleri bağlantılı rehberdeki üretici kaynaklarından alındı; kaynakta geçmeyen değer “{bos}” olarak bırakıldı. Tablo bir sıralama ya da öneri değildir.</p>
+      <div class="suzgec" role="group" aria-label="Isıtma yöntemine göre süz" data-tablo-suzgec>
+        <span>Isıtma:</span>
+        <button type="button" aria-pressed="true" data-isitma="">Tümü</button>
+        {turler.map((t) => <button type="button" aria-pressed="false" data-isitma={t}>{ISITMA_AD[t]} <small>{CIHAZLAR.filter((c) => c.isitma === t).length}</small></button>)}
+      </div>
+    </header>
+
+    <section aria-labelledby="tablo">
+      <h2 id="tablo" class="gizli">Karşılaştırma tablosu</h2>
+      <div class="karsi-kap">
+        <table class="karsi">
+          <thead>
+            <tr><th scope="col">Cihaz</th><th scope="col">Isıtma</th><th scope="col">Çubuk</th><th scope="col">Yapı / öne çıkan</th><th scope="col">Bir kullanım</th><th scope="col">Tam şarj</th><th scope="col">Şarj başına</th><th scope="col">Ayrıntı</th></tr>
+          </thead>
+          <tbody>
+            {CIHAZLAR.map((c) => (
+              <tr data-isitma={c.isitma}>
+                <th scope="row"><a href={`/marka/${c.marka}/`} class="karsi-marka">{markaAd[c.marka]?.ad}</a><span>{c.ad}</span></th>
+                <td><span class={`isitma-rozet isitma-${c.isitma}`}>{c.isitmaAd}</span></td>
+                <td>{c.cubuk}</td>
+                <td>{c.yapi ?? bos}</td>
+                <td>{c.kullanim ?? bos}</td>
+                <td>{c.sarj ?? bos}</td>
+                <td>{c.sarjBasina ?? bos}</td>
+                <td>{rehberler.has(c.rehber) ? <a href={`/rehber/${c.rehber}/`} class="karsi-link">Rehber <Ikon ad="ok" boyut={14} /></a> : bos}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bolum-ana karsi-notlar" aria-labelledby="okuma">
+      <div class="bolum-baslik"><h2 id="okuma">Tabloyu okurken</h2></div>
+      <div class="ilkeler-izgara karsi-ilke">
+        <div><h3>Çubuklar markalar arasında değişmez</h3><p>Her cihaz yalnızca kendi çubuk ailesiyle çalışır. TEREA bıçaklı IQOS'ta, HEETS ILUMA'da kullanılmaz. Ayrıntı: <a href="/rehber/heets-ve-terea-farki/">HEETS ve TEREA farkı</a>.</p></div>
+        <div><h3>Süreler ülkeye ve moda göre değişir</h3><p>Şarj ve kullanım süreleri üreticinin bildirdiği yaklaşık değerlerdir; adaptör, batarya yaşı ve ısıtma modu sonucu değiştirir.</p></div>
+        <div><h3>Isıtma yöntemleri</h3><p>İndüksiyon, bıçak ve dıştan ısıtmanın nasıl çalıştığı: <a href="/rehber/isitmali-tutun-cihazlari-nasil-calisir/">ısıtmalı tütün cihazları nasıl çalışır</a>.</p></div>
+      </div>
+      <p class="not18"><Ikon ad="kalkan" boyut={16} />VEEV ONE bir ısıtmalı tütün cihazı olmadığı için tabloda yok; kapalı pod sistemli e-sigaradır. Bilgi için <a href="/marka/veev/">VEEV sayfasına</a> bakın. Bu sayfa satış yapmaz ve bir cihazı önermez.</p>
+    </section>
+  </div>
+</Base>
+
+<script>
+  const kutu = document.querySelector<HTMLElement>('[data-tablo-suzgec]');
+  kutu?.addEventListener('click', (e) => {
+    const d = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-isitma]');
+    if (!d) return;
+    const secim = d.dataset.isitma ?? '';
+    kutu.querySelectorAll('[data-isitma]').forEach((b) => b.setAttribute('aria-pressed', String(b === d)));
+    document.querySelectorAll<HTMLElement>('.karsi tbody tr').forEach((s) => { s.hidden = Boolean(secim) && s.dataset.isitma !== secim; });
+  });
+</script>

@@ -337,6 +337,36 @@ main:has(> .ilkeler:last-child) + .alt { margin-top: 0; border-top: 1px solid #1
 .suzgec button[aria-pressed="true"] { background: var(--murekkep-2); border-color: var(--murekkep-2); color: #fff; }
 .suzgec button[aria-pressed="true"] small { color: #9fb0ac; }
 
+/* Karşılaştırma tablosu: dar ekranda kendi içinde kayar, cihaz sütunu sabit kalır */
+.karsi-kap { overflow-x: auto; border: 1px solid var(--cizgi); border-radius: 14px; -webkit-overflow-scrolling: touch; }
+.karsi { width: 100%; min-width: 64rem; border-collapse: collapse; font-size: .9rem; line-height: 1.45; }
+.karsi th, .karsi td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--cizgi); }
+.karsi thead th { position: sticky; top: 0; background: var(--murekkep-2); color: #fff; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; white-space: nowrap; }
+.karsi tbody tr:last-child > * { border-bottom: 0; }
+.karsi tbody tr:hover > * { background: var(--yuzey-2); }
+.karsi tbody th { position: sticky; left: 0; z-index: 1; min-width: 12rem; background: var(--yuzey); box-shadow: 1px 0 0 var(--cizgi); }
+.karsi thead th:first-child { position: sticky; left: 0; z-index: 2; }
+.karsi tbody th span { display: block; font-weight: 750; font-size: .95rem; color: var(--metin); }
+.karsi-marka { display: inline-block; margin-bottom: 2px; font-size: .78rem; font-weight: 800; text-decoration: none; }
+.karsi-link { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.isitma-rozet { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: .78rem; font-weight: 650; background: var(--yuzey-2); color: var(--metin-2); }
+.isitma-induksiyon { background: color-mix(in srgb, #0e6b5c 13%, transparent); color: var(--kat-on); }
+.isitma-bicak { background: color-mix(in srgb, #9a3b2e 13%, transparent); }
+.isitma-distan { background: color-mix(in srgb, #2f5d9e 13%, transparent); }
+.isitma-hibrit { background: color-mix(in srgb, #8a5a00 14%, transparent); }
+.karsi-ilke > div { background: var(--yuzey-2); border-color: transparent; }
+.karsi-ilke h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.karsi-ilke p { margin: 0; color: var(--metin-2); font-size: .92rem; }
+
+/* Ana sayfadaki karşılaştırma bağlantısı */
+.karsi-afis { display: flex; align-items: center; gap: 16px; margin-top: 14px; padding: 18px 20px; border-radius: 14px; background: var(--murekkep-2); color: #fff; text-decoration: none; transition: transform .18s, box-shadow .18s; }
+.karsi-afis:hover { color: #fff; transform: translateY(-2px); box-shadow: var(--golge-hover); }
+.karsi-afis > span:nth-child(2) { display: grid; gap: 2px; margin-right: auto; }
+.karsi-afis strong { font-size: 1.05rem; font-weight: 800; }
+.karsi-afis small { color: var(--murekkep-metin); font-size: .86rem; }
+.karsi-afis > svg { color: var(--vurgu-parlak); }
+.karsi-afis-ikon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 11px; background: rgb(63 208 179 / .14); color: var(--vurgu-parlak); flex: none; }
+
 /* Marka sayfaları */
 .marka-harf { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--murekkep-2); color: var(--vurgu-parlak); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; flex: none; }
 .marka-ust { display: grid; gap: 28px; align-items: start; padding: 20px 0 8px; margin-bottom: 8px; }

@@ -9,7 +9,7 @@ const sayi = (k: Kategori) => rehberler.filter((r) => r.data.kategori === k).len
 const konuAcik = yol.startsWith('/kategori/');
 const linkler = [
   { href: '/marka/', ad: 'Markalar' },
-  { href: '/rehber/isitmali-tutun-sik-sorulan-sorular/', ad: 'SSS' },
+  { href: '/karsilastirma/', ad: 'Karşılaştır' },
 ];
 ---
 <div class="serit">
@@ -51,6 +51,7 @@ const linkler = [
         </li>
         {kategoriler.filter(([k]) => k !== 'temel').map(([k, b]) => <li class="menu-kat"><a href={`/kategori/${k}/`} class="menu-link" aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>{b.kisa}</a></li>)}
         {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href || (l.href === '/marka/' && yol.startsWith('/marka/')) ? 'page' : undefined}>{l.ad}</a></li>)}
+        <li class="menu-mobil-ek"><a href="/rehber/isitmali-tutun-sik-sorulan-sorular/" class="menu-link">SSS</a></li>
         <li class="menu-mobil-ek"><a href="/rehber/isitmali-tutun-sozlugu/" class="menu-link">Sözlük</a></li>
         <li class="menu-mobil-ek"><a href="/rehber/" class="menu-link">Tüm rehberler</a></li>
         <li class="menu-mobil-ek"><a href="/hakkimizda/" class="menu-link">Hakkımızda</a></li>
