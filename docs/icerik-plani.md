@@ -132,5 +132,7 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-05 | Kullanım | Art arda kaç çubuk kullanılır, soğuma ve bekleme | IQOS ve lil kılavuzları; glo ve Ploom için sınır bulunamadı |
 | 2026-11-06 | Güven | Garanti süreleri: IQOS, glo, Ploom | Üreticilerin garanti sayfaları; lil için kaynak yok |
 | 2026-11-07 | Kullanım | Cihaz uygulamaları: IQOS, myglo, Ploom | Destek sayfaları ve BAT bültenleri |
+| 2026-11-08 | Teknoloji | Aksesuarlar modeller arasında uyumlu mu | IQOS Malta SSS, JT Japonya |
+| 2026-11-09 | Temel | Yeni cihaz: ilk kullanımdan önce yapılacaklar | IQOS, JT ve lil ilk adım sayfaları |
 
 Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), lil AIBLE nasıl kullanılır (resmi kaynak bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
