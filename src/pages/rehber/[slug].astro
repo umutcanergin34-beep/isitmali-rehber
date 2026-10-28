@@ -114,7 +114,7 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
     {digerleri.length > 0 && (
       <section class="bolum-ana ilgili">
         <div class="bolum-baslik"><h2>Bunları da okuyun</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} dakika={okumaSuresi(x.body)} />)}</div>
+        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} etiketler={x.data.etiketler} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} dakika={okumaSuresi(x.body)} />)}</div>
       </section>
     )}
   </div>

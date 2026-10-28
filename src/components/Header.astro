@@ -8,7 +8,7 @@ const rehberler = await getCollection('rehber');
 const sayi = (k: Kategori) => rehberler.filter((r) => r.data.kategori === k).length;
 const konuAcik = yol.startsWith('/kategori/');
 const linkler = [
-  { href: '/rehber/isitmali-tutun-sozlugu/', ad: 'Sözlük' },
+  { href: '/marka/', ad: 'Markalar' },
   { href: '/rehber/isitmali-tutun-sik-sorulan-sorular/', ad: 'SSS' },
 ];
 ---
@@ -50,7 +50,8 @@ const linkler = [
           </div>
         </li>
         {kategoriler.filter(([k]) => k !== 'temel').map(([k, b]) => <li class="menu-kat"><a href={`/kategori/${k}/`} class="menu-link" aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>{b.kisa}</a></li>)}
-        {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href ? 'page' : undefined}>{l.ad}</a></li>)}
+        {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href || (l.href === '/marka/' && yol.startsWith('/marka/')) ? 'page' : undefined}>{l.ad}</a></li>)}
+        <li class="menu-mobil-ek"><a href="/rehber/isitmali-tutun-sozlugu/" class="menu-link">Sözlük</a></li>
         <li class="menu-mobil-ek"><a href="/rehber/" class="menu-link">Tüm rehberler</a></li>
         <li class="menu-mobil-ek"><a href="/hakkimizda/" class="menu-link">Hakkımızda</a></li>
         <li class="menu-mobil-ek"><a href="/yayin-ilkeleri/" class="menu-link">Yayın ilkeleri</a></li>

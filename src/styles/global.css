@@ -51,6 +51,7 @@
   :root, [style*="--kat"] { --kat-on: color-mix(in srgb, var(--kat, var(--vurgu)) 60%, #fff); }
 }
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { background: var(--zemin); color: var(--metin); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 body { margin: 0; background: var(--zemin); font-family: var(--arayuz); font-size: 1rem; line-height: 1.6; font-feature-settings: "cv11", "ss01"; }
 a { color: var(--vurgu); text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -324,6 +325,46 @@ main:has(> .ilkeler:last-child) + .alt { margin-top: 0; border-top: 1px solid #1
 .atla a span { color: var(--soluk); font-variant-numeric: tabular-nums; font-weight: 500; }
 .atla a:hover { border-color: color-mix(in srgb, var(--kat) 45%, var(--cizgi)); background: var(--yuzey); color: var(--metin); }
 [id] { scroll-margin-top: 84px; }
+.kat-manset { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--cizgi); }
+@media (min-width: 52rem) { .kat-manset .kart-buyuk { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 32px; align-items: center; } }
+
+/* Marka süzgeci */
+.suzgec { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; font-size: .88rem; }
+.suzgec > span { color: var(--soluk); font-weight: 600; margin-right: 2px; }
+.suzgec button { padding: 7px 14px; border: 1px solid var(--cizgi-2); border-radius: 999px; background: var(--yuzey); color: var(--metin-2); font: 600 .86rem/1.2 var(--arayuz); cursor: pointer; }
+.suzgec button small { margin-left: 3px; font-weight: 500; color: var(--soluk); }
+.suzgec button:hover { border-color: var(--metin); color: var(--metin); }
+.suzgec button[aria-pressed="true"] { background: var(--murekkep-2); border-color: var(--murekkep-2); color: #fff; }
+.suzgec button[aria-pressed="true"] small { color: #9fb0ac; }
+
+/* Marka sayfaları */
+.marka-harf { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--murekkep-2); color: var(--vurgu-parlak); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; flex: none; }
+.marka-ust { display: grid; gap: 28px; align-items: start; padding: 20px 0 8px; margin-bottom: 8px; }
+@media (min-width: 60rem) { .marka-ust { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; } }
+.marka-ust h1 { margin: 18px 0 12px; max-width: 22ch; }
+.marka-kimlik { display: grid; margin: 0; border-radius: 14px; background: var(--yuzey-2); overflow: hidden; }
+.marka-kimlik div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--cizgi); }
+.marka-kimlik div:last-child { border-bottom: 0; }
+.marka-kimlik dt { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--soluk); padding-top: 2px; }
+.marka-kimlik dd { margin: 0; font-weight: 600; font-size: .94rem; }
+.bolum-sayi { font-size: .86rem; color: var(--soluk); font-weight: 600; }
+.marka-izgara { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
+.marka-kart { display: grid; gap: 6px; align-content: start; padding: 22px; border: 1px solid var(--cizgi); border-radius: 14px; background: var(--yuzey); color: var(--metin); text-decoration: none; transition: border-color .18s, box-shadow .18s, transform .18s; }
+.marka-kart:hover { color: var(--metin); border-color: var(--cizgi-2); box-shadow: var(--golge-hover); transform: translateY(-2px); }
+.marka-kart .marka-harf { margin-bottom: 10px; }
+.marka-kart-ad { display: flex; align-items: center; gap: 8px; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; }
+.marka-kart-ad small, .marka-mini small { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--uyari); }
+.marka-kart-uretici { font-size: .84rem; font-weight: 600; color: var(--soluk); }
+.marka-kart-ozet { font-size: .92rem; color: var(--metin-2); line-height: 1.55; }
+.marka-kart-sayi { margin-top: 6px; font-size: .86rem; font-weight: 700; color: var(--vurgu); }
+.marka-serit { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr)); }
+@media (min-width: 60rem) { .marka-serit { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.marka-mini { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1px solid var(--cizgi); border-radius: 12px; color: var(--metin); text-decoration: none; transition: border-color .18s, transform .18s; }
+.marka-mini:hover { color: var(--metin); border-color: var(--metin); transform: translateY(-2px); }
+.marka-mini .marka-harf { width: 40px; height: 40px; border-radius: 10px; font-size: 1.15rem; }
+.marka-mini > span:last-child { display: grid; gap: 1px; }
+.marka-mini strong { font-size: 1.02rem; font-weight: 800; }
+.marka-mini small { text-transform: none; letter-spacing: 0; font-size: .8rem; font-weight: 600; color: var(--soluk); }
 
 /* Yazı sayfası */
 .okuma-cubugu { position: fixed; top: 0; left: 0; right: 0; z-index: 25; height: 3px; background: var(--vurgu-parlak); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }

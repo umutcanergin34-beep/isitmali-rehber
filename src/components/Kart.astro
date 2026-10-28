@@ -5,12 +5,15 @@ import Ikon from './Ikon.astro';
 import type { ImageMetadata } from 'astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { tarihYaz, isoGun } from '../lib/site';
-interface Props { slug: string; baslik: string; aciklama?: string; kategori: Kategori; tarih: Date; dakika?: number; no?: number; tur?: 'buyuk' | 'normal' | 'yatay' | 'sira'; gorsel?: { src: ImageMetadata; alt: string } }
-const { slug, baslik, aciklama, kategori, tarih, dakika, no, tur = 'normal', gorsel } = Astro.props;
+import { rehberMarkalari } from '../lib/markalar';
+interface Props { slug: string; baslik: string; aciklama?: string; etiketler?: string[]; kategori: Kategori; tarih: Date; dakika?: number; no?: number; tur?: 'buyuk' | 'normal' | 'yatay' | 'sira'; gorsel?: { src: ImageMetadata; alt: string } }
+const { slug, baslik, aciklama, etiketler = [], kategori, tarih, dakika, no, tur = 'normal', gorsel } = Astro.props;
 const { kisa, renk } = KATEGORI_BILGI[kategori];
 const href = `/rehber/${slug}/`;
+// Marka süzgeci (MarkaSuzgec) bu öznitelikle kartları gizler/gösterir
+const markalar = rehberMarkalari({ baslik, etiketler }).join(' ');
 ---
-<article class={`kart kart-${tur}`} style={`--kat:${renk}`}>
+<article class={`kart kart-${tur}`} style={`--kat:${renk}`} data-marka={markalar}>
   {tur === 'buyuk' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} buyuk yer="manset" gorsel={gorsel} /></a>}
   {tur === 'normal' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} gorsel={gorsel} /></a>}
   {tur === 'yatay' && <a href={href} class="kart-gorsel" tabindex="-1" aria-hidden="true"><Kapak kategori={kategori} kucuk gorsel={gorsel} /></a>}

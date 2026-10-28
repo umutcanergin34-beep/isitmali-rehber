@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Kirinti from '../../components/Kirinti.astro';
+import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
+import { mutlakUrl } from '../../lib/sema';
+
+const rehberler = await getCollection('rehber');
+const markalar = MARKALAR.map((m) => ({ ...m, sayi: rehberler.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length }));
+const sema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Markalar',
+  url: mutlakUrl('/marka/'),
+  inLanguage: 'tr-TR',
+  isPartOf: { '@id': mutlakUrl('/#websitesi') },
+  mainEntity: { '@type': 'ItemList', itemListElement: markalar.map((m, i) => ({ '@type': 'ListItem', position: i + 1, url: mutlakUrl(`/marka/${m.slug}/`), name: m.ad })) },
+};
+---
+<Base title="Markalara göre rehberler: IQOS, glo, Ploom, lil, VEEV" description="IQOS, glo, Ploom, lil ve VEEV için rehberler markaya göre: üretici, çubuk adı, ısıtma yöntemi ve her markanın kullanım ve sorun giderme yazıları." jsonLd={[sema]}>
+  <div class="kap sayfa">
+    <Kirinti yollar={[{ ad: 'Markalar', href: '/marka/' }]} />
+    <header class="kat-ust">
+      <h1>Markalara göre rehberler</h1>
+      <p class="ozet">Her markanın üreticisi, çubuk adı ve çalışma şekli; altında o markanın kullanım, uyumluluk ve sorun giderme rehberleri. Hiçbir markayı önermiyoruz.</p>
+    </header>
+    <h2 class="gizli">Markalar</h2>
+    <div class="marka-izgara">
+      {markalar.map((m) => (
+        <a href={`/marka/${m.slug}/`} class="marka-kart">
+          <span class="marka-harf" aria-hidden="true">{m.ad.slice(0, 1).toLocaleUpperCase('tr')}</span>
+          <span class="marka-kart-ad">{m.ad}{m.tur === 'e-sigara' && <small>e-sigara</small>}</span>
+          <span class="marka-kart-uretici">{m.uretici}</span>
+          <span class="marka-kart-ozet">{m.ozet}</span>
+          <span class="marka-kart-sayi">{m.sayi} rehber →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

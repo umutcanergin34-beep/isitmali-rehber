@@ -4,13 +4,17 @@ import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import Kart from '../../components/Kart.astro';
 import Ikon from '../../components/Ikon.astro';
+import MarkaSuzgec from '../../components/MarkaSuzgec.astro';
 import { KATEGORI_BILGI, type Kategori } from '../../content.config';
+import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
+import { okumaSuresi } from '../../lib/site';
 
 const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
 const rehberler = await getCollection('rehber');
 const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
   .map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: rehberler.filter((r) => r.data.kategori === k).sort((a, b) => tarih(b).getTime() - tarih(a).getTime()) }))
   .filter((g) => g.yazilar.length > 0);
+const sayilar = Object.fromEntries(MARKALAR.map((m) => [m.slug, rehberler.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length]));
 ---
 <Base title="Tüm rehberler" description="Isıtmalı tütün cihazlarının çalışma prensibi, uyumluluk, bakım ve mevzuatı üzerine kaynak gösteren, markadan bağımsız rehberler.">
   <div class="kap sayfa">
@@ -19,11 +23,12 @@ const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
       <h1>Tüm rehberler</h1>
       <p class="ozet">{rehberler.length} rehber, {gruplar.length} konu. Her rehber üreticilerin kendi kılavuzlarına ve resmi kaynaklara dayanır; kaynaklar sayfanın sonunda listelenir.</p>
       <nav class="atla" aria-label="Konuya atla">{gruplar.map((g) => <a href={`#${g.k}`} style={`--kat:${g.renk}`}><Ikon ad={g.k} boyut={16} />{g.kisa}<span>{g.yazilar.length}</span></a>)}</nav>
+      <MarkaSuzgec sayilar={sayilar} />
     </header>
     {gruplar.map((g) => (
-      <section class="bolum-ana" id={g.k} style={`--kat:${g.renk}`}>
-        <div class="bolum-baslik"><h2><a href={`/kategori/${g.k}/`}>{g.kisa}</a></h2><a href={`/kategori/${g.k}/`} class="tumu">Konu sayfası</a></div>
-        <div class="izgara">{g.yazilar.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} />)}</div>
+      <section class="bolum-ana" id={g.k} style={`--kat:${g.renk}`} data-suzgec-bolum>
+        <div class="bolum-baslik bolum-baslik-kat"><h2><a href={`/kategori/${g.k}/`}><span class="bolum-ikon"><Ikon ad={g.k} boyut={18} /></span>{g.kisa}</a></h2><a href={`/kategori/${g.k}/`} class="tumu">Konu sayfası</a></div>
+        <div class="izgara">{g.yazilar.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} etiketler={r.data.etiketler} aciklama={r.data.aciklama} kategori={r.data.kategori} tarih={tarih(r)} dakika={okumaSuresi(r.body)} />)}</div>
       </section>
     ))}
   </div>

@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Kirinti from '../../components/Kirinti.astro';
+import Kart from '../../components/Kart.astro';
+import Ikon from '../../components/Ikon.astro';
+import { KATEGORI_BILGI, type Kategori } from '../../content.config';
+import { MARKALAR, rehberMarkalari, type Marka } from '../../lib/markalar';
+import { mutlakUrl } from '../../lib/sema';
+import { okumaSuresi } from '../../lib/site';
+
+export function getStaticPaths() {
+  return MARKALAR.map((m) => ({ params: { marka: m.slug }, props: { m } }));
+}
+const { m } = Astro.props as { m: Marka };
+const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
+const yazilar = (await getCollection('rehber', (r) => rehberMarkalari(r.data).includes(m.slug))).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const kart = (r: (typeof yazilar)[number]) => ({ slug: r.id, baslik: r.data.baslik, etiketler: r.data.etiketler, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
+const gruplar = (Object.keys(KATEGORI_BILGI) as Kategori[])
+  .map((k) => ({ k, ...KATEGORI_BILGI[k], yazilar: yazilar.filter((r) => r.data.kategori === k) }))
+  .filter((g) => g.yazilar.length > 0);
+const uyum = m.tur === 'e-sigara' ? 'pod uyumu' : 'çubuk uyumu';
+const baslik = `${m.ad}: modeller, ${uyum} ve sorun giderme rehberleri`;
+const aciklama = `${m.ad} (${m.uretici}) hakkındaki ${yazilar.length} rehber tek sayfada: ${m.ozet}`.slice(0, 160).replace(/\s+\S*$/, '…');
+const sema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: baslik,
+  description: aciklama,
+  url: mutlakUrl(`/marka/${m.slug}/`),
+  inLanguage: 'tr-TR',
+  isPartOf: { '@id': mutlakUrl('/#websitesi') },
+  about: { '@type': 'Brand', name: m.ad },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: yazilar.filter((r) => !r.data.dogrulanacak).map((r, i) => ({ '@type': 'ListItem', position: i + 1, url: mutlakUrl(`/rehber/${r.id}/`), name: r.data.baslik })),
+  },
+};
+---
+<Base title={`${m.ad} rehberleri: modeller ve ${uyum}`} description={aciklama} noindex={yazilar.length === 0} jsonLd={[sema]}>
+  <div class="kap sayfa">
+    <Kirinti yollar={[{ ad: 'Markalar', href: '/marka/' }, { ad: m.ad, href: `/marka/${m.slug}/` }]} />
+    <header class="marka-ust">
+      <div>
+        <span class="marka-harf" aria-hidden="true">{m.ad.slice(0, 1).toLocaleUpperCase('tr')}</span>
+        <h1>{baslik}</h1>
+        <p class="ozet">{m.ozet}</p>
+        {m.tur === 'e-sigara' && <p class="uyari">{m.ad} bir ısıtmalı tütün cihazı değil, kapalı pod sistemli elektronik sigaradır. Bu sayfadaki rehberler bunu ayrıca belirtir.</p>}
+      </div>
+      <dl class="marka-kimlik">
+        <div><dt>Üretici</dt><dd>{m.uretici}</dd></div>
+        <div><dt>{m.tur === 'e-sigara' ? 'Kartuş' : 'Çubuk'}</dt><dd>{m.cubuk}</dd></div>
+        <div><dt>Çalışma şekli</dt><dd>{m.isitma}</dd></div>
+        <div><dt>Bu sitede</dt><dd>{yazilar.length} rehber</dd></div>
+      </dl>
+    </header>
+    {gruplar.length > 1 && <nav class="atla" aria-label="Konuya atla">{gruplar.map((g) => <a href={`#${g.k}`} style={`--kat:${g.renk}`}><Ikon ad={g.k} boyut={16} />{g.kisa}<span>{g.yazilar.length}</span></a>)}</nav>}
+    {gruplar.map((g) => (
+      <section class="bolum-ana" id={g.k} style={`--kat:${g.renk}`}>
+        <div class="bolum-baslik bolum-baslik-kat"><h2><a href={`/kategori/${g.k}/`}><span class="bolum-ikon"><Ikon ad={g.k} boyut={18} /></span>{g.kisa}</a></h2><span class="bolum-sayi">{g.yazilar.length} rehber</span></div>
+        <div class="izgara">{g.yazilar.map((r) => <Kart {...kart(r)} aciklama={r.data.aciklama} />)}</div>
+      </section>
+    ))}
+    {yazilar.length === 0 && <p class="bos">Bu marka için henüz rehber yok. <a href="/rehber/">Tüm rehberlere</a> göz atın.</p>}
+    <p class="not18"><Ikon ad="kalkan" boyut={16} />Bu sayfa {m.ad} cihazları hakkında bilgi verir; markayı önermez, satış yapmaz. Üretici bilgisi için <a href="/rehber/isitmali-tutun-markalari-ve-ureticileri/">markalar ve üreticiler</a> rehberine bakın.</p>
+  </div>
+</Base>

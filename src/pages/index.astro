@@ -6,12 +6,13 @@ import Ikon from '../components/Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
 import { webSitesiSemasi } from '../lib/sema';
 import { okumaSuresi } from '../lib/site';
+import { MARKALAR, rehberMarkalari } from '../lib/markalar';
 
 type Rehber = Awaited<ReturnType<typeof getCollection<'rehber'>>>[number];
 const tarih = (r: Rehber) => r.data.guncelleme ?? r.data.yayin;
 const hepsi = (await getCollection('rehber')).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
 const bul = (id: string) => hepsi.find((r) => r.id === id);
-const kart = (r: Rehber) => ({ slug: r.id, baslik: r.data.baslik, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
+const kart = (r: Rehber) => ({ slug: r.id, baslik: r.data.baslik, etiketler: r.data.etiketler, kategori: r.data.kategori, tarih: tarih(r), gorsel: r.data.gorsel, dakika: okumaSuresi(r.body) });
 
 // Manşet: temel çalışma prensibi yazısı (yoksa en yeni) + yanında en yeni dört yazı
 const one = bul('isitmali-tutun-cihazlari-nasil-calisir') ?? hepsi[0];
@@ -36,6 +37,7 @@ const kategoriler = (Object.keys(KATEGORI_BILGI) as Kategori[])
   .filter((k) => k.yazilar.length > 0);
 // Konu blokları: manşette görünenler tekrar edilmez; her konuda 1 kart + 4 satır
 const bloklar = kategoriler.map((k) => ({ ...k, secilen: k.yazilar.filter((r) => !gosterilen.has(r)).slice(0, 5) })).filter((k) => k.secilen.length > 0);
+const markalar = MARKALAR.map((m) => ({ ...m, sayi: hepsi.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length })).filter((m) => m.sayi > 0);
 const kaynakSayisi = new Set(hepsi.flatMap((r) => r.data.kaynaklar.map((k) => k.url))).size;
 ---
 <Base title="Isıtmalı tütün cihazları için bağımsız teknik rehber" description="IQOS, glo, Ploom ve lil cihazlarının nasıl çalıştığı, hangi çubukla uyumlu olduğu, bakımı ve Türkiye'deki mevzuat. Satış yapmayan, kaynak gösteren rehber." jsonLd={[webSitesiSemasi()]}>
@@ -77,6 +79,20 @@ const kaynakSayisi = new Set(hepsi.flatMap((r) => r.data.kaynaklar.map((k) => k.
         ))}
       </div>
     </section>
+
+    {markalar.length > 0 && (
+      <section class="konu-serit" aria-labelledby="markalar">
+        <div class="bolum-baslik"><h2 id="markalar">Markaya göre</h2><a href="/marka/" class="tumu">Tüm markalar</a></div>
+        <div class="marka-serit">
+          {markalar.map((m) => (
+            <a href={`/marka/${m.slug}/`} class="marka-mini">
+              <span class="marka-harf" aria-hidden="true">{m.ad.slice(0, 1).toLocaleUpperCase('tr')}</span>
+              <span><strong>{m.ad}</strong><small>{m.tur === 'e-sigara' ? 'e-sigara · ' : ''}{m.sayi} rehber</small></span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </div>
 
   {baslangic.length > 0 && (
