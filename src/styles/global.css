@@ -367,6 +367,31 @@ main:has(> .ilkeler:last-child) + .alt { margin-top: 0; border-top: 1px solid #1
 .karsi-afis > svg { color: var(--vurgu-parlak); }
 .karsi-afis-ikon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 11px; background: rgb(63 208 179 / .14); color: var(--vurgu-parlak); flex: none; }
 
+/* Yazı sayfası ekleri */
+.paylas { display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; background: none; color: var(--vurgu); font: 600 .84rem/1.2 var(--arayuz); cursor: pointer; }
+.paylas:hover { text-decoration: underline; }
+.cihaz-ozet { margin-top: 40px; padding: 20px; border-radius: 14px; background: var(--murekkep-2); color: #fff; }
+.cihaz-ozet-ust { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.cihaz-ozet h2 { margin: 0; font-size: 1.1rem; color: #fff; }
+.cihaz-ozet .tumu { color: var(--vurgu-parlak); }
+.cihaz-ozet-liste { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.cihaz-ozet dl { display: grid; gap: 8px; margin: 0; padding: 16px; border-radius: 10px; background: rgb(255 255 255 / .05); border: 1px solid rgb(255 255 255 / .08); font-size: .88rem; }
+.cihaz-ozet dl div.cihaz-ozet-ad { display: block; font-weight: 800; font-size: 1rem; margin-bottom: 2px; }
+.cihaz-ozet dl div { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 8px; }
+.cihaz-ozet dl div dt { color: #9fb0ac; }
+.cihaz-ozet dd { margin: 0; font-weight: 600; }
+.sonraki { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: center; margin-top: 40px; padding: 20px 22px; border: 1px solid var(--cizgi); border-left: 4px solid var(--kat); border-radius: 12px; color: var(--metin); text-decoration: none; transition: box-shadow .18s, transform .18s; }
+.sonraki:hover { color: var(--metin); box-shadow: var(--golge-hover); transform: translateY(-2px); }
+.sonraki-etiket { font-size: .74rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--kat-on); }
+.sonraki strong { grid-column: 1; font-size: 1.1rem; line-height: 1.35; }
+.sonraki svg { grid-column: 2; grid-row: 1 / span 2; color: var(--kat-on); }
+.yan-marka { display: grid; gap: 8px; }
+.yan-marka a { display: flex; align-items: center; gap: 10px; color: var(--metin); text-decoration: none; }
+.yan-marka a:hover strong { color: var(--vurgu); }
+.yan-marka .marka-harf { width: 36px; height: 36px; border-radius: 9px; font-size: 1rem; }
+.yan-marka a > span:last-child { display: grid; }
+.yan-marka small { color: var(--soluk); font-size: .78rem; }
+
 /* Marka sayfaları */
 .marka-harf { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--murekkep-2); color: var(--vurgu-parlak); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.03em; flex: none; }
 .marka-ust { display: grid; gap: 28px; align-items: start; padding: 20px 0 8px; margin-bottom: 8px; }

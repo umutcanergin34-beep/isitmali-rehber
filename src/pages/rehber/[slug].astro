@@ -9,6 +9,8 @@ import Kart from '../../components/Kart.astro';
 import Ikon from '../../components/Ikon.astro';
 import { KATEGORILER, KATEGORI_BILGI } from '../../content.config';
 import { sssSemasi, makaleSemasi } from '../../lib/sema';
+import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
+import { CIHAZLAR } from '../../lib/cihazlar';
 import { tarihYaz, isoGun, okumaSuresi, EDITOR, SITE_ADI } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -44,6 +46,16 @@ const kat = KATEGORI_BILGI[v.kategori];
 const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri.includes(x))
   .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime())
   .slice(0, 4);
+// Yazıda geçen markalar (marka sayfasına bağlantı) ve karşılaştırma tablosunda bu rehbere dayanan cihazlar
+const tumRehberler = await getCollection('rehber');
+const markalar = MARKALAR.filter((m) => rehberMarkalari(v).includes(m.slug))
+  .map((m) => ({ ...m, sayi: tumRehberler.filter((x) => rehberMarkalari(x.data).includes(m.slug)).length }));
+const cihazlar = CIHAZLAR.filter((c) => c.rehber === r.id);
+// Sıradaki rehber: aynı konuda tarihçe olarak bir öncekisi; en eskideysek en yenisi
+const konuSirasi = tumu.concat(r as (typeof tumu)[number]).filter((x) => x.data.kategori === v.kategori)
+  .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime() || a.id.localeCompare(b.id));
+const sira = konuSirasi.findIndex((x) => x.id === r.id);
+const sonraki = konuSirasi.length > 1 ? konuSirasi[(sira + 1) % konuSirasi.length] : undefined;
 ---
 <Base title={v.seoBaslik ?? v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak} ogGorsel={ogGorsel}
   jsonLd={[makaleSemasi(r.id, v, ogResimler.map((o) => o.src)), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
@@ -63,6 +75,7 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
         <ul class="meta">
           <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
           <li><Ikon ad="saat" boyut={15} />{dakika} dk okuma</li>
+          <li><button type="button" class="paylas" data-paylas><Ikon ad="kaynak" boyut={15} /><span data-paylas-yazi>Bağlantıyı kopyala</span></button></li>
         </ul>
       </div>
       {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
@@ -77,6 +90,22 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
           </details>
         )}
         <div class="icerik"><Content /></div>
+        {cihazlar.length > 0 && (
+          <section class="cihaz-ozet" aria-labelledby="cihaz-ozet">
+            <div class="cihaz-ozet-ust"><h2 id="cihaz-ozet">Karşılaştırma tablosunda</h2><a href="/karsilastirma/" class="tumu">Tüm cihazlar</a></div>
+            <div class="cihaz-ozet-liste">
+              {cihazlar.map((c) => (
+                <dl>
+                  <div class="cihaz-ozet-ad"><dt class="gizli">Cihaz</dt><dd>{c.ad}</dd></div>
+                  <div><dt>Isıtma</dt><dd>{c.isitmaAd}</dd></div>
+                  <div><dt>Çubuk</dt><dd>{c.cubuk}</dd></div>
+                  {c.sarj && <div><dt>Tam şarj</dt><dd>{c.sarj}</dd></div>}
+                  {c.sarjBasina && <div><dt>Şarj başına</dt><dd>{c.sarjBasina}</dd></div>}
+                </dl>
+              ))}
+            </div>
+          </section>
+        )}
         <p class="not18"><Ikon ad="kalkan" boyut={16} />Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />
         {v.kaynaklar.length > 0 && (
@@ -84,6 +113,13 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
             <h2>Kaynaklar</h2>
             <ol>{v.kaynaklar.map((k) => <li><a href={k.url} rel="nofollow noopener" target="_blank">{k.ad}</a><span>{alanAdi(k.url)}</span></li>)}</ol>
           </section>
+        )}
+        {sonraki && (
+          <a href={`/rehber/${sonraki.id}/`} class="sonraki" style={`--kat:${kat.renk}`}>
+            <span class="sonraki-etiket">Sıradaki rehber · {kat.kisa}</span>
+            <strong>{sonraki.data.baslik}</strong>
+            <Ikon ad="ok" boyut={22} />
+          </a>
         )}
       </article>
       <aside class="yazi-yan">
@@ -102,6 +138,12 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
           </ul>
           <a href="/yayin-ilkeleri/">Nasıl çalışıyoruz?</a>
         </div>
+        {markalar.length > 0 && (
+          <nav class="yan-kutu yan-marka" aria-label="Bu rehberdeki markalar">
+            <p class="yan-baslik">Marka sayfası</p>
+            {markalar.map((m) => <a href={`/marka/${m.slug}/`}><span class="marka-harf" aria-hidden="true">{m.ad.slice(0, 1).toLocaleUpperCase('tr')}</span><span><strong>{m.ad}</strong><small>{m.sayi} rehber</small></span></a>)}
+          </nav>
+        )}
         {konudaki.length > 0 && (
           <nav class="yan-kutu yan-liste" aria-label={`${kat.kisa} konusundaki diğer rehberler`}>
             <p class="yan-baslik">{kat.kisa} konusunda</p>
@@ -135,6 +177,17 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
     addEventListener('scroll', () => { if (!bekliyor) { bekliyor = true; requestAnimationFrame(guncelle); } }, { passive: true });
     guncelle();
   }
+  // Bağlantı paylaşımı: telefonda sistemin paylaş menüsü, masaüstünde panoya kopyalama
+  const paylas = document.querySelector<HTMLButtonElement>('[data-paylas]');
+  paylas?.addEventListener('click', async () => {
+    const yazi = paylas.querySelector('[data-paylas-yazi]');
+    const adres = location.href.split('#')[0];
+    try {
+      if (navigator.share && matchMedia('(pointer: coarse)').matches) { await navigator.share({ title: document.title, url: adres }); return; }
+      await navigator.clipboard.writeText(adres);
+      if (yazi) { yazi.textContent = 'Kopyalandı'; setTimeout(() => { yazi.textContent = 'Bağlantıyı kopyala'; }, 2000); }
+    } catch { /* kullanıcı paylaşımı iptal etti ya da pano izni yok */ }
+  });
   // İçindekiler: ekranın üst üçte birindeki bölümün bağlantısı işaretlenir
   const baglar = [...document.querySelectorAll<HTMLAnchorElement>('.icindekiler a')];
   const bolumler = baglar.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter((b): b is HTMLElement => Boolean(b));

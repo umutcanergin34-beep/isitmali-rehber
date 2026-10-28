@@ -26,7 +26,7 @@ export const CIHAZLAR: Cihaz[] = [
   { ad: 'IQOS ILUMA i ONE', marka: 'iqos', isitma: 'induksiyon', isitmaAd: 'SMARTCORE indüksiyon', cubuk: 'TEREA', yapi: 'Tek parça',
     kullanim: 'En fazla 6 dk ya da 14 nefes', sarj: 'Yaklaşık 90 dk', sarjBasina: 'Art arda 20’ye kadar', rehber: 'iqos-iluma-i-sarj-suresi-ve-adaptor' },
   { ad: 'IQOS 3 DUO (ORIGINALS DUO)', marka: 'iqos', isitma: 'bicak', isitmaAd: 'Isıtma bıçağı', cubuk: 'HEETS', yapi: 'Holder + şarj kutusu',
-    kullanim: 'En fazla 6 dk ya da 14 nefes', sarjBasina: 'Holder ile art arda 2', rehber: 'iqos-3-duo-nasil-kullanilir' },
+    kullanim: 'En fazla 6 dk ya da 14 nefes', sarj: 'Yaklaşık 120 dk (kutu)', sarjBasina: 'Holder ile art arda 2; dolu kutuyla 20’ye kadar', rehber: 'iqos-3-duo-nasil-kullanilir' },
   { ad: 'glo hyper serisi', marka: 'glo', isitma: 'induksiyon', isitmaAd: 'İndüksiyon', cubuk: 'hyper tipi çubuk (neo)', yapi: 'Standart ve boost modu',
     kullanim: 'Yaklaşık 4 dk (boost ~3 dk), nefes sınırı yok', rehber: 'glo-hyper-serisi-modelleri' },
   { ad: 'Ploom X Advanced', marka: 'ploom', isitma: 'distan', isitmaAd: 'POWER HEATFLOW (dıştan)', cubuk: 'EVO', yapi: 'Yaklaşık 320 °C ısıtma (Japonya sürümü)',
