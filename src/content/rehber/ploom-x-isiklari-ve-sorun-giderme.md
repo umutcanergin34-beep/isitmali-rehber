@@ -49,3 +49,5 @@ kaynaklar:
 7. **Destek.** Sorun sürüyorsa üreticinin destek hattına başvurun.
 
 Batarya şişmişse ya da aşırı ısınıyorsa cihazı kullanmayın. Ayrıntılar için [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/) yazısına bakın.
+
+Ploom AURA'nın ışıkları ve sıfırlaması için [Ploom AURA ışıkları ve sorun giderme](/rehber/ploom-aura-isiklari-ve-sorun-giderme/), sıkışan çubuk için [Ploom'da çubuk sıkıştı](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/) yazısına bakın.

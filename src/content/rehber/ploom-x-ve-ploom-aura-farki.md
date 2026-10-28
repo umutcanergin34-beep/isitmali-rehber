@@ -2,7 +2,7 @@
 baslik: "Ploom X, Ploom X Advanced ve Ploom AURA: Farklar"
 aciklama: "JT Group'un Ploom ailesindeki cihazlar ne zaman çıktı ve HEATFLOW, POWER HEATFLOW ve SMART HEATFLOW ne anlama geliyor? Kuşaklara göre karşılaştırma."
 yayin: 2026-10-23
-guncelleme: 2026-10-23
+guncelleme: 2026-10-27
 kategori: teknoloji
 gorsel:
   src: "../../assets/gorseller/ploom-x-ve-ploom-aura-farki.jpg"
@@ -52,8 +52,21 @@ Ploom X Advanced, Ploom X'in geliştirilmiş sürümüdür ve iki farklı tanıt
 
 ## Ploom AURA (2025)
 
-Ploom AURA, Temmuz 2025'te Japonya'daki havalimanı mağazalarında, markanın dünyadaki ilk tanıtımı olarak kullanıma sunuldu. Cihaz, önceki HEATFLOW sisteminden farklı olan **SMART HEATFLOW** teknolojisini kullanıyor. Japonya'da dört ısıtma modu sunan **Heat Select** özelliğiyle tanıtıldı. Bu özelliğin diğer ülkelerde bulunup bulunmayacağı belli değil.
+Ploom AURA, Temmuz 2025'te Japonya'daki havalimanı mağazalarında, markanın dünyadaki ilk tanıtımı olarak kullanıma sunuldu. Cihaz, önceki HEATFLOW sisteminden farklı olan **SMART HEATFLOW** teknolojisini kullanıyor. Japonya'da dört ısıtma modu sunan **Heat Select** özelliğiyle tanıtıldı ([Ploom ısıtma modları](/rehber/ploom-isitma-modlari/)). Bu özelliğin diğer ülkelerde bulunup bulunmayacağı belli değil.
 
 ## Ploom, IQOS ve glo farkı
 
 Üç marka da tütünü yakmadan ısıtır, ancak her cihaz yalnızca kendi çubuk ailesiyle çalışır. Markaların sahipleri için [markalar ve üreticiler rehberine](/rehber/isitmali-tutun-markalari-ve-ureticileri/), diğer cihaz aileleri için [glo hyper serisi](/rehber/glo-hyper-serisi-modelleri/) ve [IQOS ILUMA modelleri](/rehber/iqos-iluma-modelleri-farklari/) yazılarına bakabilirsiniz.
+
+## Ploom dizisindeki diğer yazılar
+
+- [Ploom AURA nasıl kullanılır](/rehber/ploom-aura-nasil-kullanilir/)
+- [Ploom ısıtma modları](/rehber/ploom-isitma-modlari/)
+- [Ploom AURA ışıkları ve sorun giderme](/rehber/ploom-aura-isiklari-ve-sorun-giderme/)
+- [Ploom AURA şarj süresi ve adaptör](/rehber/ploom-aura-sarj-suresi-ve-adaptor/)
+- [Ploom temizliği ve saklama](/rehber/ploom-temizligi-ve-saklama/)
+- [Ploom'da çubuk sıkıştı ve uyumlu çubuklar](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/)
+- [Ploom Bluetooth, uygulama ve cihaz kilidi](/rehber/ploom-bluetooth-uygulama-ve-cihaz-kilidi/)
+- [Ploom X nasıl kullanılır](/rehber/ploom-x-nasil-kullanilir/)
+- [Ploom X ışıkları ve sorun giderme](/rehber/ploom-x-isiklari-ve-sorun-giderme/)
+- [Ploom X şarj süresi ve şarj olmuyor](/rehber/ploom-x-sarj-suresi-ve-sarj-olmuyor/)

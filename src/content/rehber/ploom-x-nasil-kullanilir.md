@@ -52,3 +52,5 @@ Ploom X Advanced USB-C ile şarj olur. JTI'nın İngiltere duyurusu 90 dakikanı
 ## Nasıl ısıtır?
 
 Ploom X, çubuğu çevreleyen bir hazneyle dışarıdan ısıtır; IQOS ILUMA gibi indüksiyon kullanmaz. Yöntemlerin karşılaştırması için [ısıtmalı tütün cihazları nasıl çalışır](/rehber/isitmali-tutun-cihazlari-nasil-calisir/) yazısına bakabilirsiniz. Hazne temizliği için [cihaz temizliği](/rehber/isitmali-tutun-cihazi-temizligi/) yazısına bakın.
+
+Ploom AURA'nın kullanımı için [Ploom AURA nasıl kullanılır](/rehber/ploom-aura-nasil-kullanilir/), hazne temizliği için [Ploom temizliği ve saklama](/rehber/ploom-temizligi-ve-saklama/) yazısına bakın.
