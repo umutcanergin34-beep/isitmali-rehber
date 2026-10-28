@@ -9,7 +9,9 @@ import Kart from '../../components/Kart.astro';
 import Ikon from '../../components/Ikon.astro';
 import { KATEGORILER, KATEGORI_BILGI } from '../../content.config';
 import { sssSemasi, makaleSemasi } from '../../lib/sema';
-import { tarihYaz, isoGun } from '../../lib/site';
+import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
+import { CIHAZLAR } from '../../lib/cihazlar';
+import { tarihYaz, isoGun, okumaSuresi, EDITOR, SITE_ADI } from '../../lib/site';
 
 export async function getStaticPaths() {
   const rehberler = await getCollection('rehber');
@@ -19,8 +21,7 @@ const { r } = Astro.props;
 const v = r.data;
 const { Content, headings } = await render(r);
 const bolumler = headings.filter((h) => h.depth === 2);
-// Türkçe metin için dakikada ~200 kelime
-const dakika = Math.max(1, Math.round((r.body ?? '').split(/\s+/).filter(Boolean).length / 200));
+const dakika = okumaSuresi(r.body);
 const alanAdi = (u: string) => new URL(u).hostname.replace(/^www\./, '');
 // İlgili rehberler: ortak etiket (x3) + aynı kategori (x2); eşitlikte sayfaya özgü karışık sıra.
 // Taslaklar (noindex) önerilmez. Alfabetik sıra her sayfada aynı 3 yazıyı öne çıkarıyordu.
@@ -41,20 +42,42 @@ const ogResimler = v.gorsel
   : [];
 const ogGorsel = ogResimler[0] ? { src: ogResimler[0].src, width: 1200, height: 675, alt: v.gorsel!.alt } : undefined;
 const kat = KATEGORI_BILGI[v.kategori];
+// Yan sütun: aynı konudaki en yeni dört rehber (ilgili rehberlerde çıkanlar hariç)
+const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri.includes(x))
+  .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime())
+  .slice(0, 4);
+// Yazıda geçen markalar (marka sayfasına bağlantı) ve karşılaştırma tablosunda bu rehbere dayanan cihazlar
+const tumRehberler = await getCollection('rehber');
+const markalar = MARKALAR.filter((m) => rehberMarkalari(v).includes(m.slug))
+  .map((m) => ({ ...m, sayi: tumRehberler.filter((x) => rehberMarkalari(x.data).includes(m.slug)).length }));
+const cihazlar = CIHAZLAR.filter((c) => c.rehber === r.id);
+// Sıradaki rehber: aynı konuda tarihçe olarak bir öncekisi; en eskideysek en yenisi
+const konuSirasi = tumu.concat(r as (typeof tumu)[number]).filter((x) => x.data.kategori === v.kategori)
+  .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime() || a.id.localeCompare(b.id));
+const sira = konuSirasi.findIndex((x) => x.id === r.id);
+const sonraki = konuSirasi.length > 1 ? konuSirasi[(sira + 1) % konuSirasi.length] : undefined;
 ---
 <Base title={v.seoBaslik ?? v.baslik} description={v.aciklama} ogTur="article" yayin={v.yayin} guncelleme={v.guncelleme} noindex={v.dogrulanacak} ogGorsel={ogGorsel}
   jsonLd={[makaleSemasi(r.id, v, ogResimler.map((o) => o.src)), sssSemasi(v.sss)].filter(Boolean) as Record<string, unknown>[]}>
+  <div class="okuma-cubugu" aria-hidden="true" data-okuma></div>
   <div class="kap" style={`--kat:${kat.renk}`}>
     <header class="yazi-ust">
       <Kirinti yollar={[{ ad: kat.kisa, href: `/kategori/${v.kategori}/` }, { ad: v.baslik, href: `/rehber/${r.id}/` }]} />
       <a href={`/kategori/${v.kategori}/`} class="kat-etiket"><Ikon ad={v.kategori} boyut={14} />{KATEGORILER[v.kategori]}</a>
       <h1>{v.baslik}</h1>
       <p class="yazi-dek">{v.aciklama}</p>
-      <ul class="meta">
-        <li><Ikon ad="saat" boyut={16} />{dakika} dk okuma</li>
-        <li><Ikon ad="kaynak" boyut={16} />{v.kaynaklar.length} kaynak</li>
-        <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
-      </ul>
+      <div class="imza">
+        <span class="imza-foto" aria-hidden="true"><Ikon ad={EDITOR.ad ? 'kisi' : 'kitap'} boyut={20} /></span>
+        <div class="imza-metin">
+          <p class="imza-ad">{EDITOR.ad ? <a href="/hakkimizda/#editor">{EDITOR.ad}</a> : <a href="/hakkimizda/">{SITE_ADI} editörlüğü</a>}</p>
+          <p class="imza-alt"><Ikon ad="onay" boyut={14} />{v.kaynaklar.length} kaynakla kontrol edildi · <a href="/yayin-ilkeleri/">Yayın ilkeleri</a></p>
+        </div>
+        <ul class="meta">
+          <li>Güncelleme: <time datetime={isoGun(v.guncelleme ?? v.yayin)}>{tarihYaz(v.guncelleme ?? v.yayin)}</time></li>
+          <li><Ikon ad="saat" boyut={15} />{dakika} dk okuma</li>
+          <li><button type="button" class="paylas" data-paylas><Ikon ad="kaynak" boyut={15} /><span data-paylas-yazi>Bağlantıyı kopyala</span></button></li>
+        </ul>
+      </div>
       {v.dogrulanacak && <p class="uyari">Taslak: bu sayfadaki bazı bilgiler yayından önce resmi kaynaktan doğrulanacak.</p>}
     </header>
     <div class="yazi-duzen">
@@ -67,6 +90,22 @@ const kat = KATEGORI_BILGI[v.kategori];
           </details>
         )}
         <div class="icerik"><Content /></div>
+        {cihazlar.length > 0 && (
+          <section class="cihaz-ozet" aria-labelledby="cihaz-ozet">
+            <div class="cihaz-ozet-ust"><h2 id="cihaz-ozet">Karşılaştırma tablosunda</h2><a href="/karsilastirma/" class="tumu">Tüm cihazlar</a></div>
+            <div class="cihaz-ozet-liste">
+              {cihazlar.map((c) => (
+                <dl>
+                  <div class="cihaz-ozet-ad"><dt class="gizli">Cihaz</dt><dd>{c.ad}</dd></div>
+                  <div><dt>Isıtma</dt><dd>{c.isitmaAd}</dd></div>
+                  <div><dt>Çubuk</dt><dd>{c.cubuk}</dd></div>
+                  {c.sarj && <div><dt>Tam şarj</dt><dd>{c.sarj}</dd></div>}
+                  {c.sarjBasina && <div><dt>Şarj başına</dt><dd>{c.sarjBasina}</dd></div>}
+                </dl>
+              ))}
+            </div>
+          </section>
+        )}
         <p class="not18"><Ikon ad="kalkan" boyut={16} />Bu sayfa bilgilendirme amaçlıdır, satış yapmaz ve bir ürünü önermez. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.</p>
         <SSS sorular={v.sss} />
         {v.kaynaklar.length > 0 && (
@@ -74,6 +113,13 @@ const kat = KATEGORI_BILGI[v.kategori];
             <h2>Kaynaklar</h2>
             <ol>{v.kaynaklar.map((k) => <li><a href={k.url} rel="nofollow noopener" target="_blank">{k.ad}</a><span>{alanAdi(k.url)}</span></li>)}</ol>
           </section>
+        )}
+        {sonraki && (
+          <a href={`/rehber/${sonraki.id}/`} class="sonraki" style={`--kat:${kat.renk}`}>
+            <span class="sonraki-etiket">Sıradaki rehber · {kat.kisa}</span>
+            <strong>{sonraki.data.baslik}</strong>
+            <Ikon ad="ok" boyut={22} />
+          </a>
         )}
       </article>
       <aside class="yazi-yan">
@@ -83,18 +129,72 @@ const kat = KATEGORI_BILGI[v.kategori];
             <ul>{bolumler.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
           </nav>
         )}
-        <div class="yan-kutu">
+        <div class="yan-kutu yan-guven">
           <p class="yan-baslik">Bu rehber hakkında</p>
-          <p>{v.kaynaklar.length} kaynağa dayanır. Yayın: {tarihYaz(v.yayin)}.</p>
-          <a href="/yayin-ilkeleri/">Yayın ilkelerimiz</a>
+          <ul>
+            <li><Ikon ad="kaynak" boyut={15} />{v.kaynaklar.length} kaynağa dayanır</li>
+            <li><Ikon ad="kalkan" boyut={15} />Markadan bağımsız, satış yok</li>
+            <li><Ikon ad="saat" boyut={15} />İlk yayın: {tarihYaz(v.yayin)}</li>
+          </ul>
+          <a href="/yayin-ilkeleri/">Nasıl çalışıyoruz?</a>
         </div>
+        {markalar.length > 0 && (
+          <nav class="yan-kutu yan-marka" aria-label="Bu rehberdeki markalar">
+            <p class="yan-baslik">Marka sayfası</p>
+            {markalar.map((m) => <a href={`/marka/${m.slug}/`}><span class="marka-harf" aria-hidden="true">{m.ad.slice(0, 1).toLocaleUpperCase('tr')}</span><span><strong>{m.ad}</strong><small>{m.sayi} rehber</small></span></a>)}
+          </nav>
+        )}
+        {konudaki.length > 0 && (
+          <nav class="yan-kutu yan-liste" aria-label={`${kat.kisa} konusundaki diğer rehberler`}>
+            <p class="yan-baslik">{kat.kisa} konusunda</p>
+            <ul>{konudaki.map((x) => <li><a href={`/rehber/${x.id}/`}>{x.data.baslik}</a></li>)}</ul>
+            <a href={`/kategori/${v.kategori}/`} class="tumu">Tümü</a>
+          </nav>
+        )}
       </aside>
     </div>
     {digerleri.length > 0 && (
       <section class="bolum-ana ilgili">
-        <div class="bolum-baslik"><h2>Diğer rehberler</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
-        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} aciklama={x.data.aciklama} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} />)}</div>
+        <div class="bolum-baslik"><h2>Bunları da okuyun</h2><a href="/rehber/" class="tumu">Tüm rehberler</a></div>
+        <div class="izgara">{digerleri.map((x) => <Kart slug={x.id} gorsel={x.data.gorsel} baslik={x.data.baslik} etiketler={x.data.etiketler} kategori={x.data.kategori} tarih={x.data.guncelleme ?? x.data.yayin} dakika={okumaSuresi(x.body)} />)}</div>
       </section>
     )}
   </div>
 </Base>
+
+<script>
+  // Okuma ilerleme çubuğu: yazı gövdesinin ne kadarının geçildiği
+  const cubuk = document.querySelector<HTMLElement>('[data-okuma]');
+  const yazi = document.querySelector<HTMLElement>('.yazi');
+  if (cubuk && yazi) {
+    let bekliyor = false;
+    const guncelle = () => {
+      const k = yazi.getBoundingClientRect();
+      const oran = Math.min(1, Math.max(0, -k.top / Math.max(1, k.height - innerHeight)));
+      cubuk.style.transform = `scaleX(${oran})`;
+      bekliyor = false;
+    };
+    addEventListener('scroll', () => { if (!bekliyor) { bekliyor = true; requestAnimationFrame(guncelle); } }, { passive: true });
+    guncelle();
+  }
+  // Bağlantı paylaşımı: telefonda sistemin paylaş menüsü, masaüstünde panoya kopyalama
+  const paylas = document.querySelector<HTMLButtonElement>('[data-paylas]');
+  paylas?.addEventListener('click', async () => {
+    const yazi = paylas.querySelector('[data-paylas-yazi]');
+    const adres = location.href.split('#')[0];
+    try {
+      if (navigator.share && matchMedia('(pointer: coarse)').matches) { await navigator.share({ title: document.title, url: adres }); return; }
+      await navigator.clipboard.writeText(adres);
+      if (yazi) { yazi.textContent = 'Kopyalandı'; setTimeout(() => { yazi.textContent = 'Bağlantıyı kopyala'; }, 2000); }
+    } catch { /* kullanıcı paylaşımı iptal etti ya da pano izni yok */ }
+  });
+  // İçindekiler: ekranın üst üçte birindeki bölümün bağlantısı işaretlenir
+  const baglar = [...document.querySelectorAll<HTMLAnchorElement>('.icindekiler a')];
+  const bolumler = baglar.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1)))).filter((b): b is HTMLElement => Boolean(b));
+  if (bolumler.length && 'IntersectionObserver' in window) {
+    const gozcu = new IntersectionObserver((girdiler) => {
+      for (const g of girdiler) if (g.isIntersecting) baglar.forEach((a) => a.toggleAttribute('aria-current', a.hash === `#${g.target.id}`));
+    }, { rootMargin: '-80px 0px -66% 0px' });
+    bolumler.forEach((b) => gozcu.observe(b));
+  }
+</script>

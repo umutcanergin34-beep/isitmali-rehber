@@ -4,7 +4,10 @@ import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import Kart from '../../components/Kart.astro';
 import Ikon from '../../components/Ikon.astro';
+import MarkaSuzgec from '../../components/MarkaSuzgec.astro';
 import { KATEGORI_BILGI, KATEGORILER, type Kategori } from '../../content.config';
+import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
+import { okumaSuresi } from '../../lib/site';
 import { mutlakUrl } from '../../lib/sema';
 
 export function getStaticPaths() {
@@ -14,6 +17,10 @@ const kategori = Astro.params.kategori as Kategori;
 const bilgi = KATEGORI_BILGI[kategori];
 const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
 const yazilar = (await getCollection('rehber', (r) => r.data.kategori === kategori)).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const sayilar = Object.fromEntries(MARKALAR.map((m) => [m.slug, yazilar.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length]));
+const kart = (r: (typeof yazilar)[number]) => ({ slug: r.id, gorsel: r.data.gorsel, baslik: r.data.baslik, etiketler: r.data.etiketler, aciklama: r.data.aciklama, kategori, tarih: tarih(r), dakika: okumaSuresi(r.body) });
+// İlk yazı manşet olarak büyük gösterilir; süzgeç kullanılınca manşet de diğer kartlar gibi süzülür
+const [manset, ...kalan] = yazilar;
 // CollectionPage + ItemList: yalnızca indekslenen (taslak olmayan) rehberler
 const sema = {
   '@context': 'https://schema.org',
@@ -35,10 +42,13 @@ const sema = {
     <header class="kat-ust">
       <span class="kat-kart-ikon"><Ikon ad={kategori} boyut={24} /></span>
       <h1>{KATEGORILER[kategori]}</h1>
-      <p class="ozet">{bilgi.aciklama}</p>
+      <p class="ozet">{bilgi.aciklama} {yazilar.length} rehber.</p>
+      <MarkaSuzgec sayilar={sayilar} />
     </header>
     {yazilar.length > 0
-      ? <><h2 class="gizli">Bu kategorideki rehberler</h2><div class="izgara">{yazilar.map((r) => <Kart slug={r.id} gorsel={r.data.gorsel} baslik={r.data.baslik} aciklama={r.data.aciklama} kategori={kategori} tarih={tarih(r)} />)}</div></>
+      ? <><h2 class="gizli">Bu kategorideki rehberler</h2>
+          <div class="kat-manset" data-suzgec-bolum><Kart {...kart(manset)} tur="buyuk" /></div>
+          {kalan.length > 0 && <div class="izgara" data-suzgec-bolum>{kalan.map((r) => <Kart {...kart(r)} />)}</div>}</>
       : <p class="bos">Bu kategoride henüz rehber yok. <a href="/rehber/">Tüm rehberlere</a> göz atın.</p>}
   </div>
 </Base>

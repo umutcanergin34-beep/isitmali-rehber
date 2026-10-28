@@ -2,7 +2,7 @@
 baslik: "IQOS 3 DUO Nasıl Kullanılır? Açma, Çubuk Takma ve Şarj"
 aciklama: "Bıçaklı IQOS 3 DUO ve IQOS ORIGINALS DUO nasıl açılır, HEETS nasıl takılır, ışıklar ne anlatır? Üreticinin kılavuzuna dayanan adımlar."
 yayin: 2026-10-23
-guncelleme: 2026-10-23
+guncelleme: 2026-10-28
 kategori: kullanim
 gorsel:
   src: "../../assets/gorseller/isitmali-tutun-sik-sorulan-sorular.jpg"
@@ -22,6 +22,8 @@ kaynaklar:
   - { ad: "IQOS Güney Afrika: IQOS ORIGINALS DUO guide", url: "https://www.iqos.com/za/en/support/iqos-originals-duo-guide.html" }
   - { ad: "IQOS UK: IQOS ORIGINALS DUO guide", url: "https://www.iqos.com/gb/en/get-support/iqos-originals-duo-guide.html" }
   - { ad: "IQOS Filipinler: How to use IQOS?", url: "https://www.iqos.com/ph/en/support/faqs/how-to-use-iqos.html" }
+  - { ad: "IQOS Mısır: IQOS 3 DUO sık sorulan sorular", url: "https://www.iqos.com/eg/en/get-support/faqs/iqos-3-duo-device.html" }
+  - { ad: "IQOS Maldivler: IQOS charging times", url: "https://www.iqos.com/mv/en/support/iqos-charging-times.html" }
 ---
 
 **Kısaca:** IQOS 3 DUO (yeni adıyla IQOS ORIGINALS DUO), içindeki ısıtıcı bıçakla çalışan iki parçalı bir cihazdır. Şarj kutusunun düğmesine **4 saniye** basarak açın, **HEETS** çubuğunu tütün ucu önde, gümüş çizgiye kadar holder'a takın, holder'ın düğmesine titreyene kadar basın ve ısınmanın bitmesini bekleyin. Holder tam doluyken **art arda iki kullanım** sağlar.
@@ -36,6 +38,17 @@ kaynaklar:
 6. **Şarj edin.** Holder'ı şarj kutusuna geri koyun.
 
 Kapatmak için şarj kutusunun düğmesine yine 4 saniye basın. Şarj kutusu kapanınca holder da kapanır.
+
+## Şarj süresi
+
+| | Üreticinin bildirdiği değer |
+|---|---|
+| Şarj kutusunun tam şarjı (prizden) | Yaklaşık 120 dakika |
+| Holder'ın tam şarjı | Süre verilmiyor; IQOS 3'e göre en az 1 dakika 40 saniye daha hızlı |
+| Tam dolu holder ile | Art arda 2 kullanım |
+| Tam dolu cihazla (kutu + holder) | 20 kullanıma kadar |
+
+Değerler PMI'ın Mısır ve Maldivler destek sayfalarından alındı; adaptöre ve batarya yaşına göre değişebilir.
 
 ## Bıçaklı cihazda dikkat edilecekler
 

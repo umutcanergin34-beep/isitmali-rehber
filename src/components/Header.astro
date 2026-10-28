@@ -8,23 +8,22 @@ const rehberler = await getCollection('rehber');
 const sayi = (k: Kategori) => rehberler.filter((r) => r.data.kategori === k).length;
 const konuAcik = yol.startsWith('/kategori/');
 const linkler = [
-  { href: '/rehber/', ad: 'Tüm rehberler' },
-  { href: '/rehber/isitmali-tutun-sozlugu/', ad: 'Sözlük' },
-  { href: '/rehber/isitmali-tutun-sik-sorulan-sorular/', ad: 'SSS' },
-  { href: '/hakkimizda/', ad: 'Hakkımızda' },
+  { href: '/marka/', ad: 'Markalar' },
+  { href: '/karsilastirma/', ad: 'Karşılaştır' },
 ];
 ---
+<div class="serit">
+  <div class="kap serit-ic">
+    <p><span class="serit-18">18+</span> Markadan bağımsız, kaynak gösteren rehber. Satış ve reklam yok.</p>
+    <nav aria-label="Kurumsal"><a href="/hakkimizda/">Hakkımızda</a><a href="/yayin-ilkeleri/">Yayın ilkeleri</a></nav>
+  </div>
+</div>
 <header class="ust" data-menu>
   <div class="kap ust-satir">
     <a href="/" class="logo" aria-label="Isıtmalı Rehber ana sayfa">
-      <svg class="logo-isaret" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><rect x="9" y="7" width="5" height="18" rx="2.5" fill="#fff"/><path d="M19 9c3 2 3 4 0 6s-3 4 0 6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
+      <svg class="logo-isaret" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><rect x="9" y="7" width="5" height="18" rx="2.5" fill="#fff"/><path d="M19 9c3 2 3 4 0 6s-3 4 0 6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>
       <span>Isıtmalı<b>Rehber</b></span>
     </a>
-
-    <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" data-menu-ac>
-      <span class="menu-cizgi" aria-hidden="true"></span>
-      <span class="gizli" data-menu-etiket>Menüyü aç</span>
-    </button>
 
     <nav class="ana-menu" id="ana-menu" aria-label="Ana menü">
       <ul class="menu-liste">
@@ -50,11 +49,37 @@ const linkler = [
             <a href="/rehber/" class="konu-tumu">Bütün rehberleri konulara göre gör <Ikon ad="ok" boyut={16} /></a>
           </div>
         </li>
-        {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href ? 'page' : undefined}>{l.ad}</a></li>)}
+        {kategoriler.filter(([k]) => k !== 'temel').map(([k, b]) => <li class="menu-kat"><a href={`/kategori/${k}/`} class="menu-link" aria-current={yol.startsWith(`/kategori/${k}/`) ? 'page' : undefined}>{b.kisa}</a></li>)}
+        {linkler.map((l) => <li><a href={l.href} class="menu-link" aria-current={yol === l.href || (l.href === '/marka/' && yol.startsWith('/marka/')) ? 'page' : undefined}>{l.ad}</a></li>)}
+        <li class="menu-mobil-ek"><a href="/rehber/isitmali-tutun-sik-sorulan-sorular/" class="menu-link">SSS</a></li>
+        <li class="menu-mobil-ek"><a href="/rehber/isitmali-tutun-sozlugu/" class="menu-link">Sözlük</a></li>
+        <li class="menu-mobil-ek"><a href="/rehber/" class="menu-link">Tüm rehberler</a></li>
+        <li class="menu-mobil-ek"><a href="/hakkimizda/" class="menu-link">Hakkımızda</a></li>
+        <li class="menu-mobil-ek"><a href="/yayin-ilkeleri/" class="menu-link">Yayın ilkeleri</a></li>
       </ul>
     </nav>
+
+    <div class="ust-araclar">
+      <button type="button" class="ara-dugme" aria-haspopup="dialog" data-ara-ac>
+        <Ikon ad="ara" boyut={19} /><span class="ara-yazi">Ara</span><kbd>/</kbd>
+      </button>
+      <button class="menu-dugme" type="button" aria-expanded="false" aria-controls="ana-menu" data-menu-ac>
+        <span class="menu-cizgi" aria-hidden="true"></span>
+        <span class="gizli" data-menu-etiket>Menüyü aç</span>
+      </button>
+    </div>
   </div>
 </header>
+
+<dialog class="arama" aria-label="Rehberlerde ara" data-arama>
+  <form method="dialog" class="arama-ust">
+    <Ikon ad="ara" boyut={20} />
+    <input type="search" placeholder="Rehberlerde ara: şarj, ışıklar, TEREA…" aria-label="Arama metni" autocomplete="off" enterkeyhint="search" data-ara-giris />
+    <button type="submit" class="arama-kapat" aria-label="Aramayı kapat">Esc</button>
+  </form>
+  <ul class="arama-sonuc" data-ara-sonuc></ul>
+  <p class="arama-bos" data-ara-bos hidden>Sonuç bulunamadı. Başka bir kelime deneyin ya da <a href="/rehber/">tüm rehberlere</a> göz atın.</p>
+</dialog>
 
 <script>
   const ust = document.querySelector<HTMLElement>('[data-menu]');
@@ -66,6 +91,8 @@ const linkler = [
   menuDugme?.addEventListener('click', () => {
     const acik = !acikMi(menuDugme);
     ayarla(menuDugme, acik);
+    // Üst şerit görünürken menü başlığın hemen altından başlasın
+    if (acik && ust) document.documentElement.style.setProperty('--menu-ust', `${Math.round(ust.getBoundingClientRect().bottom)}px`);
     document.documentElement.classList.toggle('menu-acik', acik);
     const etiket = menuDugme.querySelector('[data-menu-etiket]');
     if (etiket) etiket.textContent = acik ? 'Menüyü kapat' : 'Menüyü aç';
@@ -83,5 +110,55 @@ const linkler = [
     if (e.key !== 'Escape') return;
     if (acikMi(konuDugme)) { ayarla(konuDugme, false); konuDugme?.focus(); }
     else if (acikMi(menuDugme)) { ayarla(menuDugme, false); document.documentElement.classList.remove('menu-acik'); menuDugme?.focus(); }
+  });
+
+  // Arama: dizin (/arama.json) yalnızca ilk açılışta indirilir; eşleşme başlık > etiket > açıklama ağırlığıyla
+  type Kayit = { u: string; b: string; a: string; k: string; e: string };
+  const arama = document.querySelector<HTMLDialogElement>('[data-arama]');
+  const giris = arama?.querySelector<HTMLInputElement>('[data-ara-giris]');
+  const sonuc = arama?.querySelector<HTMLUListElement>('[data-ara-sonuc]');
+  const bos = arama?.querySelector<HTMLElement>('[data-ara-bos]');
+  let dizin: Promise<Kayit[]> | undefined;
+  const kucult = (s: string) => s.toLocaleLowerCase('tr').normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ı/g, 'i');
+  const kacis = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+  const ac = () => {
+    if (!arama) return;
+    dizin ??= fetch('/arama.json').then((y) => y.json());
+    arama.showModal();
+    giris?.focus();
+    giris?.select();
+  };
+  document.querySelector('[data-ara-ac]')?.addEventListener('click', ac);
+  document.addEventListener('keydown', (e) => {
+    const hedef = e.target as HTMLElement;
+    if (e.key === '/' && !arama?.open && !/^(input|textarea|select)$/i.test(hedef.tagName) && !hedef.isContentEditable) { e.preventDefault(); ac(); }
+  });
+  arama?.addEventListener('click', (e) => { if (e.target === arama) arama.close(); });
+  // type=search kutusunda ilk Esc yalnızca metni siler; pencere tek basışta kapansın
+  giris?.addEventListener('keydown', (e) => { if (e.key === 'Escape') { e.preventDefault(); arama?.close(); } });
+
+  giris?.addEventListener('input', async () => {
+    const sorgu = kucult(giris.value.trim());
+    const kelimeler = sorgu.split(/\s+/).filter(Boolean);
+    if (!sonuc || !bos) return;
+    if (!kelimeler.length) { sonuc.innerHTML = ''; bos.hidden = true; return; }
+    const liste = (await dizin) ?? [];
+    const bulunan = liste
+      .map((r) => {
+        const b = kucult(r.b), e = kucult(r.e), a = kucult(r.a);
+        let p = 0;
+        for (const k of kelimeler) {
+          const s = (b.includes(k) ? 5 : 0) + (e.includes(k) ? 3 : 0) + (a.includes(k) ? 1 : 0);
+          if (!s) return { r, p: 0 };
+          p += s;
+        }
+        return { r, p };
+      })
+      .filter((x) => x.p > 0)
+      .sort((x, y) => y.p - x.p)
+      .slice(0, 8);
+    sonuc.innerHTML = bulunan.map(({ r }) => `<li><a href="${r.u}"><span class="arama-kat">${kacis(r.k)}</span><strong>${kacis(r.b)}</strong><span>${kacis(r.a)}</span></a></li>`).join('');
+    bos.hidden = bulunan.length > 0;
   });
 </script>

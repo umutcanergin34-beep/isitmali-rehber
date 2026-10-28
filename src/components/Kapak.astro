@@ -5,10 +5,11 @@ import { Picture } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import Ikon from './Ikon.astro';
 import { KATEGORI_BILGI, type Kategori } from '../content.config';
-interface Props { kategori: Kategori; buyuk?: boolean; oncelikli?: boolean; yer?: 'yazi' | 'manset'; gorsel?: { src: ImageMetadata; alt: string } }
-const { kategori, buyuk = false, oncelikli = false, yer = 'yazi', gorsel } = Astro.props;
+// kucuk: liste satırındaki küçük resim (en fazla 128 px)
+interface Props { kategori: Kategori; buyuk?: boolean; kucuk?: boolean; oncelikli?: boolean; yer?: 'yazi' | 'manset'; gorsel?: { src: ImageMetadata; alt: string } }
+const { kategori, buyuk = false, kucuk = false, oncelikli = false, yer = 'yazi', gorsel } = Astro.props;
 const { renk, kisa } = KATEGORI_BILGI[kategori];
-const sinif = buyuk ? 'kapak kapak-buyuk' : 'kapak';
+const sinif = buyuk ? 'kapak kapak-buyuk' : kucuk ? 'kapak kapak-kucuk' : 'kapak';
 
 // sizes = görselin ekrandaki gerçek genişliği. .kap en fazla 72rem, yan boşluk 16px (<48rem) / 32px.
 // Büyük kapak 16:9 kutuda object-fit: contain ile durur: 16:9'dan dar (dik/kare) fotoğraf kutunun yalnızca bir kısmını kaplar
@@ -16,20 +17,24 @@ const oran = gorsel ? Math.min(1, gorsel.src.width / gorsel.src.height / (16 / 9
 const k = (u: string) => (oran < 1 ? `calc((${u}) * ${oran.toFixed(3)})` : u.includes(' ') ? `calc(${u})` : u);
 const BUYUK = {
   yazi: [['(min-width: 64rem)', '704px'], ['(min-width: 48rem)', '100vw - 64px'], ['', '100vw - 32px']],
-  manset: [['(min-width: 72rem)', '640px'], ['(min-width: 60rem)', '61.5vw - 69px'], ['(min-width: 48rem)', '100vw - 64px'], ['', '100vw - 32px']],
+  // ana sayfa manşeti: 60rem üstünde ızgaranın ~%58'i
+  manset: [['(min-width: 72rem)', '620px'], ['(min-width: 60rem)', '58vw - 60px'], ['(min-width: 48rem)', '100vw - 64px'], ['', '100vw - 32px']],
 };
-const sizes = buyuk
+const sizes = kucuk
+  ? '128px'
+  : buyuk
   ? BUYUK[yer].map(([m, u]) => `${m} ${k(u)}`.trim()).join(', ')
   // kart ızgarası: 19rem'lik sütunlar, 20px aralık; kart görseli kartın tam genişliğinde
-  : '(min-width: 72rem) 350px, (min-width: 63.5rem) calc((100vw - 104px) / 3), (min-width: 48rem) calc((100vw - 84px) / 2), (min-width: 41.25rem) calc((100vw - 52px) / 2), calc(100vw - 32px)';
+  // kart ızgarası: 4 sütun (≥64rem), 2 sütun (≥36rem), tek sütun; 24px aralık
+  : '(min-width: 72rem) 258px, (min-width: 64rem) calc((100vw - 136px) / 4), (min-width: 48rem) calc((100vw - 88px) / 2), (min-width: 36rem) calc((100vw - 56px) / 2), calc(100vw - 32px)';
 ---
 {gorsel ? (
   <Picture src={gorsel.src} alt={gorsel.alt} class={`${sinif} kapak-foto`} formats={['avif']} fallbackFormat="webp"
-    widths={buyuk ? [480, 720, 960, 1280] : [400, 640]} sizes={sizes}
+    widths={buyuk ? [480, 720, 960, 1280] : kucuk ? [256] : [400, 640]} sizes={sizes}
     loading={buyuk ? 'eager' : 'lazy'} fetchpriority={oncelikli ? 'high' : undefined} />
 ) : (
   <div class={`${sinif} kapak-cizim`} style={`--kat:${renk}`} role="img" aria-label={`${kisa} kategorisi`}>
-    <span class="kapak-ikon"><Ikon ad={kategori} boyut={buyuk ? 56 : 40} /></span>
+    <span class="kapak-ikon"><Ikon ad={kategori} boyut={buyuk ? 56 : kucuk ? 22 : 40} /></span>
     <span class="kapak-etiket">{kisa}</span>
   </div>
 )}

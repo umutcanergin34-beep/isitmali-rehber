@@ -1,6 +1,6 @@
 ---
 // Kategori ve arayüz ikonları: 24px ızgarada tek renkli çizgi ikonlar, renk currentColor'dan gelir
-type Ad = 'teknoloji' | 'kullanim' | 'mevzuat' | 'guven' | 'temel' | 'kaynak' | 'saat' | 'kalkan' | 'ok' | 'kitap';
+type Ad = 'teknoloji' | 'kullanim' | 'mevzuat' | 'guven' | 'temel' | 'kaynak' | 'saat' | 'kalkan' | 'ok' | 'kitap' | 'ara' | 'kisi' | 'onay';
 interface Props { ad: Ad; boyut?: number; class?: string }
 const { ad, boyut = 20, class: sinif } = Astro.props;
 const yollar: Record<Ad, string> = {
@@ -13,6 +13,9 @@ const yollar: Record<Ad, string> = {
   saat: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2',
   kalkan: 'M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6z',
   ok: 'M5 12h14M13 6l6 6-6 6',
+  ara: 'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4',
+  kisi: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0',
+  onay: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM8 12l3 3 5-6',
   kitap: 'M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h11',
 };
 ---

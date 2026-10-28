@@ -1,0 +1,27 @@
+---
+// Liste sayfalarında kartları markaya göre süzer (yalnızca istemci tarafında; adres ve site haritası değişmez).
+// Kartlar data-marka taşır; bölüm ([data-suzgec-bolum]) içinde görünen kart kalmazsa bölüm de gizlenir
+import { MARKALAR } from '../lib/markalar';
+interface Props { sayilar: Record<string, number> }
+const { sayilar } = Astro.props;
+const markalar = MARKALAR.filter((m) => sayilar[m.slug] > 0);
+---
+{markalar.length > 1 && (
+  <div class="suzgec" role="group" aria-label="Markaya göre süz" data-suzgec>
+    <span>Marka:</span>
+    <button type="button" aria-pressed="true" data-marka-sec="">Tümü</button>
+    {markalar.map((m) => <button type="button" aria-pressed="false" data-marka-sec={m.slug}>{m.ad} <small>{sayilar[m.slug]}</small></button>)}
+  </div>
+)}
+
+<script>
+  const kutu = document.querySelector<HTMLElement>('[data-suzgec]');
+  kutu?.addEventListener('click', (e) => {
+    const d = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-marka-sec]');
+    if (!d) return;
+    const secim = d.dataset.markaSec ?? '';
+    kutu.querySelectorAll('[data-marka-sec]').forEach((b) => b.setAttribute('aria-pressed', String(b === d)));
+    document.querySelectorAll<HTMLElement>('.kart[data-marka]').forEach((k) => { k.hidden = Boolean(secim) && !k.dataset.marka!.split(' ').includes(secim); });
+    document.querySelectorAll<HTMLElement>('[data-suzgec-bolum]').forEach((b) => { b.hidden = !b.querySelector('.kart:not([hidden])'); });
+  });
+</script>
