@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../lib/rehberler';
 import Base from '../layouts/Base.astro';
 import Kirinti from '../components/Kirinti.astro';
 import Ikon from '../components/Ikon.astro';
@@ -7,7 +7,7 @@ import { CIHAZLAR, ISITMA_AD, type Isitma } from '../lib/cihazlar';
 import { MARKALAR } from '../lib/markalar';
 import { mutlakUrl } from '../lib/sema';
 
-const rehberler = new Map((await getCollection('rehber')).map((r) => [r.id, r]));
+const rehberler = new Map((await yayindakiRehberler()).map((r) => [r.id, r]));
 const markaAd = Object.fromEntries(MARKALAR.map((m) => [m.slug, m]));
 const turler = [...new Set(CIHAZLAR.map((c) => c.isitma))] as Isitma[];
 const bos = '—';

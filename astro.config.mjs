@@ -17,6 +17,9 @@ const taslaklar = readdirSync('./src/content/rehber')
 const tarihler = {};
 for (const f of readdirSync('./src/content/rehber').filter((f) => f.endsWith('.md'))) {
   const md = readFileSync(`./src/content/rehber/${f}`, 'utf8');
+  // Yayın tarihi gelmemiş yazı derlenmez (src/lib/rehberler.ts); liste sayfalarının lastmod'unu ileri tarihe çekmesin
+  const yayin = md.match(/^yayin:\s*["']?(\d{4}-\d{2}-\d{2})/m)?.[1];
+  if (yayin && process.env.ONIZLEME !== '1' && new Date(yayin).getTime() > Date.now()) continue;
   const t = (md.match(/^guncelleme:\s*["']?(\d{4}-\d{2}-\d{2})/m) ?? md.match(/^yayin:\s*["']?(\d{4}-\d{2}-\d{2})/m))?.[1];
   const k = md.match(/^kategori:\s*["']?(\w+)/m)?.[1];
   if (t) tarihler[`/rehber/${f.replace(/\.md$/, '')}/`] = { t, k };

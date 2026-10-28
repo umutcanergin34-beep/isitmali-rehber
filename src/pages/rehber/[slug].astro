@@ -1,5 +1,6 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
+import { yayindakiRehberler } from '../../lib/rehberler';
 import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
@@ -14,7 +15,7 @@ import { CIHAZLAR } from '../../lib/cihazlar';
 import { tarihYaz, isoGun, okumaSuresi, EDITOR, SITE_ADI } from '../../lib/site';
 
 export async function getStaticPaths() {
-  const rehberler = await getCollection('rehber');
+  const rehberler = await yayindakiRehberler();
   return rehberler.map((r) => ({ params: { slug: r.id }, props: { r } }));
 }
 const { r } = Astro.props;
@@ -28,7 +29,7 @@ const alanAdi = (u: string) => new URL(u).hostname.replace(/^www\./, '');
 const etiket = (x: string[]) => new Set(x.map((e) => e.toLocaleLowerCase('tr')));
 const benim = etiket(v.etiketler);
 const karis = (a: string) => [...a].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
-const tumu = (await getCollection('rehber', (x) => !x.data.dogrulanacak)).filter((x) => x.id !== r.id);
+const tumu = (await yayindakiRehberler((x) => !x.data.dogrulanacak)).filter((x) => x.id !== r.id);
 const puan = (x: (typeof tumu)[number]) => [...etiket(x.data.etiketler)].filter((e) => benim.has(e)).length * 3 + (x.data.kategori === v.kategori ? 2 : 0);
 const digerleri = tumu
   .map((x) => ({ x, p: puan(x), k: karis(r.id + x.id) }))
@@ -47,7 +48,7 @@ const konudaki = tumu.filter((x) => x.data.kategori === v.kategori && !digerleri
   .sort((a, b) => (b.data.guncelleme ?? b.data.yayin).getTime() - (a.data.guncelleme ?? a.data.yayin).getTime())
   .slice(0, 4);
 // Yazıda geçen markalar (marka sayfasına bağlantı) ve karşılaştırma tablosunda bu rehbere dayanan cihazlar
-const tumRehberler = await getCollection('rehber');
+const tumRehberler = await yayindakiRehberler();
 const markalar = MARKALAR.filter((m) => rehberMarkalari(v).includes(m.slug))
   .map((m) => ({ ...m, sayi: tumRehberler.filter((x) => rehberMarkalari(x.data).includes(m.slug)).length }));
 const cihazlar = CIHAZLAR.filter((c) => c.rehber === r.id);

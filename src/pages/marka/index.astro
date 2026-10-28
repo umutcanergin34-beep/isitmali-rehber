@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../../lib/rehberler';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import { MARKALAR, rehberMarkalari } from '../../lib/markalar';
 import { mutlakUrl } from '../../lib/sema';
 
-const rehberler = await getCollection('rehber');
+const rehberler = await yayindakiRehberler();
 const markalar = MARKALAR.map((m) => ({ ...m, sayi: rehberler.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length }));
 const sema = {
   '@context': 'https://schema.org',

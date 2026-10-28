@@ -114,3 +114,16 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | P5 | Kullanım | Ploom temizliği ve saklama | Yazıldı |
 | P6 | Kullanım | Ploom'da çubuk sıkıştı ve uyumlu çubuklar | Yazıldı |
 | P7 | Kullanım | Ploom Bluetooth, uygulama ve cihaz kilidi | Yazıldı; uygulama adları Japonya'ya ait |
+
+## Kademeli yayın (günde bir yazı)
+
+`yayin` tarihi gelmemiş yazılar derlemeye girmez (`src/lib/rehberler.ts`); site her gün yeniden derlenince o günün yazısı açılır. Önizleme: `ONIZLEME=1 npm run build` ya da `npm run dev`. Henüz yayında olmayan bir yazıya, daha önce yayında olan bir yazıdan link verilmez (kırık bağlantı testi yakalar); geri linkler yazı çıktıktan sonra eklenir.
+
+| Yayın | Kategori | Başlık | Not |
+|---|---|---|---|
+| 2026-10-28 | Kullanım | glo hyper şarj süresi ve tam şarjla kaç çubuk | Karşılaştırma tablosunda glo şarj hücrelerini doldurdu; BAT Japonya resmi SSS |
+| 2026-10-29 | Kullanım | lil SOLID şarj süresi, ışıkları ve sıfırlama | lil SOLID hücreleri; IQOS kullanım kılavuzları |
+| 2026-10-30 | Kullanım | lil HYBRID nasıl kullanılır | lil HYBRID hücreleri; Japonya basını (2020), resmi kılavuz bulunamadı |
+| 2026-10-31 | Kullanım | Isıtmalı tütün cihazlarının şarj süreleri (marka marka) | Şarj yazılarının merkez sayfası |
+
+Sıradaki adaylar: glo Hilo nasıl kullanılır, glo hyper temizliği, lil SOLID temizliği, ısıtmalı tütün cihazlarında ısınma süreleri karşılaştırması, Ploom X Advanced nasıl kullanılır.

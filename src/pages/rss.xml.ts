@@ -1,11 +1,11 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../lib/rehberler';
 import type { APIContext } from 'astro';
 import { SITE_ADI, SITE_SLOGAN } from '../lib/site';
 
 export async function GET(context: APIContext) {
   // noindex taslaklar (dogrulanacak) akışa da girmez
-  const rehberler = (await getCollection('rehber', (r) => !r.data.dogrulanacak)).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
+  const rehberler = (await yayindakiRehberler((r) => !r.data.dogrulanacak)).sort((a, b) => b.data.yayin.getTime() - a.data.yayin.getTime());
   return rss({
     title: SITE_ADI,
     description: SITE_SLOGAN,

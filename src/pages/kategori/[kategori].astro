@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { yayindakiRehberler } from '../../lib/rehberler';
 import Base from '../../layouts/Base.astro';
 import Kirinti from '../../components/Kirinti.astro';
 import Kart from '../../components/Kart.astro';
@@ -16,7 +16,7 @@ export function getStaticPaths() {
 const kategori = Astro.params.kategori as Kategori;
 const bilgi = KATEGORI_BILGI[kategori];
 const tarih = (r: { data: { yayin: Date; guncelleme?: Date } }) => r.data.guncelleme ?? r.data.yayin;
-const yazilar = (await getCollection('rehber', (r) => r.data.kategori === kategori)).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
+const yazilar = (await yayindakiRehberler((r) => r.data.kategori === kategori)).sort((a, b) => tarih(b).getTime() - tarih(a).getTime());
 const sayilar = Object.fromEntries(MARKALAR.map((m) => [m.slug, yazilar.filter((r) => rehberMarkalari(r.data).includes(m.slug)).length]));
 const kart = (r: (typeof yazilar)[number]) => ({ slug: r.id, gorsel: r.data.gorsel, baslik: r.data.baslik, etiketler: r.data.etiketler, aciklama: r.data.aciklama, kategori, tarih: tarih(r), dakika: okumaSuresi(r.body) });
 // İlk yazı manşet olarak büyük gösterilir; süzgeç kullanılınca manşet de diğer kartlar gibi süzülür
