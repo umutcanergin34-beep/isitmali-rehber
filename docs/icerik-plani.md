@@ -134,5 +134,7 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-07 | Kullanım | Cihaz uygulamaları: IQOS, myglo, Ploom | Destek sayfaları ve BAT bültenleri |
 | 2026-11-08 | Teknoloji | Aksesuarlar modeller arasında uyumlu mu | IQOS Malta SSS, JT Japonya |
 | 2026-11-09 | Temel | Yeni cihaz: ilk kullanımdan önce yapılacaklar | IQOS, JT ve lil ilk adım sayfaları |
+| 2026-11-10 | Mevzuat | Yurt dışından ısıtmalı tütün getirmek: gümrük kuralları | 2149 sayılı Karar, 2020/7 genelgesi (2024/18 değişikliği) |
+| 2026-11-11 | Güven | Sahte ya da kaçak ürün nasıl anlaşılır | IQOS UK rehberi, GİB BÜİS; cihaz için üretici kod listesi yok |
 
 Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), lil AIBLE nasıl kullanılır (resmi kaynak bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
