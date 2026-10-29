@@ -7,7 +7,7 @@ export const YAYINDA = true;
 // Editör: gerçek kişi, gerçek adıyla. Boşken yazar olarak site gösterilir.
 export const EDITOR = { ad: 'Gülsüm Yüksel', unvan: 'Editör', hakkinda: '' };
 // Okur düzeltme bildirimi için editoryal e-posta. Boşken gösterilmez.
-export const ILETISIM = { eposta: 'gulsumyuksel5743@gmail.com' };
+export const ILETISIM = { eposta: '' };
 // Sahiplik açıklaması (Hakkımızda). Mağaza adı ve linki karar verilince doldurulur; boşken uyarı gösterilir.
 export const SAHIPLIK = { magazaAdi: '', magazaUrl: '' };
 
