@@ -69,7 +69,7 @@ Kullanım adımları AURA ile büyük ölçüde aynıdır: [Ploom AURA nasıl ku
 
 ## Hangi çubukla kullanılır?
 
-JT bültenleri çubuk ailesini metinde ayrıca saymıyor. Mynavi'nin incelemesi CUBE'u, ilk olarak AURA için tasarlanan ve SMART HEATFLOW'a göre geliştirilen **EVO** çubuklarıyla denedi ve AURA'dan belirgin bir tat farkı bulmadı. Ploom ailesinde hangi çubuğun hangi cihaza uyduğu için [Ploom uyumlu çubuklar](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/) yazısına bakın.
+JT bültenleri çubuk ailesini metinde ayrıca saymıyor. Mynavi'nin incelemesi CUBE'u, ilk olarak AURA için tasarlanan ve SMART HEATFLOW'a göre geliştirilen **EVO** çubuklarıyla ([EVO çubukları nedir](/rehber/ploom-evo-cubuklari-nedir/)) denedi ve AURA'dan belirgin bir tat farkı bulmadı. Ploom ailesinde hangi çubuğun hangi cihaza uyduğu için [Ploom uyumlu çubuklar](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/) yazısına bakın.
 
 ## AURA mı, CUBE mu?
 

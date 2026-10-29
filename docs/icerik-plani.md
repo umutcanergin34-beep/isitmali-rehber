@@ -139,6 +139,8 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-12 | Teknoloji | bonds by IQOS ve blends nedir | Philip Morris Japonya bülteni (Temmuz 2026 pilot) |
 | 2026-11-13 | Teknoloji | lil AIBLE 3.0 yenilikleri | Kore basını (Financial News), Tobacco Insider |
 | 2026-11-14 | Teknoloji | lil Tonino Lamborghini ve FlashWave ısıtma | Kore basını (Sateconomy, MTN, Insight) |
+| 2026-11-15 | Teknoloji | Ploom EVO çubukları nedir | JT Japonya destek SSS, Impress Watch, Newsweek Japan, Better Retailing |
+| 2026-11-16 | Teknoloji | glo hyper pro+ nedir | BAT Japonya bültenleri (Temmuz ve Ağustos 2026), discoverglo SSS, Korea Times |
 
 Yön (cano, 29 Ekim): yasak ve mevzuat ağırlıklı yeni yazı yok; ürün bilgisi ve ürün haberleri öncelikli.
 
