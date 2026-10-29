@@ -5,9 +5,9 @@ export const SITE_URL = 'https://isitmalihber.com';
 // false iken tüm sayfalar noindex, robots.txt her şeyi kapatır: alan adı ve avukat onayı gelmeden Google'a açılmaz.
 export const YAYINDA = true;
 // Editör: gerçek kişi, gerçek adıyla. Boşken yazar olarak site gösterilir.
-export const EDITOR = { ad: '', unvan: '', hakkinda: '' };
+export const EDITOR = { ad: 'Gülsüm Yüksel', unvan: 'Editör', hakkinda: '' };
 // Okur düzeltme bildirimi için editoryal e-posta. Boşken gösterilmez.
-export const ILETISIM = { eposta: '' };
+export const ILETISIM = { eposta: 'gulsumyuksel5743@gmail.com' };
 // Sahiplik açıklaması (Hakkımızda). Mağaza adı ve linki karar verilince doldurulur; boşken uyarı gösterilir.
 export const SAHIPLIK = { magazaAdi: '', magazaUrl: '' };
 
