@@ -2,7 +2,7 @@
 baslik: "Isıtmalı Tütün Hakkında Sık Sorulan Sorular"
 aciklama: "Isıtmalı tütün nedir, nasıl çalışır, hangi çubuk hangi cihazda kullanılır, nerede kullanılamaz? Rehberlerimizdeki en sık sorulan soruların kısa cevapları."
 yayin: 2026-10-22
-guncelleme: 2026-10-22
+guncelleme: 2026-10-29
 kategori: temel
 gorsel:
   src: "../../assets/gorseller/isitmali-tutun-sik-sorulan-sorular.jpg"
@@ -21,6 +21,13 @@ sss:
     cevap: "Hayır. Isıtmalı tütün 4207 sayılı Kanun'a göre tütün ürünüdür ve sigaranın yasak olduğu kapalı alanlarda o da yasaktır."
   - soru: "Isıtmalı tütün cihazı uçakta taşınabilir mi?"
     cevap: "Yalnızca kabin bagajında, yanınızda taşınabilir. Bavula konmaz, uçakta şarj edilmez ve kullanılmaz."
+kaynaklar:
+  - { ad: "WHO: Heated tobacco products information sheet", url: "https://www.who.int/publications-detail-redirect/WHO-NMH-PND-17.6" }
+  - { ad: "PMI 2014 Faaliyet Raporu: iQOS", url: "https://media.corporate-ir.net/media_files/IROL/14/146476/PM_AR_2014/pdf/pmi-iqos.pdf" }
+  - { ad: "IQOS: IQOS 3 DUO vs IQOS ILUMA", url: "https://www.iqos.com/gb/en/blog/difference-between-iqos-iluma-and-iqos-3-duo.html" }
+  - { ad: "IQOS: How do IQOS models differ from each other?", url: "https://www.iqos.com/ph/en/support/faqs/how-do-iqos-models-differ-from-each-other.html" }
+  - { ad: "Mevzuat Bilgi Sistemi: 4207 sayılı Kanun", url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4207.pdf" }
+  - { ad: "TSA: Electronic Cigarettes and Vaping Devices", url: "https://tsa.gov/travel/security-screening/whatcanibring/items/electronic-cigarettes-and-vaping-devices" }
 ---
 
 **Kısaca:** Bu sayfa, rehberlerimizde en sık cevapladığımız soruları tek yerde toplar. Her cevabın sonunda konuyu ayrıntılı anlatan rehbere bağlantı var. Isıtmalı tütün ürünleri yalnızca 18 yaş üstü yetişkinler içindir, sağlık riski taşır ve bağımlılık yapar.
@@ -51,7 +58,7 @@ Bugünkü pazar 2014'te Japonya'da IQOS ile başladı; ilk denemeler daha eskiye
 HEETS bıçaklı eski IQOS'lar, TEREA ise bıçaksız ILUMA serisi içindir; birbirinin cihazında kullanılmaz. [HEETS ile TEREA farkı](/rehber/heets-ve-terea-farki/)
 
 **ILUMA, ILUMA PRIME ve ILUMA ONE arasındaki fark ne?**
-ILUMA ve PRIME iki parçalı, ONE tek parçalıdır; üçü de aynı ısıtma sistemini ve TEREA çubuklarını kullanır. [ILUMA modelleri](/rehber/iqos-iluma-modelleri-farklari/)
+ILUMA ve PRIME iki parçalı, ONE tek parçalıdır. 2024'te gelen ILUMA i serisi de aynı üç biçimi izler; altı modelin hepsi aynı ısıtma sistemini ve TEREA çubuklarını kullanır. [ILUMA modelleri](/rehber/iqos-iluma-modelleri-farklari/)
 
 ## Kullanım ve bakım
 
