@@ -54,3 +54,5 @@ Her üretici kendi ısıtma sistemini patentlerle korur ve çubuklarını yalnı
 Daha ayrıntılı zaman çizelgesi için [ısıtmalı tütünün kısa tarihi](/rehber/isitmali-tutunun-kisa-tarihi/) rehberine bakın.
 
 Bu sayfa markalar hakkında bilgi verir; hiçbir markayı önermez ya da karşılaştırmalı olarak değerlendirmez.
+
+Markaların hangi ülkelerde yaygın olduğu için [ısıtmalı tütün hangi ülkelerde yaygın](/rehber/isitmali-tutun-hangi-ulkelerde-yaygin/) yazısına bakın.

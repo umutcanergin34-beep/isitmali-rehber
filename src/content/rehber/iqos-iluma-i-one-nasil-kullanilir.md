@@ -30,7 +30,7 @@ kaynaklar:
 
 **Kısaca:** ILUMA i ONE, şarj kutusu olmayan **tek parça** ILUMA i modelidir. Düğmeye **4 saniye** basarak açılır, kapağı kaydırıp çubuğu **filtre çizgisine kadar** takınca ısıtma kendiliğinden başlar ve **ikinci titreşimde** hazır olur. Üreticiye göre tam şarj yaklaşık **90 dakika** sürer ve art arda **20 kullanıma** kadar yeter. Dokunmatik ekranı ve **Duraklatma modu yoktur**; sıfırlamak için düğme **10 saniye** basılı tutulur.
 
-## Adım adım kullanım
+## ILUMA i ONE adım adım nasıl kullanılır?
 
 1. **Açın.** Düğmeyi 4 saniye basılı tutun. Şarja takmak da cihazı açar.
 2. **Kapağı açın.** Üst kapağı kaydırarak açın.

@@ -52,3 +52,5 @@ Sigarada tütün yakılır ve uçta yanma olur. Isıtmalı tütünde çubuk, cih
 - Üçü de **nikotin** içerebilir. Nikotin bağımlılık yapar.
 - Üçü de **18 yaş altına** yasaktır.
 - Üçü de Türkiye'de 4207 sayılı Kanun kapsamındadır: reklamları ve kapalı alanda kullanımları yasaktır.
+
+Bu üç ürün hakkında sık karıştırılan konular için [ısıtmalı tütün cihazları hakkında yanlış bilinenler](/rehber/isitmali-tutun-hakkinda-yanlis-bilinenler/) yazısına bakın.

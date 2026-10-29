@@ -63,7 +63,7 @@ VEEV ONE bir **elektronik sigaradır**. IQOS ile aynı şirketin ürünü olduğ
 - **Nikotin:** Avrupa Birliği'nde e-sigara sıvılarındaki nikotin, Tütün Ürünleri Direktifi gereği en fazla 20 mg/ml olabilir ve pod hacmi en fazla 2 ml'dir. Bir pod'un nikotin oranı paketinin üzerinde yazar ve ülkeye göre değişebilir.
 - **Batarya:** Şarj edilebilir, cihaza gömülü batarya. Resmi sayfalarda batarya kapasitesi (mAh) verilmiyor; bu yüzden burada bir sayı yazmıyoruz.
 
-## Adım adım kullanım
+## VEEV ONE adım adım nasıl kullanılır?
 
 1. **İlk kullanımdan önce şarj edin.** Cihazı ilk kez kullanmadan önce tam şarj edin (ayrıntılar aşağıda).
 2. **Pod'u hazırlayın.** Pod'u kapalı poşetinden yırtarak çıkarın.

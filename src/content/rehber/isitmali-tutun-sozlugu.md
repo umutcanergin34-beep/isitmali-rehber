@@ -60,3 +60,5 @@ kaynaklar:
 | Menşe | Paketin üretildiği ya da satışa sunulduğu ülke/bölge. Aynı çeşidin farklı menşeli paketleri tat ve içerik olarak farklılık gösterebilir. |
 | Kapsül (pearl) | Filtredeki, sıkınca aroma veren küçük kapsül. Kapsülsüz kullanılırsa çubuk aromasız haliyle içilir. |
 | Yoğunluk | Üreticinin çubuğa verdiği tat sertliği derecesi; markalar farklı ölçek kullanır, karşılaştırılamaz. |
+
+Terimlerin geçtiği sık sorular için [ısıtmalı tütün sık sorulan sorular](/rehber/isitmali-tutun-sik-sorulan-sorular/) sayfasına bakın.

@@ -91,3 +91,9 @@ Hayır; 4207 sayılı Kanun tütün ürünlerinin her türlü reklamını ve tan
 
 **Avrupa'da aromalı çubuk yasak mı?**
 Evet; AB'de 23 Ekim 2023'ten beri karakteristik aromalı ısıtmalı tütün yasak. [AB aroma yasağı](/rehber/ab-aromali-isitmali-tutun-yasagi/)
+
+**Yeni aldığım cihazla ilk ne yapmalıyım?**
+Önce tam şarj edin, kaydedin ve kılavuzu okuyun. [Yeni cihaz: ilk kullanımdan önce](/rehber/yeni-isitmali-tutun-cihazi-ilk-kullanim/)
+
+**Isıtmalı tütünle ilgili yaygın yanlışlar neler?**
+En sık karıştırılan konuları tek yazıda topladık. [Yanlış bilinenler](/rehber/isitmali-tutun-hakkinda-yanlis-bilinenler/)

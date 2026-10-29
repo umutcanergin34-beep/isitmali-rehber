@@ -28,7 +28,7 @@ kaynaklar:
 
 **Kısaca:** IQOS 3 DUO (yeni adıyla IQOS ORIGINALS DUO), içindeki ısıtıcı bıçakla çalışan iki parçalı bir cihazdır. Şarj kutusunun düğmesine **4 saniye** basarak açın, **HEETS** çubuğunu tütün ucu önde, gümüş çizgiye kadar holder'a takın, holder'ın düğmesine titreyene kadar basın ve ısınmanın bitmesini bekleyin. Holder tam doluyken **art arda iki kullanım** sağlar.
 
-## Adım adım kullanım
+## IQOS 3 DUO adım adım nasıl kullanılır?
 
 1. **Açın.** Holder şarj kutusundayken şarj kutusunun düğmesine 4 saniye basılı tutun.
 2. **Şarjı kontrol edin.** Düğmeye kısa basınca şarj durumu görünür. İki sabit ışık, holder'ın art arda iki kullanım için hazır olduğunu gösterir.

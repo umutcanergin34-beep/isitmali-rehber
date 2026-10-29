@@ -33,7 +33,7 @@ kaynaklar:
 
 Talimatlarda sıvı temizleyici geçmiyor; yalnızca fırça ve kâğıt mendil kullanın. Fırça kaybolur ya da kırılırsa yerine kürdan gibi başka bir nesne kullanmayın; markanın kendi fırçasını edinin.
 
-## Adım adım temizlik
+## glo hyper adım adım nasıl temizlenir?
 
 1. **Soğumasını bekleyin.** Isıtma bittikten sonra en az 10 dakika bekleyin.
 2. **Üst kapağı açın.** Üstteki kapağı kaydırarak hazneyi açın.

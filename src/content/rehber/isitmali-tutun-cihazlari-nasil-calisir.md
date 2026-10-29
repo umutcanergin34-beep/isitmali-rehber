@@ -59,6 +59,10 @@ Bu tablo yalnızca teknik uyumluluğu gösterir; ürünlerin satışı ya da tem
 - **Ölçüler farklı.** Çubukların çapı ve boyu markaya göre değişir; yanlış çubuk ya hazneye girmez ya da sıkı oturmaz.
 - **Cihaz zarar görebilir.** IQOS, TEREA'nın içindeki metal parçanın eski bıçaklı cihazlara zarar verebileceğini belirtiyor.
 
+## Yeni ısıtma yöntemleri
+
+Üreticiler bu üç yöntemin dışında da denemeler yapıyor. Philip Morris Japonya'nın 2026'da pilot olarak çıkardığı cihaz çubuğu dışarıdan saran bir sistemle ısıtıyor: [bonds by IQOS ve blends](/rehber/bonds-by-iqos-ve-blends-nedir/). KT&G ise mikrodalgayla ısıtan bir cihaz çıkardı: [lil Tonino Lamborghini ve FlashWave](/rehber/lil-tonino-lamborghini-flashwave/).
+
 ## Bu sayfada ne yok
 
 Sıcaklık değerleri: üreticilerin resmi destek sayfaları çalışma sıcaklığını yayımlamıyor ya da kaynaklar birbirini tutmuyor. Doğrulanmış bir kaynak bulduğumuzda tabloya ekleyeceğiz. Sağlık karşılaştırması: bu sayfa yalnızca teknik çalışma prensibini anlatır.

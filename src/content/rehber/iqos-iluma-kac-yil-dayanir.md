@@ -57,3 +57,5 @@ ILUMA'da ve diğer ısıtmalı tütün cihazlarında **lityum iyon batarya** kul
 ## Eski cihaz ne olacak?
 
 Kullanılmayan cihazı ve bataryasını evsel çöpe atmayın. Elektronik atık toplama noktalarına bırakın. Ayrıntılar için [cihaz ve çubuk atıkları](/rehber/isitmali-tutun-cihazi-ve-cubuk-atiklari/) yazısına bakın.
+
+Cihazı bir süre kullanmayacaksanız bataryayı korumak için [uzun süre kullanılmazsa](/rehber/isitmali-tutun-cihazi-uzun-sure-kullanilmazsa/) yazısındaki adımlara bakın.

@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { readdirSync, readFileSync } from 'node:fs';
 import { SITE_URL } from './src/lib/site.ts';
+import yayindaOlmayanLinkler from './src/lib/yayinda-olmayan-linkler.mjs';
 
 // noindex olan taslak rehberler (dogrulanacak: true) site haritasına girmez
 const taslaklar = readdirSync('./src/content/rehber')
@@ -39,6 +40,7 @@ export default defineConfig({
   // ve küçük Türkçe woff2 alt kümeleri (font-src default-src 'self' ile data: kabul etmez)
   vite: { build: { assetsInlineLimit: 0 } },
   integrations: [
+    yayindaOlmayanLinkler(),
     sitemap({
       filter: (sayfa) => !taslaklar.some((y) => sayfa.endsWith(y)),
       serialize: (oge) => {

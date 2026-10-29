@@ -60,3 +60,5 @@ Bu yüzden bazı ülkelerde lil cihazları IQOS mağazalarında ve IQOS markası
 ## Diğer markalarla karşılaştırma
 
 Markaların sahipleri için [markalar ve üreticiler](/rehber/isitmali-tutun-markalari-ve-ureticileri/) yazısına, Güney Kore pazarı için [ısıtmalı tütün hangi ülkelerde yaygın](/rehber/isitmali-tutun-hangi-ulkelerde-yaygin/) yazısına bakabilirsiniz.
+
+Ailenin yeni cihazları için [lil AIBLE 3.0 yenilikleri](/rehber/lil-aible-3-0-yenilikleri/) ve mikrodalgayla ısıtan [lil Tonino Lamborghini](/rehber/lil-tonino-lamborghini-flashwave/) yazılarına bakın.

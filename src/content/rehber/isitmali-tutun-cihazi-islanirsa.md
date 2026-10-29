@@ -26,7 +26,7 @@ kaynaklar:
 
 **Kısaca:** Cihaz suya düştüyse onu **hemen sudan çıkarın** ve mümkünse **kapatın**. Islakken **açmayın ve şarj etmeyin**. Isı kaynaklarından ve doğrudan güneşten uzakta, **kendiliğinden tamamen kurumasını** bekleyin. Tamamen kuruduğundan emin olunca açıp deneyin. Çalışmıyorsa ya da tuhaf davranıyorsa üreticinin destek hattına başvurun. Bu adımlar IQOS'un destek sayfalarına dayanır; diğer markalarda da aynı mantık geçerlidir.
 
-## Adım adım
+## Islanan cihazda adım adım ne yapılır?
 
 1. **Sudan çıkarın.** Ne kadar çabuk çıkarırsanız o kadar iyi.
 2. **Kapatın.** Mümkünse cihazı kapatın. Şarj kablosu takılıysa çıkarın.

@@ -27,7 +27,7 @@ kaynaklar:
 
 **Kısaca:** glo Hilo, BAT'ın 2025'te Japonya'da çıkardığı ve yalnızca **virto** çubuklarıyla çalışan cihaz ailesidir. BAT Japan'a göre cihaz yaklaşık **5 saniyede** ısınır. Bir kullanım standart modda **5 dakika 10 saniye**, boost modunda **4 dakika 10 saniye** sürer; nefes sayısı sınırlı değildir. Tam şarj yaklaşık **90 dakika**dır ve tam şarjla yaklaşık **20 kullanım** yapılır.
 
-## Adım adım kullanım
+## glo Hilo adım adım nasıl kullanılır?
 
 1. **Çubuğu takın.** virto çubuğunu cihaza yerleştirin. All About'un incelemesine göre cihazın içindeki ısıtıcı, çubuğun kapalı ucunu delerek içeri girer ve çubuğu içten ısıtır.
 2. **Modu seçin.** Standart ya da boost modu seçin. Hilo Plus'ta mod, dokunmatik ekrandan seçilir.
