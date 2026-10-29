@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Kirinti from '../components/Kirinti.astro';
-import { SITE_ADI } from '../lib/site';
+import { SITE_ADI, ILETISIM } from '../lib/site';
 ---
 <Base title="Yayın ilkeleri ve düzeltmeler" description={`${SITE_ADI} rehberlerinin hangi kaynaklara dayandığı, nasıl güncellendiği ve hataların nasıl düzeltildiği.`}>
   <div class="kap duz">
@@ -17,7 +17,7 @@ import { SITE_ADI } from '../lib/site';
     </ul>
     <h2>Güncelleme</h2>
     <p>Rehberler en az altı ayda bir gözden geçirilir. Sayfanın başındaki güncelleme tarihi son içerik değişikliğini gösterir.</p>
-    <h2>Düzeltmeler</h2>
-    <p>Bir hata gördüyseniz bize bildirin. Doğrulanan hatalar düzeltilir ve önemli düzeltmeler sayfanın sonunda tarihiyle not edilir.</p>
+    <h2 id="duzeltmeler">Düzeltmeler</h2>
+    <p>Bir hata gördüyseniz bize bildirin{ILETISIM.eposta && <>: <a href={`mailto:${ILETISIM.eposta}`}>{ILETISIM.eposta}</a></>}. Doğrulanan hatalar düzeltilir ve önemli düzeltmeler sayfanın sonunda tarihiyle not edilir.</p>
   </div>
 </Base>
