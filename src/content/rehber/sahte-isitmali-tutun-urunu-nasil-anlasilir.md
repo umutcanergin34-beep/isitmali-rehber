@@ -56,7 +56,7 @@ Türkiye'de tütün ürünleri ve alkollü içkiler, Hazine ve Maliye Bakanlığ
 2. Kod okuyucuyu paketteki bandrolün ya da kodun üzerine getirin.
 3. Ekranda çıkan **barkod numarası, marka ve üreticiyi** paketle karşılaştırın.
 
-Bandrol yoksa, okunmuyorsa ya da çıkan bilgi paketle uyuşmuyorsa ürünü kullanmayın. Yurt dışından getirilen ürünlerde Türk bandrolü olmaz; yolcu beraberinde getirilebilecek miktar sınırlıdır: [yurt dışından ısıtmalı tütün getirmek](/rehber/yurt-disindan-isitmali-tutun-getirmek-gumruk/).
+Bandrol yoksa, okunmuyorsa ya da çıkan bilgi paketle uyuşmuyorsa ürünü kullanmayın.
 
 ## Cihazda bakılacaklar
 
