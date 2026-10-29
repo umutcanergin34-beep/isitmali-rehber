@@ -29,6 +29,8 @@ Isıtmalı tütün cihazları (IQOS, glo, Ploom, lil) için markadan bağımsız
 ## Kademeli yayın
 `yayin` tarihi ileride olan rehber derlemeye girmez: sayfası, listelerde, aramada, RSS'te ve site haritasında görünmez (`src/lib/rehberler.ts`). Yazılar ileri tarihle eklenir, site her gün yeniden derlenip yayınlanınca o günün yazısı açılır. Önizleme için `ONIZLEME=1 npm run build` (`npm run dev` hepsini gösterir). Takvim `docs/icerik-plani.md` içinde.
 
+Yayında olmayan bir rehbere eski yazılardan şimdiden bağlantı verilebilir: derleme sonunda bu bağlantılar düz metne çevrilir (`src/lib/yayinda-olmayan-linkler.mjs`), yazının yayın günündeki derlemede kendiliğinden açılır.
+
 Günlük derleme: `.github/workflows/gunluk-yayin.yml` her sabah 06:00'da (TSİ) `main`'i derler, `npm test` geçerse `wrangler deploy` yapar. Elle çalıştırmak için GitHub'da Actions > Günlük yayın > Run workflow. Depo sırları: `CLOUDFLARE_API_TOKEN` ("Edit Cloudflare Workers" şablonu) ve `CLOUDFLARE_ACCOUNT_ID`.
 
 ## IndexNow (Bing, Yandex)

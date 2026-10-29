@@ -26,7 +26,7 @@ kaynaklar:
 
 **Kısaca:** ILUMA şarj olmuyorsa sırasıyla şunlara bakın: **portlar ve kontaklar temiz ve kuru mu**, **kablo ve adaptör sağlam ve uyumlu mu**, kutu tamamen bittiyse **20 dakika beklediniz mi**, cihaz **sıcaklık aralığının dışında mı**. Bunlar sorunu çözmezse **sıfırlayın**. Sıfırlamadan sonra da şarj olmuyorsa üreticinin müşteri hizmetlerine başvurun.
 
-## Adım adım kontrol listesi
+## ILUMA şarj olmuyorsa adım adım kontrol listesi
 
 1. **Fişi çekin ve portlara bakın.** Cihazın ve kablonun şarj girişleri kuru olmalı, içinde toz ya da kalıntı olmamalı.
 2. **Kontakları temizleyin.** Holder'ın ve şarj kutusunun birbirine değen metal kontaklarını kuru bir bezle silin.

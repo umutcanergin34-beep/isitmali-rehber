@@ -34,7 +34,7 @@ kaynaklar:
 
 IQOS, ilk kullanımdan önce cihazın tam şarj edilmesini öneriyor. İki parçalı ILUMA modellerinde (holder ve şarj kutusu) tam şarj yaklaşık **135 dakika** sürer. Ayrıntılar için [IQOS ILUMA şarj süresi ve kaç kullanım](/rehber/iqos-iluma-sarj-suresi-ve-kullanim-sayisi/) yazısına bakın.
 
-## Adım adım kullanım
+## IQOS ILUMA adım adım nasıl kullanılır?
 
 1. **Cihazı açın.** Şarj kutusundaki düğmeyi yaklaşık 4 saniye basılı tutun. Aynı işlem cihazı kapatır.
 2. **Şarjı kontrol edin.** Holder'daki ışıklar kalan kullanımı gösterir. ILUMA i serisinde bu bilgi dokunmatik ekranda görünür. Işıkların anlamı için [IQOS ILUMA ışıkları ne anlama gelir](/rehber/iqos-iluma-isiklari-ne-anlama-gelir/) yazısına bakabilirsiniz.

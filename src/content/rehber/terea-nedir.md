@@ -60,3 +60,5 @@ TEREA farklı tütün karışımı ve aroma seçenekleriyle üretilir. Hangi çe
 TEREA'nın içindeki metal parçanın kenarları keskindir. Kullanılmış ve kullanılmamış çubukları çocuklardan ve evcil hayvanlardan uzak tutun, çubukları sökmeyin. Ayrıntılar için [TEREA çubuğundaki metal parça](/rehber/terea-cubugundaki-metal-parca/) yazısına bakın.
 
 TEREA'nın tütünsüz bir benzeri olan LEVIA için [tütünsüz nikotin çubukları](/rehber/tutunsuz-nikotin-cubuklari-levia/) yazısına, günlük kullanım adımları için [IQOS ILUMA nasıl kullanılır](/rehber/iqos-iluma-nasil-kullanilir/) yazısına bakabilirsiniz.
+
+Paketin orijinal olup olmadığını kodlardan ve bandrolden anlamak için [sahte ya da kaçak ürün nasıl anlaşılır](/rehber/sahte-isitmali-tutun-urunu-nasil-anlasilir/) yazısına, bir çubuğun kaç dakika sürdüğü için [ısıtmalı tütün çubuğu kaç dakika sürer](/rehber/isitmali-tutun-cubugu-kac-dakika-surer/) yazısına bakın.

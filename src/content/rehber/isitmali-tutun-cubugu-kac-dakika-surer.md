@@ -52,3 +52,5 @@ Sıcaklık sütunu, bağımsız bir çalışmanın derlediği üretici değerler
 IQOS cihazları kullanımın son 30 saniyesine ya da son 2 nefesine gelindiğini titreşim ve ışıkla bildirir. Ploom X ve glo hyper'da da kullanım bitince cihaz titreşir. Bir çubuk yalnızca bir kez kullanılır; biten çubuğu yeniden ısıtmayın.
 
 Çubukların cihazlar arasında neden değiştirilemediğini [ısıtmalı tütün cihazları nasıl çalışır](/rehber/isitmali-tutun-cihazlari-nasil-calisir/) yazısında, TEREA'yı ise [TEREA nedir](/rehber/terea-nedir/) yazısında bulabilirsiniz.
+
+Bir çubuk bittikten sonra hemen ikincisine geçmek için cihazların sınırları farklıdır: [art arda kaç çubuk kullanılır](/rehber/isitmali-tutun-cihazi-art-arda-kullanim/).

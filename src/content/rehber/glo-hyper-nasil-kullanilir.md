@@ -28,7 +28,7 @@ kaynaklar:
 
 **Kısaca:** glo hyper'da üst kapağı kaydırın, çubuğu renkli çizgi görünmez olana kadar takın ve düğmeye cihaz titreyene kadar yaklaşık **3 saniye** basılı tutun. Isınma bitince cihaz titrer ve kullanıma hazır olur. Basına yansıyan bilgilere göre ilk glo hyper'da **standart mod** yaklaşık 20 saniyede ısınıp yaklaşık 4 dakika, **boost modu** yaklaşık 15 saniyede ısınıp yaklaşık 3 dakika sürer. Süreler modele göre değişir; cihazınızın kılavuzuna bakın.
 
-## Adım adım kullanım
+## glo hyper adım adım nasıl kullanılır?
 
 1. **Kapağı açın.** Cihazın üstündeki kapağı kaydırın.
 2. **Çubuğu takın.** Çubuğu, üzerindeki renkli çizgi görünmez olana kadar hazneye yerleştirin.

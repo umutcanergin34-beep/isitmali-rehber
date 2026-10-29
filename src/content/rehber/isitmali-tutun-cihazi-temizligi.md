@@ -53,3 +53,5 @@ ILUMA serisinde ısı, çubuğun içindeki metal parçada üretilir ve cihazda b
 | Bıçağa bastırmak | Bıçak kırılırsa cihaz çalışmaz |
 
 Diğer markalarda (glo, Ploom, lil) temizlik adımları ve önerilen araçlar modele göre değişir; cihazın kullanım kılavuzundaki talimata uyun.
+
+glo hyper için ayrıntılı adımlar: [glo hyper temizliği](/rehber/glo-hyper-temizligi/).

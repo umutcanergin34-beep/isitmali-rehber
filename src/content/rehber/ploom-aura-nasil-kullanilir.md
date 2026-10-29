@@ -34,7 +34,7 @@ kaynaklar:
 
 **Kısaca:** Yeni bir Ploom AURA **bir kez şarj edilmeden** çalışmaz. Kaydırmalı kapak açılıp çubuk **ağızlık yukarıda ve renkli çizgi görünecek şekilde** takılınca ısıtma **kendiliğinden** başlar. Yaklaşık **25 saniye** sonra (Strong modunda 30) cihaz **iki kez titreşir** ve kullanıma hazırdır. Bir çubuk, ısıtma moduna göre **3 ile 6 dakika** arasında kullanılır. Bilgiler JT'nin Japonya destek sayfalarından alınmıştır; başka ülkelerde satılan sürümlerde farklılık olabilir.
 
-## Adım adım kullanım
+## Ploom AURA adım adım nasıl kullanılır?
 
 1. **İlk şarj.** Yeni cihaz bir kez şarj edilmelidir. İlk şarjda beyaz ışık 10 kez yanıp söner ve cihaz titreşir.
 2. **Kapağı açın.** Üstteki kaydırmalı kapağı açın.

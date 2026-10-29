@@ -49,3 +49,5 @@ kaynaklar:
 - Cihaz ya da kablo ısınıyor, kokuyor ya da gövde şişiyorsa şarjı hemen kesin. Bkz. [batarya güvenliği](/rehber/isitmali-tutun-cihazi-batarya-guvenligi/).
 
 Markaya özel şarj süreleri ve sorun giderme için: [ILUMA şarj süresi](/rehber/iqos-iluma-sarj-suresi-ve-kullanim-sayisi/), [ILUMA şarj olmuyor](/rehber/iqos-iluma-sarj-olmuyor/), [Ploom X şarj süresi](/rehber/ploom-x-sarj-suresi-ve-sarj-olmuyor/), [glo hyper ışıkları ve sorun giderme](/rehber/glo-hyper-isiklari-ve-sorun-giderme/).
+
+Kablo, kılıf ve kapak gibi parçaların modeller arasında uyumu için [aksesuarlar modeller arasında uyumlu mu](/rehber/isitmali-tutun-cihazi-aksesuar-uyumu/) yazısına bakın.

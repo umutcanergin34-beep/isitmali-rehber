@@ -26,7 +26,7 @@ kaynaklar:
 
 **Kısaca:** Ploom X'te kaydırmalı kapağı açın, **EVO** çubuğunu baskılı çizgi cihazın üst kenarıyla hizalanana kadar takın ve cihazı çalıştırın. Tüm ışıklar yanıp cihaz titreyince kullanıma hazırdır. Basına yansıyan bilgilere göre Ploom X Advanced yaklaşık **25 saniyede** ısınır ve bir kullanım yaklaşık **5 dakika** sürer. Ploom X yalnızca EVO çubuklarıyla çalışır.
 
-## Adım adım kullanım
+## Ploom X adım adım nasıl kullanılır?
 
 1. **Kapağı açın.** Cihazın üstündeki kaydırmalı kapağı açın.
 2. **Çubuğu takın.** EVO çubuğunu, üzerindeki baskılı çizgi cihazın üst kenarıyla aynı hizaya gelecek şekilde yerleştirin.

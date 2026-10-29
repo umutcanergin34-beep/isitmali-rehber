@@ -28,7 +28,7 @@ kaynaklar:
 
 **Kısaca:** lil HYBRID, Güney Koreli **KT&G**'nin geliştirdiği ve Japonya'da Philip Morris'in dağıttığı, **MIIX** tütün çubuğuyla ayrı bir **sıvı kartuşunu** birlikte kullanan bir cihazdır. Kartuşu takın, çubuğu yerleştirin; ısıtma kendiliğinden başlar ve yaklaşık **25 saniye** sürer. Japonya'daki ilk modelde bir kullanım **14 nefes ya da 4 dakika 20 saniye** sürer, tam şarj yaklaşık **100 dakika**dır ve tam şarjla yaklaşık **20 çubuk** kullanılır.
 
-## Adım adım kullanım
+## lil HYBRID adım adım nasıl kullanılır?
 
 1. **Kartuşu takın.** Sıvı kartuşunu cihazdaki yerine yerleştirin. Kartuş ayrı satılır ve çubukla birlikte kullanılır.
 2. **Çubuğu takın.** MIIX çubuğunu cihazın ağzına yerleştirin. Isıtma, çubuk takılınca kendiliğinden başlar.

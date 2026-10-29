@@ -30,7 +30,7 @@ kaynaklar:
 
 **Kısaca:** Duraklatma (Pause) modu, **ILUMA i** ve **ILUMA i PRIME**'da kullanıma **en fazla 8 dakika** ara verip kaldığınız yerden devam etmenizi sağlar. Açmak için dokunmatik ekranın **tamamı boyunca hızlıca aşağı**, devam etmek için **yukarı** kaydırırsınız. Yalnızca **Performance modunda**, kullanımın **ilk 3 dakikası ya da ilk 8 nefesi** içinde ve tam şarjlı holder'la yapılan **iki kullanımdan birinde** çalışır. ILUMA i ONE'da bu özellik yoktur.
 
-## Adım adım duraklatma
+## ILUMA i duraklatma modu adım adım
 
 1. **Uygun anı yakalayın.** Kullanımın ilk 3 dakikası ya da ilk 8 nefesi içinde olmalısınız. Üretici sayfalarına göre ekranın üst kısmındaki **iki kısa dikey çizgi**, Duraklatma modunun o an kullanılabilir olduğunu gösterir.
 2. **Aşağı kaydırın.** Dokunmatik ekranın tamamı boyunca, yukarıdan aşağı **hızlı** bir hareketle kaydırın. Hafif bir titreşim duraklatmanın başladığını bildirir.

@@ -37,7 +37,7 @@ kaynaklar:
 | Sızıntı, renk değişimi | Çıplak elle dokunmayın |
 | Duman, kıvılcım ya da alev | Dokunmayın, ortamı terk edin, 112'yi arayın |
 
-## Adım adım
+## Batarya ısınır ya da şişerse adım adım ne yapılır?
 
 1. **Kullanmayı ve şarj etmeyi bırakın.** Şarjdaysa ve güvenliyse fişi prizden çekin.
 2. **Çıplak elle dokunmayın.** Şişmiş ya da yırtılmış bir batarya ısı ve kimyasallarla ciddi yanıklara yol açabilir.

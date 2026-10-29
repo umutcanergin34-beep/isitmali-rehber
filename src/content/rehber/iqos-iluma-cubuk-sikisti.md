@@ -27,7 +27,7 @@ kaynaklar:
 
 **Kısaca:** TEREA çubuğu holder'ın içinde kırılır ya da sıkışırsa önce **cihazı kapatın** ve **soğumasını bekleyin**. Sonra parçayı iki parmakla dikkatlice çıkarmayı deneyin. Çıkmazsa üreticinin **ILUMA Stick Remover** aracını kullanın. Isıtma haznesine bıçak, iğne gibi keskin cisimler sokmayın.
 
-## Adım adım
+## Sıkışan ya da kırılan çubuk adım adım nasıl çıkarılır?
 
 1. **Cihazı kapatın.** ILUMA i ve ILUMA i PRIME'da holder'ı şarj kutusuna yerleştirip açma/kapama düğmesine 4 saniye basın. Hiçbir ışığın yanmadığından emin olun.
 2. **Soğumasını bekleyin.** Son kullanımdan sonra holder ve çubuk sıcak olabilir. Sıcakken çekmeye çalışmayın.

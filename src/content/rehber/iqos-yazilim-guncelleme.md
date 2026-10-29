@@ -27,7 +27,7 @@ kaynaklar:
 
 **Kısaca:** IQOS cihazının yazılımı **IQOS web uygulaması** ya da uygulama üzerinden güncellenir. Önce iqos.com hesabınızla giriş yapın, cihazı **Cihazlarım** bölümüne ekleyin, cihazı **USB kablo** ya da Bluetooth ile bağlayın ve cihazın bilgi sayfasından güncellemeyi başlatın. IQOS'a göre **holder'ın yazılımı yalnızca USB ile** güncellenebilir. Güncelleme sırasında bağlantının birkaç kez kopması normaldir.
 
-## Adım adım
+## IQOS yazılımı adım adım nasıl güncellenir?
 
 1. **Giriş yapın.** IQOS web uygulamasına ya da uygulamaya iqos.com hesabınızla girin.
 2. **Cihazı seçin.** Cihazlarım bölümünden cihazınızı seçin ve Cihazı Yönet'e girin.

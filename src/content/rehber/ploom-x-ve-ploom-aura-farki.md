@@ -70,3 +70,4 @@ Ploom AURA, Temmuz 2025'te Japonya'daki havalimanı mağazalarında, markanın d
 - [Ploom X nasıl kullanılır](/rehber/ploom-x-nasil-kullanilir/)
 - [Ploom X ışıkları ve sorun giderme](/rehber/ploom-x-isiklari-ve-sorun-giderme/)
 - [Ploom X şarj süresi ve şarj olmuyor](/rehber/ploom-x-sarj-suresi-ve-sarj-olmuyor/)
+- [Ploom CUBE nedir](/rehber/ploom-cube-nedir/): AURA'nın ısıtma sistemini küp biçimli bir gövdede kullanan model

@@ -28,7 +28,7 @@ kaynaklar:
 
 **Kısaca:** IQOS ILUMA ONE, şarj kutusu olmayan tek parça bir cihazdır. Düğmeye **4 saniye** basılı tutarak açın, kapağı kaydırıp **TEREA** çubuğunu filtredeki çizgiye kadar takın ve düğmeye **en az 1 saniye** basarak ısınmayı başlatın. Cihaz titreyip ışıklar sabit yanınca kullanıma hazırdır. Bir kullanım en fazla 6 dakika ya da 14 nefes sürer.
 
-## Adım adım kullanım
+## ILUMA ONE adım adım nasıl kullanılır?
 
 1. **Açın.** Düğmeye yaklaşık 4 saniye basılı tutun.
 2. **Kapağı açın.** Cihazın üstündeki kapağı kaydırın.

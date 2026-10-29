@@ -27,7 +27,7 @@ kaynaklar:
 
 **Kısaca:** lil SOLID, Güney Koreli **KT&G**'nin geliştirdiği ve 2020'den beri bazı ülkelerde PMI'ın da dağıttığı bir ısıtmalı tütün cihazıdır. **Fiit** çubuğunu takın, düğmeye cihaz titreyene kadar yaklaşık **2 saniye** basılı tutun ve ışık sabit yanıp cihaz yeniden titreyince kullanmaya başlayın. Kılavuza göre ısınma ortama bağlı olarak yaklaşık **25 saniye** sürer. lil SOLID Ez'de bir kullanım, hangisi önce dolarsa yaklaşık **5 dakika ya da 14 nefes** sürer.
 
-## Adım adım kullanım
+## lil SOLID adım adım nasıl kullanılır?
 
 1. **Çubuğu takın.** Fiit çubuğunu cihazın ağzına, doğru şekilde oturana kadar yerleştirin.
 2. **Isınmayı başlatın.** Düğmeye cihaz titreyene kadar yaklaşık 2 saniye basılı tutun.

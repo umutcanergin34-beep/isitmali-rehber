@@ -38,7 +38,7 @@ kaynaklar:
 | Şarj kutusu (Pocket Charger) | Holder'ı şarj eder; açma düğmesi ve şarj ışıkları buradadır |
 | Wrap (yalnızca i PRIME) | Şarj kutusunun holder'ı saran kapağı; kapatıldığında holder şarj olur |
 
-## Adım adım kullanım
+## ILUMA i ve i PRIME adım adım nasıl kullanılır?
 
 1. **Açın.** Şarj kutusundaki düğmeyi 4 saniye basılı tutun.
 2. **Holder'ı çıkarın.** ILUMA i'de holder'ı kutudan alın; i PRIME'da wrap'i açın.
