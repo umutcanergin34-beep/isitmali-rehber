@@ -38,8 +38,8 @@ kaynaklar:
 | SENTIA (SMARTCORE) | PMI | IQOS ILUMA serisi (bazı pazarlar) | Bıçaklı eski IQOS'lar | [ILUMA ile hangi çubuklar](/rehber/iqos-iluma-uyumlu-cubuklar/) |
 | LEVIA (tütünsüz) | PMI | IQOS ILUMA ve ILUMA i serisi | Bıçaklı eski IQOS'lar | [LEVIA nedir](/rehber/tutunsuz-nikotin-cubuklari-levia/) |
 | HEETS | PMI | IQOS ORIGINALS, IQOS 3 DUO ve önceki bıçaklı modeller | ILUMA serisi (ısınmaz) | [HEETS ve TEREA farkı](/rehber/heets-ve-terea-farki/) |
-| neo (hyper tipi) | BAT | glo hyper serisi | glo Hilo, diğer markalar | [glo hyper serisi](/rehber/glo-hyper-serisi-modelleri/) |
-| virto | BAT | glo Hilo, glo Hilo Plus | glo hyper, diğer markalar | [glo Hilo ve Hilo Plus](/rehber/glo-hilo-serisi/) |
+| neo (hyper tipi) | BAT | glo hyper serisi | glo Hilo, diğer markalar | [glo neo çubukları](/rehber/glo-neo-cubuklari-nedir/), [glo hyper serisi](/rehber/glo-hyper-serisi-modelleri/) |
+| virto | BAT | glo Hilo, glo Hilo Plus | glo hyper, diğer markalar | [glo virto çubukları](/rehber/glo-virto-cubuklari-nedir/), [glo Hilo ve Hilo Plus](/rehber/glo-hilo-serisi/) |
 | EVO | JTI | Ploom X, Ploom X Advanced, Ploom AURA, Ploom CUBE | Diğer markalar | [EVO çubukları nedir](/rehber/ploom-evo-cubuklari-nedir/), [Ploom'da uyumlu çubuklar](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/) |
 | Fiit | KT&G | lil SOLID | Diğer markalar | [lil SOLID nasıl kullanılır](/rehber/lil-solid-nasil-kullanilir/) |
 | MIIX | KT&G | lil HYBRID (sıvı kartuşuyla) | Diğer markalar | [lil HYBRID nasıl kullanılır](/rehber/lil-hybrid-nasil-kullanilir/) |

@@ -141,6 +141,8 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-14 | Teknoloji | lil Tonino Lamborghini ve FlashWave ısıtma | Kore basını (Sateconomy, MTN, Insight) |
 | 2026-11-15 | Teknoloji | Ploom EVO çubukları nedir | JT Japonya destek SSS, Impress Watch, Newsweek Japan, Better Retailing |
 | 2026-11-16 | Teknoloji | glo hyper pro+ nedir | BAT Japonya bültenleri (Temmuz ve Ağustos 2026), discoverglo SSS, Korea Times |
+| 2026-11-17 | Teknoloji | glo neo çubukları nedir (hyper tipi, StickSeal) | Impress Watch 2020 ve 2024, BAT Japonya StickSeal bülteni, 2Firsts (Kore) |
+| 2026-11-18 | Teknoloji | glo virto çubukları nedir | BAT bülteni (Haziran 2025), DIME, 2Firsts, Leadersnet (Avusturya 2026) |
 
 Yön (cano, 29 Ekim): yasak ve mevzuat ağırlıklı yeni yazı yok; ürün bilgisi ve ürün haberleri öncelikli.
 

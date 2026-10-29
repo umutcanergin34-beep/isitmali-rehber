@@ -50,7 +50,7 @@ Talimatlarda sıvı temizleyici geçmiyor; yalnızca fırça ve kâğıt mendil 
 | Isıtıcının içini fırçalamak | Her 20 çubukta bir (yaklaşık her paket) |
 | Fırçayı suyla durulamak | Ara sıra; kuruduktan sonra kullanın |
 
-Kaynak: BAT Japonya'nın glo hyper air bakım sayfası ve DIME'ın glo hyper anlatımı. Adımlar hyper ailesinde benzer; modelinizin kılavuzunda farklı bir talimat varsa onu esas alın.
+Kaynak: BAT Japonya'nın glo hyper air bakım sayfası ve DIME'ın glo hyper anlatımı. Adımlar hyper ailesinde benzer; modelinizin kılavuzunda farklı bir talimat varsa onu esas alın. Japonya'da 2024'ten beri neo ve LUCKY STRIKE çubuklarının ucunda bulunan StickSeal mühürü tütün kırıntılarını azaltır ama bakımı kaldırmaz; bkz. [glo neo çubukları](/rehber/glo-neo-cubuklari-nedir/).
 
 ## Temizlik yapılmazsa
 
