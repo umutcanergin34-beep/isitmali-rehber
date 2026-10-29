@@ -134,5 +134,12 @@ Kaynak: JT'nin Japonya Ploom destek sayfaları (clubjt.jp SSS). Bilgilerin Japon
 | 2026-11-07 | Kullanım | Cihaz uygulamaları: IQOS, myglo, Ploom | Destek sayfaları ve BAT bültenleri |
 | 2026-11-08 | Teknoloji | Aksesuarlar modeller arasında uyumlu mu | IQOS Malta SSS, JT Japonya |
 | 2026-11-09 | Temel | Yeni cihaz: ilk kullanımdan önce yapılacaklar | IQOS, JT ve lil ilk adım sayfaları |
+| 2026-11-10 | Teknoloji | Ploom CUBE nedir (2026 yenilenmesiyle) | JT bülteni, BCN, Mynavi, Impress Watch |
+| 2026-11-11 | Güven | Sahte ya da kaçak ürün nasıl anlaşılır | IQOS UK rehberi, GİB BÜİS; cihaz için üretici kod listesi yok |
+| 2026-11-12 | Teknoloji | bonds by IQOS ve blends nedir | Philip Morris Japonya bülteni (Temmuz 2026 pilot) |
+| 2026-11-13 | Teknoloji | lil AIBLE 3.0 yenilikleri | Kore basını (Financial News), Tobacco Insider |
+| 2026-11-14 | Teknoloji | lil Tonino Lamborghini ve FlashWave ısıtma | Kore basını (Sateconomy, MTN, Insight) |
 
-Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), lil AIBLE nasıl kullanılır (resmi kaynak bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
+Yön (cano, 29 Ekim): yasak ve mevzuat ağırlıklı yeni yazı yok; ürün bilgisi ve ürün haberleri öncelikli.
+
+Sıradaki adaylar: glo Hilo ışıkları ve sorun giderme (resmi kılavuz bulunamadı, bekliyor), Ploom X Advanced bilgilerinin resmi kaynakla güncellenmesi.
