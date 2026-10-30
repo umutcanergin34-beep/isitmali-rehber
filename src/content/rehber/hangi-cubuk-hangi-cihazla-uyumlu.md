@@ -43,7 +43,7 @@ kaynaklar:
 | EVO | JTI | Ploom X, Ploom X Advanced, Ploom AURA, Ploom CUBE | Diğer markalar | [EVO çubukları nedir](/rehber/ploom-evo-cubuklari-nedir/), [Ploom'da uyumlu çubuklar](/rehber/ploom-cubuk-sikisti-ve-uyumlu-cubuklar/) |
 | Fiit | KT&G | lil SOLID | Diğer markalar | [lil SOLID nasıl kullanılır](/rehber/lil-solid-nasil-kullanilir/) |
 | MIIX | KT&G | lil HYBRID (sıvı kartuşuyla) | Diğer markalar | [lil HYBRID nasıl kullanılır](/rehber/lil-hybrid-nasil-kullanilir/) |
-| AIIM | KT&G | lil AIBLE | Diğer markalar | [lil ailesi](/rehber/lil-solid-hybrid-aible-farki/) |
+| AIIM | KT&G | lil AIBLE | Diğer markalar | [lil çubukları](/rehber/lil-cubuklari-fiit-miix-aiim/), [lil ailesi](/rehber/lil-solid-hybrid-aible-farki/) |
 
 Çubuk aileleri ve hangi ülkede satıldıkları zamanla değişir. JT'nin Japonya sayfası, Ploom AURA ve CUBE için evo'nun yanında MEVIUS ve CAMEL serisi Ploom çubuklarını da sayıyor. Kendi cihazınızın kılavuzundaki listeyi esas alın.
 

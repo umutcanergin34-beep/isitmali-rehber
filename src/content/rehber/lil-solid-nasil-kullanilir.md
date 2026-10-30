@@ -42,7 +42,7 @@ lil SOLID Ez kılavuzu, cihazın aralarında beklemeden art arda 3 kullanıma iz
 
 ## lil SOLID ailesi
 
-lil SOLID, KT&G'nin lil markası altındaki cihazlardan biridir. lil HYBRID ve lil AIBLE ile farkları için [lil SOLID, lil HYBRID ve lil AIBLE](/rehber/lil-solid-hybrid-aible-farki/) yazısına bakın. lil SOLID çubuğu çevresinden ısıtır; yöntemlerin karşılaştırması [ısıtmalı tütün cihazları nasıl çalışır](/rehber/isitmali-tutun-cihazlari-nasil-calisir/) yazısında.
+lil SOLID, KT&G'nin lil markası altındaki cihazlardan biridir. lil HYBRID ve lil AIBLE ile farkları için [lil SOLID, lil HYBRID ve lil AIBLE](/rehber/lil-solid-hybrid-aible-farki/) yazısına bakın. 1.0, 2.0 ve 3.0 kuşaklarının farkı için [lil SOLID modelleri](/rehber/lil-solid-modelleri-farklari/). lil SOLID çubuğu çevresinden ısıtır; yöntemlerin karşılaştırması [ısıtmalı tütün cihazları nasıl çalışır](/rehber/isitmali-tutun-cihazlari-nasil-calisir/) yazısında.
 
 ## Bakım ve güvenlik
 
