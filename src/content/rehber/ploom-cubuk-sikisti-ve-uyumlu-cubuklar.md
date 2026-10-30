@@ -61,7 +61,7 @@ JT'nin sayfası iki neden sayıyor:
 
 | Cihaz | Uyumlu çubuklar (JT Japonya) |
 |---|---|
-| Ploom AURA, Ploom CUBE | evo (JT'ye göre en uygun seri), MEVIUS, CAMEL |
+| Ploom AURA, Ploom CUBE | evo (JT'ye göre en uygun seri; bkz. [EVO çubukları nedir](/rehber/ploom-evo-cubuklari-nedir/)), MEVIUS, CAMEL |
 | Ploom X, Ploom X Advanced | EVO (bkz. [Ploom X nasıl kullanılır](/rehber/ploom-x-nasil-kullanilir/)) |
 
 JT, başka üreticilerin çubuklarının kaza ya da arızaya yol açabileceği uyarısıyla kullanılmamasını söylüyor. Satılan seriler ülkeye göre değişir; cihazınızın kılavuzundaki uyumluluk listesi önceliklidir. IQOS ILUMA gibi indüksiyonlu cihazların çubukları ile Ploom çubukları birbirinin yerine kullanılamaz.

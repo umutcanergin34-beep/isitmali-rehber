@@ -55,7 +55,7 @@ hyper pro, Japonya'da Aralık 2023'te çıktı. BAT, Ocak 2024 tarihli bültenin
 - **HeatBoost:** Üstteki bir kadranla Standart ve Boost modları arasında geçiş yapılır. Boost modunda cihaz daha yüksek sıcaklıkta ısıtır ve daha kısa sürede hazır olur.
 - **EasyView ekran:** Seçili modu, oturumun başlangıcını ve bitişini ve kalan batarya durumunu gösteren renkli bir ekran.
 
-2026'da Güney Kore'de **hyper pro+** adıyla, daha hızlı ısınma öne çıkarılan bir sürüm çıktı. Bu model her ülkede bulunmayabilir.
+2026'da önce Japonya'da (Temmuz), ardından Güney Kore'de (Ağustos) **hyper pro+** çıktı. Çubuk takılınca kendiliğinden ısınmaya başlayan ve yaklaşık 10 saniyede hazır olan bu model her ülkede bulunmayabilir. Ayrıntılar: [glo hyper pro+ nedir](/rehber/glo-hyper-pro-plus-nedir/).
 
 ## Sonraki kuşak: glo Hilo
 

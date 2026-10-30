@@ -47,7 +47,7 @@ BAT Japan'ın duyurusuna göre:
 
 ## virto çubuğu
 
-virto, glo Hilo serisine özel çubuktur. Basına yansıyan bilgilere göre çubukta **StickSeal** adlı bir yapı var. Bu yapı, tütün kırıntılarının cihazın içine dökülmesini önlüyor ve ısıtma verimini artırıyor. Genel bakım için [cihaz temizliği rehberine](/rehber/isitmali-tutun-cihazi-temizligi/) bakabilirsiniz.
+virto, glo Hilo serisine özel çubuktur. Basına yansıyan bilgilere göre çubukta **StickSeal** adlı bir yapı var. Bu yapı, tütün kırıntılarının cihazın içine dökülmesini önlüyor ve ısıtma verimini artırıyor. Genel bakım için [cihaz temizliği rehberine](/rehber/isitmali-tutun-cihazi-temizligi/) bakabilirsiniz. Çubuğun yapısı, çıkış tarihleri ve neo ile farkı için [glo virto çubukları](/rehber/glo-virto-cubuklari-nedir/) yazısına bakın.
 
 ## glo hyper ile farkı
 
