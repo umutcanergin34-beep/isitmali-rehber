@@ -40,7 +40,7 @@ Bilgiler KT&G ve PMI duyurularından ve basın haberlerinden derlenmiştir. Mode
 
 ## lil SOLID
 
-lil SOLID, KT&G'nin ilk ısıtmalı tütün cihazı ailesidir ve **Fiit** çubuklarıyla çalışır. Çubuğu yakmadan ısıtır. PMI, lil SOLID'i 17 Ağustos 2020'de Rusya'da "lil introduced by IQOS" adıyla satışa sundu. Bu, KT&G'nin Kore dışındaki ilk tanıtımıydı.
+lil SOLID, KT&G'nin ilk ısıtmalı tütün cihazı ailesidir ve **Fiit** çubuklarıyla çalışır. Çubuğu yakmadan ısıtır. PMI, lil SOLID'i 17 Ağustos 2020'de Rusya'da "lil introduced by IQOS" adıyla satışa sundu. Bu, KT&G'nin Kore dışındaki ilk tanıtımıydı. Kuşaklar arasındaki farklar için [lil SOLID 1.0, 2.0 ve 3.0](/rehber/lil-solid-modelleri-farklari/), çubuk aileleri için [lil çubukları: Fiit, MIIX ve AIIM](/rehber/lil-cubuklari-fiit-miix-aiim/) yazısına bakın.
 
 ## lil HYBRID
 
